@@ -1,27 +1,31 @@
-//function to update current date and time
-function updateDateTime() {
-    //get current date and time
-    const currentDate = new Date();//creates object for date info
-    //say how date to be formatted
-    const options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
-    //format date
-    const formattedDate = currentDate.toLocaleDateString('en-GB', options);
-    //get current hrs and mins
-    const hours = String(currentDate.getHours()).padStart(2, '0');
-    const minutes = String(currentDate.getMinutes()).padStart(2, '0');
-    //format time as HH:MM
-    const formattedTime = `${hours}:${minutes}`;
-    //get element where date and time will be displayed
-    const currentDateTimeElement = document.getElementById('currentDateTime');
-    //set text content of the element
-    currentDateTimeElement.textContent = `${formattedDate} ${formattedTime}`;
+// Function to update the current date
+function updateDate() {
+    const currentDate = new Date(); // Get the current date
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const formattedDate = currentDate.toLocaleDateString('en-GB', options); // Format the date
+
+    // Get the element where the date will be displayed
+    const currentDateElement = document.getElementById('currentDate');
+
+    // Set the text content of the element to the formatted date
+    currentDateElement.textContent = formattedDate;
 }
 
-// Function to update the date and time every minute
-function updateTimeContinuously() {
-    updateDateTime();
-    setInterval(updateDateTime, 1000);//update every second
+// Function to update the date continuously
+function updateDateContinuously() {
+    updateDate(); // Call updateDate immediately to set the initial date
+
+    // Set up an interval to update the date every second
+    setInterval(function() {
+        const currentDate = new Date(); // Get the current date
+        const currentDay = currentDate.getDate(); // Get the current day
+
+        // Check if the current day has changed compared to the previously stored day
+        if (currentDay !== parseInt(currentDateElement.textContent.split(' ')[1])) {
+            updateDate(); // If a new day has started, update the date
+        }
+    }, 1000); // Check every second for date changes
 }
 
-// Event listeners
-updateTimeContinuously();
+// Event listener to start updating the date continuously
+updateDateContinuously();
