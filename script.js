@@ -17,10 +17,10 @@ function updateDateTime() {
     currentDateTimeElement.textContent = `${formattedDate} ${formattedTime}`;
 }
 
-// Function to update the date and time every second
+// Function to update the date and time every minute
 function updateTimeContinuously() {
     updateDateTime();
-    setInterval(updateDateTime, 1000);
+    setInterval(updateDateTime, 60000);//update every minute
 }
 
 // Event listeners
