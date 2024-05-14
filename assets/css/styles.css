@@ -7,3 +7,12 @@ body {
 .complete {
     text-decoration: line-through !important; /* Use !important to ensure the style is applied */
 }
+
+/*digital clock*/
+.clock-container {
+    font-size: 2rem;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}

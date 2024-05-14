@@ -96,8 +96,8 @@ function updateClock() {
     timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
   }
  
- function startTimer() {
-    timerInterval = setInterval() {
+  function startTimer() {
+    timerInterval = setInterval(() => {
         currentTimer--;
         updateTimerDisplay();
 
@@ -105,7 +105,9 @@ function updateClock() {
             clearInterval(timerInterval);
             //sound or modal?
         }
-    }
- }
+    }, 1000); // It's 1000 milliseconds for one second, not 100.
+}
+
  //event listeners
  startTimerBtn.addEventListener('click', startTimer);
+ stopTimerBtn.addEventListener('click', () => clearInterval(timerInterval)); // Stop the timer

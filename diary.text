@@ -1,2 +1,37 @@
 - add file structure- basic
 
+- boilerplate and dependencies/libraries/links
+
+-add navbar from bootstrap
+
+- basic html completed and checked inc modals and footer
+
+JS date/time update
+
+learning from freeCodeCamp https://www.freecodecamp.org/news/how-to-format-dates-in-javascript/
+// Function to update the date and time every minute
+function updateTimeContinuously() {
+    updateDateTime();
+    setInterval(updateDateTime, 60000);//update every minute
+}
+was updating but not on the minute in line with actual 
+time so when checked with testing so changed to update 
+every second
+
+// Function to update the date and time every minute
+function updateTimeContinuously() {
+    updateDateTime();
+    setInterval(updateDateTime, 1000);//update every second
+}
+
+---clock
+
+
+------pommodoro
+link
+https://webdesign.tutsplus.com/create-a-pomodoro-timer-with-html-css-and-vanilla-javascript--cms-108069t
+and 
+https://www.youtube.com/watch?app=desktop&v=MtYR2vCs2R0
+
+
+
