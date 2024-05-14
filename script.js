@@ -49,4 +49,13 @@ updateDateContinuously();
  // Event listener to add a task
  const addTaskBtn = document.getElementById('addTaskBtn');
  addTaskBtn.addEventListener('click', addTask);
+
+ //function to clear the task list
+ function clearList() {
+    const taskList = document.getElementById('taskList');
+    taskList.innerHTML = '';
+ }
+ // Event listener to clear the task list
+ const clearListBtn = document.getElementById('clearListBtn');
+ clearListBtn.addEventListener('click', clearList);
     
