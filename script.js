@@ -65,3 +65,15 @@ function clearList() {
 // Event listener to clear the task list
 const clearListBtn = document.getElementById('clearListBtn');
 clearListBtn.addEventListener('click', clearList);
+
+
+//digital clock
+function updateClock() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const timeString = `${hours}:${minutes}`;
+    document.getElementById('clockDisplay').textContent = timeString;
+}
+ // Update the clock every second
+ setInterval(updateClock, 1000);
