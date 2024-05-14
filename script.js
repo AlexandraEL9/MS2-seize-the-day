@@ -77,3 +77,35 @@ function updateClock() {
 }
  // Update the clock every second
  setInterval(updateClock, 1000);
+
+ //pomodoro timer
+ const focusTime = 25; //in mins
+ const shortBreakTime = 5;
+ const longBreakTime = 15;
+
+ let currentTimer = focusTime * 60;
+ let timerInterval = null;
+
+ const timerDisplay = document.getElementById('timerDisplay');
+ const startTimerBtn = document.getElementById('startTimerBtn');
+ const stopTimerBtn = document.getElementById('stopTimerBtn');
+
+ function updateTimerDisplay() {
+    const minutes = Math.floor(currentTimer / 60);
+    const seconds = currentTimer % 60;
+    timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  }
+ 
+ function startTimer() {
+    timerInterval = setInterval() {
+        currentTimer--;
+        updateTimerDisplay();
+
+        if (currentTimer <= 0) {
+            clearInterval(timerInterval);
+            //sound or modal?
+        }
+    }
+ }
+ //event listeners
+ startTimerBtn.addEventListener('click', startTimer);
