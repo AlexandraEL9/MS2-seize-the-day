@@ -20,7 +20,7 @@ function updateDateTime() {
 // Function to update the date and time every minute
 function updateTimeContinuously() {
     updateDateTime();
-    setInterval(updateDateTime, 60000);//update every minute
+    setInterval(updateDateTime, 1000);//update every second
 }
 
 // Event listeners
