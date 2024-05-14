@@ -2,3 +2,8 @@
 body {
     background-color:whitesmoke;
 }
+/*to do list*/
+/* Apply line-through style to completed tasks */
+.complete {
+    text-decoration: line-through !important; /* Use !important to ensure the style is applied */
+}
