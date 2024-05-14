@@ -1,3 +1,4 @@
+//current date section
 // Function to update the current date
 function updateDate() {
     const currentDate = new Date(); // Get the current date
@@ -29,3 +30,39 @@ function updateDateContinuously() {
 
 // Event listener to start updating the date continuously
 updateDateContinuously();
+
+//todo list section
+
+    // Function to add a new task
+    function addTask() {
+        const taskInput = document.getElementById('taskInput');
+        const taskList = document.getElementById('taskList');
+        const taskText = taskInput.value.trim();
+        if (taskText !== '') {
+            const listItem = document.createElement('li');
+            listItem.textContent = taskText;
+            listItem.classList.add('list-group-item');
+            const completeBtn = document.createElement('button');
+            completeBtn.textContent = 'Done';
+            completeBtn.classList.add('btn', 'ml-2');
+            completeBtn.addEventListener('click', function() {
+                listItem.classList.toggle('complete');
+            });
+            listItem.appendChild(completeBtn);
+            taskList.appendChild(listItem);
+            taskInput.value = '';
+        }
+    }
+
+    // Function to clear the task list
+    function clearList() {
+        const taskList = document.getElementById('taskList');
+        taskList.innerHTML = '';
+    }
+
+    // Event listeners
+    updateTimeContinuously();
+    const addTaskBtn = document.getElementById('addTaskBtn');
+    addTaskBtn.addEventListener('click', addTask);
+    const clearListBtn = document.getElementById('clearListBtn');
+    clearListBtn.addEventListener('click', clearList);
