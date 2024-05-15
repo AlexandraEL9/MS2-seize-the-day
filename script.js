@@ -83,3 +83,11 @@ function updateClock() {
 let pomodoro = document.getElementById("pomodoro-timer");
 let short = document.getElementById("short-timer");
 let long = document.getElementById(long-timer);
+// set up so pomodoro timer shows by default and hide other timer displays
+function showDefaultTimer() {
+    pomodoro.style.display = "block";
+    short.style.display = "none";
+    long.style.display = "none"
+}
+//call default timer display
+showDefaultTimer()
