@@ -104,7 +104,8 @@ let pomodoro = document.getElementById("pomodoro-timer");
           hideAll();
 
           pomodoro.style.display = "block";
-          currentTimer = pomodoro;
+          currentTimer = document.getElementById("pomodoro-timer");
+          startTimer(currentTimer);
         });
       document
         .getElementById("short-break")
@@ -172,7 +173,8 @@ let pomodoro = document.getElementById("pomodoro-timer");
     });
 
       document.getElementById("stop").addEventListener("click", function () {
-        if (currentTimer) {
           clearInterval(myInterval);
+          clearInterval(shortInterval);
+          clearInterval(longInterval);
         }
       });
