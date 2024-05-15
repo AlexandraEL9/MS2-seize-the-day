@@ -166,10 +166,3 @@ function updateClock() {
       document.getElementById("timer-message").style.display = "block";
   }
 });
-
-document.getElementById("pauseTimerBtn").addEventListener("click", function () {
-  console.log("Pause button clicked");
-  if (myInterval) {
-      clearInterval(myInterval);
-  }
-});

@@ -34,4 +34,52 @@ and
 https://www.youtube.com/watch?app=desktop&v=MtYR2vCs2R0
 
 
+debugging of pomodoro timer
+from this
+document
+        .getElementById("short-break")
+        .addEventListener("click", function () {
+          hideAll();
+
+          short.style.display = "block";
+          currentTimer = short;
+        });
+      document
+        .getElementById("long-break")
+        .addEventListener("click", function () {
+          hideAll();
+
+          long.style.display = "block";
+          currentTimer = long;
+        });
+to this
+document.getElementById("short-break").addEventListener("click", function () {
+    hideAll();
+    short.style.display = "block";
+    currentTimer = document.getElementById("short-timer"); // Set currentTimer to the actual timer display element
+    startTimer(currentTimer); // Start the timer for short break
+});
+
+document.getElementById("long-break").addEventListener("click", function () {
+    hideAll();
+    long.style.display = "block";
+    currentTimer = document.getElementById("long-timer"); // Set currentTimer to the actual timer display element
+    startTimer(currentTimer); // Start the timer for long break
+});
+
+passed correct timer display element to'startTimer' function
+
+
+modified start timer so carry on from current interval- not just start a new one
+
+from thisfunction startTimer(timerdisplay) {
+   if (myInterval) {
+     clearInterval(myInterval);
+   }
+to this
+function startTimer(timerdisplay) {
+  if (myInterval) {
+    // If there's already an active interval, do nothing
+    return;
+
 
