@@ -91,3 +91,24 @@ function showDefaultTimer() {
 }
 //call default timer display
 showDefaultTimer()
+
+//Event Listeners
+let currentTimer = null;
+//create event listeners trigered when user clicks the buttons
+document.getElementById("pomodoro-session").addEventListener("click", function(){
+    hideAll();
+    pomodoro.style.display = "block"
+    currentTimer = pomodoro
+});
+
+document.getElementById("short-break).addEventListener("click", function(){
+    hideAll();
+    pomodoro.style.display = "block"
+    currentTimer = short
+});
+
+document.getElementById("long-break).addEventListener("click", function(){
+    hideAll();
+    pomodoro.style.display = "block"
+    currentTimer = "long"
+});
