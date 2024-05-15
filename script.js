@@ -79,102 +79,97 @@ function updateClock() {
  setInterval(updateClock, 1000);
 
  //pomodoro timer
-//define timer variables
-let pomodoro = document.getElementById("pomodoro-timer");
-      let short = document.getElementById("short-timer");
-      let long = document.getElementById("long-timer");
-      let currentTimer = null;
+ let pomodoro = document.getElementById("pomodoro-timer");
+ let short = document.getElementById("short-timer");
+ let long = document.getElementById("long-timer");
+ let currentTimer = null;
+ let myInterval = null;
 
-      function showDefaultTimer() {
-        pomodoro.style.display = "block";
-        short.style.display = "none";
-        long.style.display = "none";
-      }
+ function showDefaultTimer() {
+   pomodoro.style.display = "block";
+   short.style.display = "none";
+   long.style.display = "none";
+ }
 
-      showDefaultTimer();
+ showDefaultTimer();
 
-      function hideAll() {
-        let timers = document.querySelectorAll(".timer-display");
-        timers.forEach((timer) => (timer.style.display = "none"));
-      }
+ function hideAll() {
+   let timers = document.querySelectorAll(".timer-display");
+   timers.forEach((timer) => (timer.style.display = "none"));
+ }
 
-      document
-        .getElementById("pomodoro-session")
-        .addEventListener("click", function () {
-          hideAll();
+ document
+   .getElementById("pomodoro-session")
+   .addEventListener("click", function () {
+    hideAll();
+    pomodoro.style.display = "block";
+    currentTimer = pomodoro;
+   });
+ document
+   .getElementById("short-break")
+   .addEventListener("click", function () {
+     hideAll();
 
-          pomodoro.style.display = "block";
-          currentTimer = document.getElementById("pomodoro-timer");
-          startTimer(currentTimer);
-        });
-      document
-        .getElementById("short-break")
-        .addEventListener("click", function () {
-          hideAll();
+     short.style.display = "block";
+     currentTimer = short;
+   });
+ document
+   .getElementById("long-break")
+   .addEventListener("click", function () {
+     hideAll();
 
-          short.style.display = "block";
-          currentTimer = document.getElementById("short-timer");
-          startTimer(currentTimer);
-        });
-      document
-        .getElementById("long-break")
-        .addEventListener("click", function () {
-          hideAll();
+     long.style.display = "block";
+     currentTimer = long;
+   });
 
-          long.style.display = "block";
-          currentTimer = document.getElementById("long-timer");
-          startTimer(currentTimer);
-        });
+ function startTimer(timerdisplay) {
+   if (myInterval) {
+    //if there's already an active interval, do nothing
+     return;
+   }
 
-      let myInterval = null;
+   let timerDuration = timerdisplay
+     .getAttribute("data-duration")
+     .split(":")[0];
 
-      function startTimer(timerdisplay) {
-        if (myInterval) {
-          clearInterval(myInterval);
-        }
+   let durationinmiliseconds = timerDuration * 60 * 1000;
+   let endTimestamp = Date.now() + durationinmiliseconds;
 
-        timerDuration = timerdisplay
-          .getAttribute("data-duration")
-          .split(":")[0];
-        console.log(timerDuration);
+   myInterval = setInterval(function () {
+     const timeRemaining = new Date(endTimestamp - Date.now());
 
-        let durationinmiliseconds = timerDuration * 60 * 1000;
-        let endTimestamp = Date.now() + durationinmiliseconds;
+     if (timeRemaining <= 0) {
+       clearInterval(myInterval);
+       timerdisplay.textContent = "00:00";
+       const alarm = new Audio(
+         "https://www.freespecialeffects.co.uk/soundfx/scifi/electronic.wav"
+       );
+       alarm.play();
+     } else {
+       const minutes = Math.floor(timeRemaining / 60000);
+       const seconds = ((timeRemaining % 60000) / 1000).toFixed(0);
+       const formattedTime = `${minutes}:${seconds
+         .toString()
+         .padStart(2, "0")}`;
+       console.log(formattedTime);
+       timerdisplay.textContent = formattedTime;
+     }
+   }, 1000);
+ }
 
-        myInterval = setInterval(function () {
-          const timeRemaining = new Date(endTimestamp - Date.now());
+ document.getElementById("startTimerBtn").addEventListener("click", function () {
+  console.log("Start button clicked");
+  if (currentTimer) {
+      startTimer(currentTimer);
+      document.getElementById("timer-message").style.display = "none";
+  } else {
+      document.getElementById("timer-message").style.display = "block";
+  }
+});
 
-          if (timeRemaining <= 0) {
-            clearInterval(myInterval);
-            timerdisplay.textContent = "00:00";
-            const alarm = new Audio(
-              "https://www.freespecialeffects.co.uk/soundfx/scifi/electronic.wav"
-            );
-            alarm.play();
-          } else {
-            const minutes = Math.floor(timeRemaining / 60000);
-            const seconds = ((timeRemaining % 60000) / 1000).toFixed(0);
-            const formattedTime = `${minutes}:${seconds
-              .toString()
-              .padStart(2, "0")}`;
-            console.log(formattedTime);
-            timerdisplay.textContent = formattedTime;
-          }
-        }, 1000);
-      }
-
-      document.getElementById("start").addEventListener("click", function () {
-        if (currentTimer) {
-            startTimer(currentTimer);
-            document.getElementById("timer-message").style.display = "none"; 
-        } else {
-            document.getElementById("timer-message").style.display = "block";
-        }
-    });
-
-      document.getElementById("stop").addEventListener("click", function () {
-          clearInterval(myInterval);
-          clearInterval(shortInterval);
-          clearInterval(longInterval);
-        }
-      });
+document.getElementById("pauseTimerBtn").addEventListener("click", function () {
+  console.log("Pause button clicked");
+  if (myInterval) {
+      clearInterval(myInterval);
+  }
+});
