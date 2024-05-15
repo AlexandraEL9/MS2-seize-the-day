@@ -112,7 +112,8 @@ let pomodoro = document.getElementById("pomodoro-timer");
           hideAll();
 
           short.style.display = "block";
-          currentTimer = short;
+          currentTimer = document.getElementById("short-timer");
+          startTimer(currentTimer);
         });
       document
         .getElementById("long-break")
@@ -120,7 +121,8 @@ let pomodoro = document.getElementById("pomodoro-timer");
           hideAll();
 
           long.style.display = "block";
-          currentTimer = long;
+          currentTimer = document.getElementById("long-timer");
+          startTimer(currentTimer);
         });
 
       let myInterval = null;
