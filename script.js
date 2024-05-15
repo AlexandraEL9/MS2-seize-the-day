@@ -117,3 +117,10 @@ document.getElementById("long-break).addEventListener("click", function(){
 function hideAll(){
     let timers = document.querySelectorAll(".timer-display");
 }
+//start timer functionality
+let myInterval = null;
+function startTimer(timerdisplay){
+    timerDuration = timerdisplay.getAttribute("data-duration").split(":")[0]
+    let durationinMiliseconds = timerDuration*60*1000;
+    let endTimestamp = Date.now() + durationinMiliseconds;
+}
