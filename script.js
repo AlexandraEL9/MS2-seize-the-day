@@ -124,3 +124,28 @@ function startTimer(timerdisplay){
     let durationinMiliseconds = timerDuration*60*1000;
     let endTimestamp = Date.now() + durationinMiliseconds;
 }
+//create timer
+function startTimer(timerdisplay) {
+    if (myInterval) {
+        clearInterval(myInterval);
+    }
+    timerDuration = timerdisplay.getAttribute("data-duration").split(":")[0];
+    console.log(timerDuration);
+    let durationinmiliseconds = timerDuration * 60 * 1000;
+    let endTimestamp = Date.now() + durationinmiliseconds;
+    myInterval = setInterval(function() {
+        const timeRemaining = new Date(endTimestamp - Date.now());
+
+        if (timeRemaining <= 0) {
+            clearInterval(myInterval);
+            timerdisplay.textContent = "00:00";
+            const alarm = Audio("https://www.freespecialeffects.co.uk/soundfx/scifi/electronic.wav");  
+        } else {
+            const minutes = Math.floor(timeRemaining / 60000);
+            const seconds = ((timeRemaining % 60000) / 1000).toFixed(0);
+            const formattedTime = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            console.log(formattedTime);
+            timerdisplay.textContent = formattedTime;
+        }
+    }, 1000);
+}
