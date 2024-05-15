@@ -112,3 +112,8 @@ document.getElementById("long-break).addEventListener("click", function(){
     pomodoro.style.display = "block"
     currentTimer = "long"
 });
+
+//hide timers
+function hideAll(){
+    let timers = document.querySelectorAll(".timer-display");
+}
