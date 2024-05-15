@@ -92,6 +92,12 @@ function showDefaultTimer() {
 //call default timer display
 showDefaultTimer()
 
+//hide timers
+function hideAll(){
+    let timers = document.querySelectorAll(".timer-display");
+    timers.forEach((timer) => (timer.style.display = "none"));
+}
+
 //Event Listeners
 let currentTimer = null;
 //create event listeners trigered when user clicks the buttons
@@ -113,10 +119,7 @@ document.getElementById("long-break).addEventListener("click", function(){
     currentTimer = "long"
 });
 
-//hide timers
-function hideAll(){
-    let timers = document.querySelectorAll(".timer-display");
-}
+
 //start timer functionality
 let myInterval = null;
 function startTimer(timerdisplay){
@@ -149,3 +152,18 @@ function startTimer(timerdisplay) {
         }
     }, 1000);
 }
+//event listener start button to display countdown
+document.getElementById("start").addEventListener("click", function() {
+    if(currentTimer){
+        startTimer(currentTimer);
+        document.getElementById("timer-message").style.display = "none";
+    } else {
+        document.getElementById("timer-message").style.display = "block";
+    }
+});
+//stop button 
+document.getElementById("stop").addEventListener("click", function() {
+    if(currentTimer){
+        startTimer(currentTimer);
+        clearInterval(myInterval);
+});
