@@ -130,3 +130,11 @@ function countdown() {
   updateDisplay();
 }
 
+//event listeners for timer buttons
+//EL for pomodoro time button
+pomodoroButton.addEventListener('click', () => {
+  isPaused = true; //pause timer
+  startButton.textContent = 'Start'; //reset button to start
+  startTimer(25); //start 25min timer
+});
+
