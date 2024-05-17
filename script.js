@@ -130,7 +130,23 @@ function countdown() {
   updateDisplay();
 }
 
-//event listeners for timer buttons
+//event listener for start/pause button
+startButton.addEventListener('click', () => {
+  //toggle start/pause
+  isPaused = !isPaused;
+
+  //timer running- start countdown
+  if (!isPaused) {
+    timer = setInterval(countdown, 1000);
+    startButton.textContent = 'Pause'; //changes button text to 'Pause
+  } else {
+    //timer paused- clear interval to stop countdown
+    clearInterval(timer);
+    startButton.textContent = 'Start'; //change button text to 'Start
+  }
+});
+
+//event listeners for timer buttons(pom/short/long breaks)
 //EL for pomodoro time button
 pomodoroButton.addEventListener('click', () => {
   isPaused = true; //pause timer
