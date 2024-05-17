@@ -79,90 +79,54 @@ function updateClock() {
  setInterval(updateClock, 1000);
 
  //pomodoro timer
- let pomodoro = document.getElementById("pomodoro-timer");
- let short = document.getElementById("short-timer");
- let long = document.getElementById("long-timer");
- let currentTimer = null;
- let myInterval = null;
+//define initial state of timer elements
+//timer starts in paused state
+let isPaused = true;
 
- function showDefaultTimer() {
-   pomodoro.style.display = "block";
-   short.style.display = "none";
-   long.style.display = "none";
- }
+// Declare a variable to hold the timer interval ID.
+let timer;
 
- showDefaultTimer();
+// Set the initial timer values to 25 minutes and 0 seconds.
+let minutes = 25;
+let seconds = 0;
 
- function hideAll() {
-   let timers = document.querySelectorAll(".timer-display");
-   timers.forEach((timer) => (timer.style.display = "none"));
- }
+// Get references to the HTML elements where the minutes and seconds will be displayed.
+const minutesElement = document.getElementById('minutes');
+const secondsElement = document.getElementById('seconds');
 
- document
-   .getElementById("pomodoro-session")
-   .addEventListener("click", function () {
-    hideAll();
-    pomodoro.style.display = "block";
-    currentTimer = pomodoro;
-   });
- document
-   .getElementById("short-break")
-   .addEventListener("click", function () {
-     hideAll();
+// Get references to the control buttons for the timer.
+const startButton = document.getElementById('startTimerBtn');
+const pomodoroButton = document.getElementById('pomodoro-session');
+const shortBreakButton = document.getElementById('short-break');
+const longBreakButton = document.getElementById('long-break');
 
-     short.style.display = "block";
-     currentTimer = short;
-   });
- document
-   .getElementById("long-break")
-   .addEventListener("click", function () {
-     hideAll();
+//function to update the timer display
+function updateDisplay() {
+  minutesElement.textContent = string(minutes).padStart(2, '0');
+  secondsElement.textContent = string(seconds).padStart(2, '0');
+}
 
-     long.style.display = "block";
-     currentTimer = long;
-   });
+//countdown logic
+function countdown() {
+  //timer on pause= exit function
+  if (isPaused) return;
 
- function startTimer(timerdisplay) {
-   if (myInterval) {
-    //if there's already an active interval, do nothing
-     return;
-   }
-
-   let timerDuration = timerdisplay
-     .getAttribute("data-duration")
-     .split(":")[0];
-
-   let durationinmiliseconds = timerDuration * 60 * 1000;
-   let endTimestamp = Date.now() + durationinmiliseconds;
-
-   myInterval = setInterval(function () {
-     const timeRemaining = new Date(endTimestamp - Date.now());
-
-     if (timeRemaining <= 0) {
-       clearInterval(myInterval);
-       timerdisplay.textContent = "00:00";
-       const alarm = new Audio(
-         "https://www.freespecialeffects.co.uk/soundfx/scifi/electronic.wav"
-       );
-       alarm.play();
-     } else {
-       const minutes = Math.floor(timeRemaining / 60000);
-       const seconds = ((timeRemaining % 60000) / 1000).toFixed(0);
-       const formattedTime = `${minutes}:${seconds
-         .toString()
-         .padStart(2, "0")}`;
-       console.log(formattedTime);
-       timerdisplay.textContent = formattedTime;
-     }
-   }, 1000);
- }
-
- document.getElementById("startTimerBtn").addEventListener("click", function () {
-  console.log("Start button clicked");
-  if (currentTimer) {
-      startTimer(currentTimer);
-      document.getElementById("timer-message").style.display = "none";
+  //seconds at o- reset to 59
+  if (seconde === 0) {
+    //minutes also at 0- clear interval
+    if (minutes === 0) {
+      clearInterval(timer);
+      //and alert that time is up
+      alert("Time is up!");
+      return;
+    }
+    minutes--;
+    seconds = 59;
   } else {
-      document.getElementById("timer-message").style.display = "block";
+    //or decrement the seconds
+    seconds--;
   }
-});
+  //show timer mins and seconds by updating display
+  updateDisplay();
+}
+

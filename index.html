@@ -67,34 +67,22 @@
             <!--digital clock,pomodoro timer and alarm section-->
             <section class="col-lg-6">
                 <div class="row">
-                    <!--pomodoro timer-->
-                    <div class="col-md-12">
-                        <div class="content-section">
-                            <h3>Pomodoro Timer</h3>
-                            <button id="pomodoroModalBtn" class="btn" data-toggle="modal" data-target="#pomodoroModal">
-                                ?
-                            </button>
-                            <!--timer buttons-->
-                            <div class="button-container" id="timerButtons">
-                              <button class="button" id="pomodoro-session">Pomodoro</button>
-                              <button class="button" id="short-break">Short Break</button>
-                              <button class="button" id="long-break">Long break</button>
-                            </div>
-                            <!--timer display-->
-                            <div id="pomodoro-timer" class="timer-display" data-duration="25.00">
-                              25:00
-                            </div>
-                    
-                            <div id="short-timer" class="timer-display" data-duration="5.00">
-                              5:00
-                            </div>
-                    
-                            <div id="long-timer" class="timer-display" data-duration="15.00">
-                              15:00
-                            </div>
-                            <button id="startTimerBtn" class="btn">Start</button>
-                        </div>
+                  <div class="content-section timer">
+                    <h3>Pomodoro Timer</h3>
+                    <button id="pomodoroModalBtn" class="btn" data-toggle="modal" data-target="#pomodoroModal">?</button>
+                    <!-- Timer Buttons -->
+                    <div class="button-container" id="timerButtons">
+                        <button class="button" id="pomodoro-session">Pomodoro</button>
+                        <button class="button" id="short-break">Short Break</button>
+                        <button class="button" id="long-break">Long Break</button>
                     </div>
+                    <!-- Timer Display -->
+                    <div class="timer-display">
+                        <span id="minutes">25</span>:<span id="seconds">00</span>
+                    </div>
+                    <button id="startTimerBtn" class="btn">Start</button>
+                </div>
+            </div>
                     <!--pomodoro modal-->
                     <!--adapted bootstrap code-->
                     <div class="modal" id="pomodoroModal" tabindex="-1" aria-labelledby="pomodoroModalLabel" aria-hidden="true">
