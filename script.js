@@ -79,12 +79,11 @@ function updateClock() {
  setInterval(updateClock, 1000);
 
  //pomodoro timer
-//define initial state of timer elements
-//timer starts in paused state
-let isPaused = true;
+// Initialize the timer as paused.
+let isPaused = true;//timer starts in paused state
 
 // Declare a variable to hold the timer interval ID.
-let timer;
+let timer;//variable to hold timer interval
 
 // Set the initial timer values to 25 minutes and 0 seconds.
 let minutes = 25;
@@ -100,57 +99,88 @@ const pomodoroButton = document.getElementById('pomodoro-session');
 const shortBreakButton = document.getElementById('short-break');
 const longBreakButton = document.getElementById('long-break');
 
-//function to update the timer display
+// Function to update the timer display with the current minutes and seconds.
 function updateDisplay() {
-  minutesElement.textContent = string(minutes).padStart(2, '0');
-  secondsElement.textContent = string(seconds).padStart(2, '0');
+    // Pad the minutes and seconds with leading zeros if needed and update the text content of the respective elements.
+    minutesElement.textContent = String(minutes).padStart(2, '0');
+    secondsElement.textContent = String(seconds).padStart(2, '0');
 }
 
-//countdown logic
+// Function to handle the countdown logic for the timer.
 function countdown() {
-  //timer on pause= exit function
-  if (isPaused) return;
+    // If the timer is paused, exit the function.
+    if (isPaused) return;
 
-  //seconds at o- reset to 59
-  if (seconde === 0) {
-    //minutes also at 0- clear interval
-    if (minutes === 0) {
-      clearInterval(timer);
-      //and alert that time is up
-      alert("Time is up!");
-      return;
+    // If seconds are at 0, decrement minutes and reset seconds to 59.
+    if (seconds === 0) {
+        // If minutes are also at 0, clear the interval and alert the user that time's up.
+        if (minutes === 0) {
+            clearInterval(timer);
+            alert("Time's up!");
+            return;
+        }
+        minutes--;
+        seconds = 59;
+    } else {
+        // Otherwise, just decrement the seconds.
+        seconds--;
     }
-    minutes--;
-    seconds = 59;
-  } else {
-    //or decrement the seconds
-    seconds--;
-  }
-  //show timer mins and seconds by updating display
-  updateDisplay();
+
+    // Update the display with the new time values.
+    updateDisplay();
 }
 
-//event listener for start/pause button
-startButton.addEventListener('click', () => {
-  //toggle start/pause
-  isPaused = !isPaused;
-
-  //timer running- start countdown
-  if (!isPaused) {
-    timer = setInterval(countdown, 1000);
-    startButton.textContent = 'Pause'; //changes button text to 'Pause
-  } else {
-    //timer paused- clear interval to stop countdown
+// Function to start the timer with a given duration in minutes.
+function startTimer(duration) {
+    // Clear any existing timer intervals to avoid multiple timers running concurrently.
     clearInterval(timer);
-    startButton.textContent = 'Start'; //change button text to 'Start
-  }
+
+    // Set the timer as running (not paused).
+    isPaused = true; //ensure timer is paused
+
+    // Set the minutes to the given duration and reset seconds to 0.
+    minutes = duration;
+    seconds = 0;
+
+    // Update the display with the new initial values.
+    updateDisplay();
+
+    startButton.textContent = 'start'; //ensures start button text is set to start 
+}
+
+// Event listener for the start/pause button.
+startButton.addEventListener('click', () => {
+    // Toggle the pause state.
+    isPaused = !isPaused;
+
+    // If the timer is now running (not paused), start the countdown.
+    if (!isPaused) {
+        timer = setInterval(countdown, 1000);
+        startButton.textContent = 'Pause'; // Change button text to 'Pause'.
+    } else {
+        // If the timer is paused, clear the interval to stop the countdown.
+        clearInterval(timer);
+        startButton.textContent = 'Start'; // Change button text to 'Start'.
+    }
 });
 
-//event listeners for timer buttons(pom/short/long breaks)
-//EL for pomodoro time button
+// Event listener for the Pomodoro session button.
 pomodoroButton.addEventListener('click', () => {
-  isPaused = true; //pause timer
-  startButton.textContent = 'Start'; //reset button to start
-  startTimer(25); //start 25min timer
+    startTimer(25); // Start a 25-minute Pomodoro session.
 });
+
+// Event listener for the short break button.
+shortBreakButton.addEventListener('click', () => {
+    startTimer(5); // Start a 5-minute short break.
+});
+
+// Event listener for the long break button.
+longBreakButton.addEventListener('click', () => {
+    startTimer(15); // Start a 15-minute long break.
+});
+
+// Initial call to update the display with the default timer values.
+updateDisplay();
+
+
 
