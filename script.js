@@ -1,3 +1,12 @@
+//variables
+let isPaused = true; //timer starts in paused state
+let timer; //variable to hold timer interval
+let minutes = 25; //initial mins set to 25
+let seconds = 0;
+
+//references to html elements to do with displaying time (mins and secs)
+const minutesElement = document.getElementById('minutes');
+
 //current date section
 // Function to update the current date
 function updateDate() {
@@ -163,24 +172,45 @@ startButton.addEventListener('click', () => {
         startButton.textContent = 'Start'; // Change button text to 'Start'.
     }
 });
-
+// Event listeners for the mode buttons to set the timer duration without starting it
 // Event listener for the Pomodoro session button.
 pomodoroButton.addEventListener('click', () => {
     startTimer(25); // Start a 25-minute Pomodoro session.
+    pomodoroButton.classList.add('active');
+    shortBreakButton.classList.remove('active');
+    longBreakButton.classList.remove('active');
 });
 
 // Event listener for the short break button.
 shortBreakButton.addEventListener('click', () => {
     startTimer(5); // Start a 5-minute short break.
+    pomodoroButton.classList.remove('active');
+    shortBreakButton.classList.add('active');
+    longBreakButton.classList.remove('active');
+
 });
 
 // Event listener for the long break button.
 longBreakButton.addEventListener('click', () => {
     startTimer(15); // Start a 15-minute long break.
+    pomodoroButton.classList.remove('active');
+    shortBreakButton.classList.remove('active');
+    longBreakButton.classList.add('active');
+});
+//Event listeners to close the modals when close buttons are clicked
+closeButtons.forEach(button => {
+    button.addEventListener('click', () =>{
+        pomodoroModal.style.display = 'none';
+        shortBreakModal.style.display = 'none';
+        longBreakModal.style.display = 'none';
+    });
 });
 
 // Initial call to update the display with the default timer values.
 updateDisplay();
+
+//alarms and reminders section
+
 
 
 
