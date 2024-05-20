@@ -6,6 +6,19 @@ let seconds = 0;
 
 //references to html elements to do with displaying time (mins and secs)
 const minutesElement = document.getElementById('minutes');
+const secondsElement = document.getElementById('minutes');
+
+//references to control buttons for timer
+const startButton = document.getElementById('startTimerBtn');
+const pomodoroButton = document.getElementById('pomodoro-session');
+const shortBreakButton = document.getElementById('short-break');
+const LongBreakButton = document.getElementById('long-break');
+
+//references to modal elements
+const pomodoroModal = document.getElementById('pomodoroOverModal');
+const shortBreakModal = document.getElementById('shortBreakOverModal');
+const longBreakModal = document.getElementById('longBreakOverModal');
+const closeButtons = document.querySelectorAll('.close');
 
 //current date section
 // Function to update the current date
