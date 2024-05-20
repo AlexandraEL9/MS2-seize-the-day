@@ -101,26 +101,6 @@ function updateClock() {
  setInterval(updateClock, 1000);
 
  //pomodoro timer
-// Initialize the timer as paused.
-let isPaused = true;//timer starts in paused state
-
-// Declare a variable to hold the timer interval ID.
-let timer;//variable to hold timer interval
-
-// Set the initial timer values to 25 minutes and 0 seconds.
-let minutes = 25;
-let seconds = 0;
-
-// Get references to the HTML elements where the minutes and seconds will be displayed.
-const minutesElement = document.getElementById('minutes');
-const secondsElement = document.getElementById('seconds');
-
-// Get references to the control buttons for the timer.
-const startButton = document.getElementById('startTimerBtn');
-const pomodoroButton = document.getElementById('pomodoro-session');
-const shortBreakButton = document.getElementById('short-break');
-const longBreakButton = document.getElementById('long-break');
-
 // Function to update the timer display with the current minutes and seconds.
 function updateDisplay() {
     // Pad the minutes and seconds with leading zeros if needed and update the text content of the respective elements.
@@ -138,7 +118,15 @@ function countdown() {
         // If minutes are also at 0, clear the interval and alert the user that time's up.
         if (minutes === 0) {
             clearInterval(timer);
-            alert("Time's up!");
+            if (pomodoroButton.classList.contains('active')) {
+                pomodoroModal.style.display = 'block';//display pomodoro modal when pomodoro session ends
+            } else if (shortBreakButton.classList.contains('active')) {
+                shortBreakModal.style.display = 'block';//display short break modal when pomodoro session ends
+            } else if (longBreakButton.classList.contains('active')) {
+                longBreakModal.style.display = 'block';//display long break modal when pomodoro session ends
+            } else {
+                alert("Time's up!");
+            }
             return;
         }
         minutes--;
