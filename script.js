@@ -179,7 +179,6 @@ function checkReminders() {
     reminders.forEach((reminder, index) => {
         if (reminder.time === currentTime) {
             alert(reminder.message);
-            alarmSound.play();
             reminders.splice(index, 1);
             updateReminderList();
         }
@@ -195,7 +194,7 @@ function updateReminderList() {
     });
 }
 
-setInterval(checkReminders, 60000); // Checks reminders every minute
+setInterval(checkReminders, 1000); // Checks reminders every second
 
 updateDateContinuously();
 updateClock();
