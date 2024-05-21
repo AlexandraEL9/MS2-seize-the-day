@@ -59,17 +59,36 @@
         </div>
     </div>
 
-    <div id="pomodoroOverModal" class="modal">
+    <div id="pomodoroOverModal" class="modal" tab>
         <div class="modal-content">
             <span class="close">&times;</span>
             <p>Pomodoro Session Over! Take a break.</p>
         </div>
     </div>
 
-    <div id="shortBreakOverModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Short Break Over! Back to work.</p>
+    <div class="modal" id="shortBreakOverModal" tabindex="-1" aria-labelledby="shortBreakOverModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="pomodoroModalLabel">
+                Time's Up!?
+              </h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Your 5 minute break time is over.
+                </p>
+                <p>
+                    Time to get focused for another pomodoro session.
+                </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
     </div>
 
