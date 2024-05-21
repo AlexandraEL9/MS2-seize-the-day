@@ -1,38 +1,18 @@
-//current date section
-// Function to update the current date
+// Current date section
 function updateDate() {
-    const currentDate = new Date(); // Get the current date
+    const currentDate = new Date();
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    const formattedDate = currentDate.toLocaleDateString('en-GB', options); // Format the date
-
-    // Get the element where the date will be displayed
+    const formattedDate = currentDate.toLocaleDateString('en-GB', options);
     const currentDateElement = document.getElementById('currentDate');
-
-    // Set the text content of the element to the formatted date
     currentDateElement.textContent = formattedDate;
 }
 
-// Function to update the date continuously
 function updateDateContinuously() {
-    updateDate(); // Call updateDate immediately to set the initial date
-
-    // Set up an interval to update the date every second
-    setInterval(function() {
-        const currentDate = new Date(); // Get the current date
-        const currentDay = currentDate.getDate(); // Get the current day
-
-        // Check if the current day has changed compared to the previously stored day
-        if (currentDay !== parseInt(currentDateElement.textContent.split(' ')[1])) {
-            updateDate(); // If a new day has started, update the date
-        }
-    }, 1000); // Check every second for date changes
+    updateDate();
+    setInterval(updateDate, 1000);
 }
 
-// Event listener to start updating the date continuously
-updateDateContinuously();
-
-//todo
-// Function to add a new task
+// To-do list section
 function addTask() {
     const taskInput = document.getElementById('taskInput');
     const taskList = document.getElementById('taskList');
@@ -53,22 +33,18 @@ function addTask() {
     }
 }
 
-// Event listener to add a task
 const addTaskBtn = document.getElementById('addTaskBtn');
 addTaskBtn.addEventListener('click', addTask);
 
-// Function to clear the task list
 function clearList() {
     const taskList = document.getElementById('taskList');
     taskList.innerHTML = '';
 }
 
-// Event listener to clear the task list
 const clearListBtn = document.getElementById('clearListBtn');
 clearListBtn.addEventListener('click', clearList);
 
-
-//digital clock
+// Digital clock section
 function updateClock() {
     const now = new Date();
     const hours = now.getHours().toString().padStart(2, '0');
@@ -76,143 +52,105 @@ function updateClock() {
     const timeString = `${hours}:${minutes}`;
     document.getElementById('clockDisplay').textContent = timeString;
 }
- // Update the clock every second
- setInterval(updateClock, 1000);
 
- //pomodoro timer
- //pomodoro variables
-let isPaused = true; //timer starts in paused state
-let timer; //variable to hold timer interval
-let minutes = 25; //initial mins set to 25
+setInterval(updateClock, 1000);
+
+// Pomodoro timer section
+let isPaused = true;
+let timer;
+let minutes = 25;
 let seconds = 0;
 
-//references to html elements to do with displaying time (mins and secs)
 const minutesElement = document.getElementById('minutes');
-const secondsElement = document.getElementById('minutes');
-
-//references to control buttons for timer
+const secondsElement = document.getElementById('seconds');
 const startButton = document.getElementById('startTimerBtn');
 const pomodoroButton = document.getElementById('pomodoro-session');
 const shortBreakButton = document.getElementById('short-break');
-const LongBreakButton = document.getElementById('long-break');
+const longBreakButton = document.getElementById('long-break');
 
-//references to modal elements
 const pomodoroModal = document.getElementById('pomodoroOverModal');
 const shortBreakModal = document.getElementById('shortBreakOverModal');
 const longBreakModal = document.getElementById('longBreakOverModal');
 const closeButtons = document.querySelectorAll('.close');
 
-// Function to update the timer display with the current minutes and seconds.
 function updateDisplay() {
-    // Pad the minutes and seconds with leading zeros if needed and update the text content of the respective elements.
     minutesElement.textContent = String(minutes).padStart(2, '0');
     secondsElement.textContent = String(seconds).padStart(2, '0');
 }
 
-// Function to handle the countdown logic for the timer.
 function countdown() {
-    // If the timer is paused, exit the function.
     if (isPaused) return;
 
-    // If seconds are at 0, decrement minutes and reset seconds to 59.
     if (seconds === 0) {
-        // If minutes are also at 0, clear the interval and alert the user that time's up.
         if (minutes === 0) {
             clearInterval(timer);
             if (pomodoroButton.classList.contains('active')) {
-                pomodoroModal.style.display = 'block';//display pomodoro modal when pomodoro session ends
+                pomodoroModal.style.display = 'block';
             } else if (shortBreakButton.classList.contains('active')) {
-                shortBreakModal.style.display = 'block';//display short break modal when pomodoro session ends
+                shortBreakModal.style.display = 'block';
             } else if (longBreakButton.classList.contains('active')) {
-                longBreakModal.style.display = 'block';//display long break modal when pomodoro session ends
-            } else {
-                alert("Time's up!");
+                longBreakModal.style.display = 'block';
             }
             return;
         }
         minutes--;
         seconds = 59;
     } else {
-        // Otherwise, just decrement the seconds.
         seconds--;
     }
 
-    // Update the display with the new time values.
     updateDisplay();
 }
 
-// Function to start the timer with a given duration in minutes.
-function startTimer(duration) {
-    // Clear any existing timer intervals to avoid multiple timers running concurrently.
+function setTimer(duration) {
     clearInterval(timer);
-
-    // Set the timer as running (not paused).
-    isPaused = true; //ensure timer is paused
-
-    // Set the minutes to the given duration and reset seconds to 0.
+    isPaused = true;
     minutes = duration;
     seconds = 0;
-
-    // Update the display with the new initial values.
     updateDisplay();
-
-    startButton.textContent = 'start'; //ensures start button text is set to start 
+    startButton.textContent = 'Start';
 }
 
-// Event listener for the start/pause button.
 startButton.addEventListener('click', () => {
-    // Toggle the pause state.
     isPaused = !isPaused;
-
-    // If the timer is now running (not paused), start the countdown.
     if (!isPaused) {
         timer = setInterval(countdown, 1000);
-        startButton.textContent = 'Pause'; // Change button text to 'Pause'.
+        startButton.textContent = 'Pause';
     } else {
-        // If the timer is paused, clear the interval to stop the countdown.
         clearInterval(timer);
-        startButton.textContent = 'Start'; // Change button text to 'Start'.
+        startButton.textContent = 'Start';
     }
 });
-// Event listeners for the mode buttons to set the timer duration without starting it
-// Event listener for the Pomodoro session button.
+
 pomodoroButton.addEventListener('click', () => {
-    startTimer(25); // Start a 25-minute Pomodoro session.
+    setTimer(25);
     pomodoroButton.classList.add('active');
     shortBreakButton.classList.remove('active');
     longBreakButton.classList.remove('active');
 });
 
-// Event listener for the short break button.
 shortBreakButton.addEventListener('click', () => {
-    startTimer(5); // Start a 5-minute short break.
+    setTimer(5);
     pomodoroButton.classList.remove('active');
     shortBreakButton.classList.add('active');
     longBreakButton.classList.remove('active');
-
 });
 
-// Event listener for the long break button.
 longBreakButton.addEventListener('click', () => {
-    startTimer(15); // Start a 15-minute long break.
+    setTimer(15);
     pomodoroButton.classList.remove('active');
     shortBreakButton.classList.remove('active');
     longBreakButton.classList.add('active');
 });
-//Event listeners to close the modals when close buttons are clicked
+
 closeButtons.forEach(button => {
-    button.addEventListener('click', () =>{
+    button.addEventListener('click', () => {
         pomodoroModal.style.display = 'none';
         shortBreakModal.style.display = 'none';
         longBreakModal.style.display = 'none';
     });
 });
 
-// Initial call to update the display with the default timer values.
+updateDateContinuously();
+updateClock();
 updateDisplay();
-
-//alarms and reminders section
-
-
-
-
