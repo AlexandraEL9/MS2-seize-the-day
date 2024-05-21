@@ -23,7 +23,7 @@ function addTask() {
         listItem.classList.add('list-group-item');
         const completeBtn = document.createElement('button');
         completeBtn.textContent = 'Done';
-        completeBtn.classList.add('btn');
+        completeBtn.classList.add('btn', 'btn-sm', 'btn-success', 'ml-2');
         completeBtn.addEventListener('click', function() {
             listItem.classList.toggle('complete');
         });
@@ -85,7 +85,7 @@ function countdown() {
     if (seconds === 0) {
         if (minutes === 0) {
             clearInterval(timer);
-            alarmSound.play(); //play alarm sound
+            alarmSound.play();
             if (pomodoroButton.classList.contains('active')) {
                 pomodoroModal.style.display = 'block';
             } else if (shortBreakButton.classList.contains('active')) {
@@ -152,23 +152,22 @@ closeButtons.forEach(button => {
         longBreakModal.style.display = 'none';
     });
 });
-//alarm/reminder section
+
+// Alarm/reminder section
 const reminderTimeInput = document.getElementById('reminderTime');
 const reminderMessageInput = document.getElementById('reminderMessage');
 const setReminderBtn = document.getElementById('setReminderBtn');
 const reminderList = document.getElementById('reminderList');
 let reminders = [];
 
-let alarmTimeout;
+setReminderBtn.addEventListener('click', () => {
+    const reminderTime = reminderTimeInput.value;
+    const reminderMessage = reminderMessageInput.value;
 
-setReminderBtn.addEventListener('click', () => {//listen for alarm button click
-    const reminderTime = reminderTimeInput.Value;
-    const reminderMessage = reminderMessageInput.Value;//get both values
-
-    if (time && message) {
-        reminders.push({time, message});
+    if (reminderTime && reminderMessage) {
+        reminders.push({ time: reminderTime, message: reminderMessage });
         const li = document.createElement('li');
-        li.textContent = `${time} - ${message}`;
+        li.textContent = `${reminderTime} - ${reminderMessage}`;
         reminderList.appendChild(li);
         reminderTimeInput.value = '';
         reminderMessageInput.value = '';
@@ -176,7 +175,7 @@ setReminderBtn.addEventListener('click', () => {//listen for alarm button click
 });
 
 function checkReminders() {
-    const currentTime = new Date().toLocaleTimeString('en-GB', { hour12: false}).slice(0, 5);
+    const currentTime = new Date().toLocaleTimeString('en-GB', { hour12: false }).slice(0, 5);
     reminders.forEach((reminder, index) => {
         if (reminder.time === currentTime) {
             alert(reminder.message);
@@ -196,7 +195,7 @@ function updateReminderList() {
     });
 }
 
-setInterval(checkReminders, 60000);//checks reminders every minute
+setInterval(checkReminders, 60000); // Checks reminders every minute
 
 updateDateContinuously();
 updateClock();
