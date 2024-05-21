@@ -72,6 +72,7 @@ const pomodoroModal = document.getElementById('pomodoroOverModal');
 const shortBreakModal = document.getElementById('shortBreakOverModal');
 const longBreakModal = document.getElementById('longBreakOverModal');
 const closeButtons = document.querySelectorAll('.close');
+const alarmSound = document.getElementById("alarmSound");
 
 function updateDisplay() {
     minutesElement.textContent = String(minutes).padStart(2, '0');
@@ -84,6 +85,7 @@ function countdown() {
     if (seconds === 0) {
         if (minutes === 0) {
             clearInterval(timer);
+            alarmSound.play(); //play alarm sound
             if (pomodoroButton.classList.contains('active')) {
                 pomodoroModal.style.display = 'block';
             } else if (shortBreakButton.classList.contains('active')) {
