@@ -152,6 +152,51 @@ closeButtons.forEach(button => {
         longBreakModal.style.display = 'none';
     });
 });
+//alarm/reminder section
+const reminderTimeInput = document.getElementById('reminderTime');
+const reminderMessageInput = document.getElementById('reminderMessage');
+const setReminderBtn = document.getElementById('setReminderBtn');
+const reminderList = document.getElementById('reminderList');
+let reminders = [];
+
+let alarmTimeout;
+
+setReminderBtn.addEventListener('click', () => {//listen for alarm button click
+    const reminderTime = reminderTimeInput.Value;
+    const reminderMessage = reminderMessageInput.Value;//get both values
+
+    if (time && message) {
+        reminders.push({time, message});
+        const li = document.createElement('li');
+        li.textContent = `${time} - ${message}`;
+        reminderList.appendChild(li);
+        reminderTimeInput.value = '';
+        reminderMessageInput.value = '';
+    }
+});
+
+function checkReminders() {
+    const currentTime = new Date().toLocaleTimeString('en-GB', { hour12: false}).slice(0, 5);
+    reminders.forEach((reminder, index) => {
+        if (reminder.time === currentTime) {
+            alert(reminder.message);
+            alarmSound.play();
+            reminders.splice(index, 1);
+            updateReminderList();
+        }
+    });
+}
+
+function updateReminderList() {
+    reminderList.innerHTML = '';
+    reminders.forEach(reminder => {
+        const li = document.createElement('li');
+        li.textContent = `${reminder.time} - ${reminder.message}`;
+        reminderList.appendChild(li);
+    });
+}
+
+setInterval(checkReminders, 60000);//checks reminders every minute
 
 updateDateContinuously();
 updateClock();
