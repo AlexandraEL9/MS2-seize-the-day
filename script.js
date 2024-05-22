@@ -1,17 +1,28 @@
-// Current date section
-function updateDate() {
-    const currentDate = new Date();
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    const formattedDate = currentDate.toLocaleDateString('en-GB', options);
-    const currentDateElement = document.getElementById('currentDate');
-    currentDateElement.textContent = formattedDate;
-}
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Function to update the current date
+    function updateDate() {
+        const dateElement = document.getElementById('currentDate');
+        const currentDate = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        dateElement.textContent = currentDate.toLocaleDateString(undefined, options);
+    }
 
-function updateDateContinuously() {
+    // Function to update the clock display
+    function updateClock() {
+        const clockElement = document.getElementById('clockDisplay');
+        const currentTime = new Date();
+        const hours = String(currentTime.getHours()).padStart(2, '0');
+        const minutes = String(currentTime.getMinutes()).padStart(2, '0');
+        clockElement.textContent = `${hours}:${minutes}`;
+    }
+
+    // Initialize the date and clock display
     updateDate();
-    setInterval(updateDate, 1000);
-}
+    updateClock();
 
+    // Update the clock every second
+    setInterval(updateClock, 1000);
+});
 // To-do list section
 function addTask() {
     const taskInput = document.getElementById('taskInput');
