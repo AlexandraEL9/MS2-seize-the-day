@@ -56,7 +56,7 @@
                     <button class="button btn btn-secondary" id="short-break">Short Break</button>
                     <button class="button btn btn-secondary" id="long-break">Long Break</button>
                 </div>
-                <div class="timer-display mb-3">
+                <div class="timer-display">
                     <span id="minutes">25</span>:<span id="seconds">00</span>
                 </div>
                 <button id="startTimerBtn" class="btn btn-success">Start</button>
@@ -75,7 +75,76 @@
         </div>
     </main>
 
-    <!-- Modals and footer omitted for brevity -->
+    <!--modals-->
+  <!--pomodoro over modal-->
+  <div class="modal" id="pomodoroOverModal" tabindex="-1" aria-labelledby="pomodoroOverModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="pomodoroOverModalLabel">Time's Up!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <p>Your pomodoro focus session is finished. Time to take a break.</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--short break over modal-->
+<div class="modal" id="shortBreakOverModal" tabindex="-1" aria-labelledby="shortBreakOverModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="shortBreakOverModalLabel">Time's Up!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <p>Your 5-minute break time is over. Time to get focused for another pomodoro session.</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--long break over modal-->
+<div class="modal" id="longBreakOverModal" tabindex="-1" aria-labelledby="longBreakOverModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="longBreakOverModalLabel">Time's Up!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <p>Your 15-minute break time is over. Time to get focused for another pomodoro session.</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--reminder modal-->
+<div class="modal" id="reminderModal" tabindex="-1" aria-labelledby="reminderModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="reminderModalLabel">Reminder</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <p><!--populated at input--></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--alarm sound-->
+<audio id="alarmSound" src="calm-alarm.wav" preload="auto"></audio>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>

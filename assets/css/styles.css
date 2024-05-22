@@ -1,13 +1,8 @@
-html, body {
+body {
     height: 100%;
+    width: 100%;
     margin: 0;
     background-color: whitesmoke;
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
 /*navbar*/
@@ -17,62 +12,25 @@ html, body {
 /*header*/
 header {
     width: 100%;
+    margin: 10px;
+    justify-content: center;
 }
-.content-section {
-    padding: 5px;
-}
+/* title and description Section */
 .content-section-title-description {
-    padding-left: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
 }
-
+/*time and date Section */
 .content-section-date-time {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     text-align: right;
-    padding-right: 1px;
 }
 
-/*main*/
-main {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.row {
-    width: 90%;/*width of row*/
-    justify-content: center;
-}
-.todo-section,
-.timer-section,
-.reminder-section {
-    background-color: white;
-    border: 1px solid lightgray;
-    border-radius: 10px;
-    padding: 5px;
-    text-align: center;
-}
-
-/*to do specific styling*/
-.todo-section .d-flex {
-    justify-content: flex-end; /* Align items to the right */
-    text-align: center;
-}
-
-.todo-section h3 {
-    font-weight: bold;
-}
-
-.todo-section .input-group {
-    margin-bottom: 10px; /* Add margin below the input group */
-}
-.list-group-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;/*align items evenly*/
-}
-.btn-success {
-    margin-left: auto; /*move button to right*/
-}
-
+/*to-do section*/
 /* Apply line-through style to completed tasks */
 .complete {
     text-decoration: line-through !important; /* Use !important to ensure the style is applied */
@@ -85,14 +43,6 @@ main {
 }
 
 /*digital clock*/
-.clock-container {
-    font-size: 2rem;
-    text-align: center;
-    padding: 20px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    color: ;
-}
 
 .timer-display {
     font-size: 48px;
@@ -115,16 +65,3 @@ main {
 .btn:hover {
     background-color: darkslategray;
 }
-
-@media (max-width: 991.98px) {
-    .row > .col-md-6 {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 767.98px) {
-    .todo-section {
-        margin-bottom: 20px;
-    }
-}
-
