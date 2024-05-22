@@ -24,13 +24,22 @@ header {
 }
 
 /*main*/
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row {
+    width: 90%;/*width of row*/
+
+}
 .todo-section,
 .timer-section,
 .reminder-section {
     background-color: white;
     border: 1px solid lightgray;
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 10px;
 }
 /*to do list*/
 /* Apply line-through style to completed tasks */
