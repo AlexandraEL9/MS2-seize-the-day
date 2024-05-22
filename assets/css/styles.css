@@ -1,6 +1,6 @@
 body {
     background-color: whitesmoke;
-    color: slategray;
+    color: ;
 }
 .navbar {
     background-color: white;
@@ -47,4 +47,19 @@ footer {
     background-color: whitesmoke;
     color: slategrey;
     padding: 20px;
+}
+
+/*buttons styling*/
+.btn {
+    background-color: whitesmoke;
+    color: darkslategray;
+    border: 1px solid darkslategray;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+} 
+
+.btn:hover {
+    background-color: darkslategray;
 }
