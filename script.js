@@ -180,7 +180,8 @@ function checkReminders() {
     const currentTime = new Date().toLocaleTimeString('en-GB', { hour12: false }).slice(0, 5);
     reminders.forEach((reminder, index) => {
         if (reminder.time === currentTime) {
-            alert(reminder.message);
+            reminderModalMessage.textContent = reminder.message;
+            reminderModal.show();
             reminders.splice(index, 1);
             updateReminderList();
         }
@@ -201,3 +202,4 @@ setInterval(checkReminders, 1000); // Checks reminders every second
 updateDateContinuously();
 updateClock();
 updateDisplay();
+
