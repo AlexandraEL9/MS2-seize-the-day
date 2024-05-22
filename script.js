@@ -159,7 +159,7 @@ const reminderMessageInput = document.getElementById('reminderMessage');
 const setReminderBtn = document.getElementById('setReminderBtn');
 const reminderList = document.getElementById('reminderList');
 const reminderModal = new bootstrap.Modal(document.getElementById('reminderModal'));
-const reminderModalMessage = document.getElementById('#reminderModal .modal-body p');
+const reminderModalMessage = document.querySelector('#reminderModal .modal-body p');
 let reminders = [];
 
 setReminderBtn.addEventListener('click', () => {
@@ -202,4 +202,5 @@ setInterval(checkReminders, 1000); // Checks reminders every second
 updateDateContinuously();
 updateClock();
 updateDisplay();
+
 
