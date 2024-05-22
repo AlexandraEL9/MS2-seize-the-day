@@ -158,6 +158,8 @@ const reminderTimeInput = document.getElementById('reminderTime');
 const reminderMessageInput = document.getElementById('reminderMessage');
 const setReminderBtn = document.getElementById('setReminderBtn');
 const reminderList = document.getElementById('reminderList');
+const reminderModal = new bootstrap.Modal(document.getElementById('reminderModal'));
+const reminderModalMessage = document.getElementById('reminderModalMessage');
 let reminders = [];
 
 setReminderBtn.addEventListener('click', () => {
