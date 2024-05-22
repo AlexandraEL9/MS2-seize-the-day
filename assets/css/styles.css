@@ -1,3 +1,21 @@
+body {
+    background-color: whitesmoke;
+    color: slategray;
+}
+.navbar {
+    background-color: white;
+}
+.header-section {
+    padding: 20px
+}
+.todo-section,
+.timer-section,
+.reminder-section {
+    background-color: white;
+    border: 1px solid lightgray;
+    margin-bottom: 20px;
+    padding: 20px;
+}
 /*to do list*/
 /* Apply line-through style to completed tasks */
 .complete {
@@ -11,6 +29,7 @@
     padding: 20px;
     border: 2px solid #ccc;
     border-radius: 10px;
+    color: ;
 }
 
 .timer-display {
@@ -19,3 +38,13 @@
 }
 
 /* Modal styles */
+.modal-content {
+    background-color: whitesmoke;
+    color: slategrey;
+}
+
+footer {
+    background-color: whitesmoke;
+    color: slategrey;
+    padding: 20px;
+}
