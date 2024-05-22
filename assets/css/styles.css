@@ -1,20 +1,26 @@
-body {
-    background-color: whitesmoke;
-    color: darkslategrey;
+html, body {
+    height: 100%;
+    margin: 0;
 }
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 /*navbar*/
 .navbar {
     background-color: white;
 }
 /*header*/
 header {
-    display: flex;
+    width: 100%;
 }
 .content-section {
     padding: 5px;
 }
 .content-section-title-description {
-    flex: 1; /* Expand to fill remaining space */
     padding-left: 1px;
 }
 
@@ -25,13 +31,14 @@ header {
 
 /*main*/
 main {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .row {
     width: 90%;/*width of row*/
-
+    justify-content: center;
 }
 .todo-section,
 .timer-section,
@@ -91,17 +98,7 @@ main {
     margin-bottom: 20px;
 }
 
-/* Modal styles */
-.modal-content {
-    background-color: whitesmoke;
-    color: slategrey;
-}
-
-footer {
-    background-color: whitesmoke;
-    color: slategrey;
-    padding: 5px;
-}
+/* footer */
 
 /*buttons styling*/
 .btn {
@@ -117,3 +114,16 @@ footer {
 .btn:hover {
     background-color: darkslategray;
 }
+
+@media (max-width: 991.98px) {
+    .row > .col-md-6 {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .todo-section {
+        margin-bottom: 20px;
+    }
+}
+
