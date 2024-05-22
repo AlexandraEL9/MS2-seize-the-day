@@ -1,13 +1,29 @@
 body {
     background-color: whitesmoke;
-    color: ;
+    color: darkslategrey;
 }
+/*navbar*/
 .navbar {
     background-color: white;
 }
-.header-section {
-    padding: 20px
+/*header*/
+header {
+    display: flex;
 }
+.content-section {
+    padding: 5px;
+}
+.content-section-title-description {
+    flex: 1; /* Expand to fill remaining space */
+    padding-left: 1px;
+}
+
+.content-section-date-time {
+    text-align: right;
+    padding-right: 1px;
+}
+
+/*main*/
 .todo-section,
 .timer-section,
 .reminder-section {
@@ -46,7 +62,7 @@ body {
 footer {
     background-color: whitesmoke;
     color: slategrey;
-    padding: 20px;
+    padding: 5px;
 }
 
 /*buttons styling*/
