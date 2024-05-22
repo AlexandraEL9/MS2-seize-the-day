@@ -38,13 +38,42 @@ main {
 .reminder-section {
     background-color: white;
     border: 1px solid lightgray;
-    margin-bottom: 20px;
-    padding: 10px;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
 }
-/*to do list*/
+
+/*to do specific styling*/
+.todo-section .d-flex {
+    justify-content: flex-end; /* Align items to the right */
+    text-align: center;
+}
+
+.todo-section h3 {
+    font-weight: bold;
+}
+
+.todo-section .input-group {
+    margin-bottom: 10px; /* Add margin below the input group */
+}
+.list-group-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;/*align items evenly*/
+}
+.btn-success {
+    margin-left: auto; /*move button to right*/
+}
+
 /* Apply line-through style to completed tasks */
 .complete {
     text-decoration: line-through !important; /* Use !important to ensure the style is applied */
+}
+
+/*pomodoro timer specific styling*/
+.timer-section {
+    padding: 20px;
+    text-align: center;
 }
 
 /*digital clock*/
