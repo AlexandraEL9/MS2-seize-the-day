@@ -9,8 +9,9 @@
 </head>
 <body>
   <nav class="navbar navbar-light bg-light">
-    <span class="navbar-brand mb-0 h1">Seize the Day</span>
+    <span class="navbar-brand">Seize the Day</span>
   </nav>
+  <!--header-->
   <header>
     <section class="content-section">
     <h1>Seize the Day</h1>
@@ -21,16 +22,24 @@
       <div id="clockDisplay"></div>
     </section>
   </header>
+  <!--main content-->
   <main>
-    <section class="todo-section">
+    <div class="row">
+    <!--to do list section-->
+    <section class="todo-section col-12 col-lg-4">
             <h3>To-Do List</h3>
+            <div class="input-group">
             <input type="text" id="taskInput" placeholder="Enter task" class="form-control">
+            <div class="input-group-append">
             <button id="addTaskBtn" class="btn btn-primary">Add Task</button>
+            </div>
+            </div>
             <ul id="taskList" class="list-group"></ul>
             <button id="clearListBtn" class="btn btn-secondary">Clear List</button>
-        </section>
-
-        <section class="timer-section">
+    </section>
+    <!--pomodoro timer section-->
+    <section class="timer-section">
+      <div class="col-12 col-lg-4 col-md-6">
             <h3>Pomodoro Timer</h3>
             <div class="button-container">
                 <button class="button btn btn-primary" id="pomodoro-session">Pomodoro</button>
@@ -41,21 +50,24 @@
                 <span id="minutes">25</span>:<span id="seconds">00</span>
             </div>
             <button id="startTimerBtn" class="btn btn-success">Start</button>
-        </section>
-
-        <section class="reminder-section">
+    </section>
+    <!--reminder section-->
+    <section class="reminder-section col-12 col-lg-4 col-md-6">
             <h3>Set Reminder</h3>
+            <div class="form-group">
             <input type="time" id="reminderTime" class="form-control">
             <input type="text" id="reminderMessage" class="form-control" placeholder="Reminder message">
             <button id="setReminderBtn" class="btn btn-primary">Set Reminder</button>
+            </div>
             <ul id="reminderList" class="list-group"></ul>
-        </section>
     </section>
+    </div>
     </div>
   </main>
 
-    <!-- Modals and alarm sound -->
-    <div class="modal" id="pomodoroOverModal" tabindex="-1" aria-labelledby="pomodoroOverModalLabel" aria-hidden="true">
+  <!--modals-->
+  <!--pomodoro over modal-->
+  <div class="modal" id="pomodoroOverModal" tabindex="-1" aria-labelledby="pomodoroOverModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -69,9 +81,10 @@
             </div>
           </div>
         </div>
-    </div>
+  </div>
 
-    <div class="modal" id="shortBreakOverModal" tabindex="-1" aria-labelledby="shortBreakOverModalLabel" aria-hidden="true">
+  <!--short break over modal-->
+  <div class="modal" id="shortBreakOverModal" tabindex="-1" aria-labelledby="shortBreakOverModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -85,9 +98,10 @@
             </div>
           </div>
         </div>
-    </div>
+  </div>
 
-    <div class="modal" id="longBreakOverModal" tabindex="-1" aria-labelledby="longBreakOverModalLabel" aria-hidden="true">
+  <!--long break over modal-->
+  <div class="modal" id="longBreakOverModal" tabindex="-1" aria-labelledby="longBreakOverModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -101,9 +115,10 @@
             </div>
           </div>
         </div>
-    </div>
-    <!--reminder modal-->
-    <div class="modal" id="reminderModal" tabindex="-1" aria-labelledby="reminderModalLabel" aria-hidden="true">
+  </div>
+
+  <!--reminder modal-->
+  <div class="modal" id="reminderModal" tabindex="-1" aria-labelledby="reminderModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -117,9 +132,10 @@
           </div>
         </div>
       </div>
-  </div>
-
+</div>
+<!--alarm sound-->
 <audio id="alarmSound" src="calm-alarm.wav" preload="auto"></audio>
+<!--footer-->
 <footer class="bg-light text-center text-lg-start">
   <div class="container p-4">
       <div class="row">
