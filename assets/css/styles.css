@@ -229,18 +229,23 @@ input {
 }
 
 #reminderList .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: white;
     color: darkslategrey;
-    border: 1px solid darkslategrey;
     margin-bottom: 10px;
     border-radius: 5px;
 }
 
 .dark-mode #reminderList .list-group-item {
-    background-color: #333;
-    color: whitesmoke !important;
-    border-color: darkslategrey;
+    background-color: black;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    margin-bottom: 10px;
+    padding: 10px; /* Added padding for better visibility */
 }
+
 
 
 
