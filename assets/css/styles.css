@@ -1,5 +1,5 @@
 /*light mode*/
-body.light-mode {
+body {
     background-color: whitesmoke;
     color: darkslategrey;
     width: 100%;
@@ -130,136 +130,13 @@ input {
     text-align: center;
     margin-bottom: 20px;
 }
-
-/*dark mode*/
-body.dark-mode {
-    background-color: darkslategrey;
-    color: white;
+ /* Footer styles */
+ .footer {
+    background-color: #ffffff;
+    color: #000000;
+    position: relative;
+    bottom: 0;
     width: 100%;
-}
-
-/*navbar*/
-.navbar {
-    background-color: white;
-    color: darkslategrey;
-    border-bottom: 1px solid darkslategrey;
-}
-.navbar-brand {
-    columns: darkslategrey;
-    font-weight: bolder;
-}
-
-/*header styles*/
-header {
-    background-color: whitesmoke;
-    border-bottom: 1px solid darkslategray;
-    padding: 20px;
-}
-.content-section-title-description {
-    text-align: left;
-}
-.content-section-date-time {
-    text-align: right;
-}
-.content-section h1,
-.content-section h2 {
-            color: darkslategray;
-}
-#clockDisplay {
-    font-size: 2em;
-    font-weight: light;
-    color: darkslategrey;
-}
-
-/* Main Content Styles */
-main {
-    padding: 20px 0;
-}
-.container-main {
-    display: flex;
-    justify-content: center;
-}
-
-.row-main{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.todo-section,
-.timer-section,
-.reminder-section {
-    background-color: white;
-    border: 1px solid darkslategray;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.todo-section h3,
-.timer-section h3,
-.reminder-section h3 {
-    color: darkslategray;
-    border-bottom: 1px solid darkslategray;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-}
-
-/* Styles for the button containers and btn/ buttons */
-.button-container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.button {
-    background-color: whitesmoke;
-    color: darkslategrey;
-    border: 1px solid slategrey;
-    margin: 5px;
-}
-
-.button:hover {
-    background-color: darkslategray;
-    color: whitesmoke;
-}
-
-.btn {
-    background-color: whitesmoke;
-    color: darkslategrey;
-    border: 1px solid slategrey;
-}
-
-.btn:hover {
-    background-color: darkslategray;
-    color: whitesmoke;
-}
-
-/* inputs and lists styling */
-.input-group {
-    margin-bottom: 20px;
-}
-input {
-    margin-bottom: 10px;
-}
-.list-group-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.list-group-item.complete {
-    text-decoration: line-through;
-}
-
-
-/* todo list section */
-/* pomodoro section */
-/* Timer display styling */
-.timer-display {
-    font-size: 2em;
-    font-weight: bold;
-    color: darkslategray;
-    text-align: center;
-    margin-bottom: 20px;
+    padding: 10px 0;
+    border-top: 1px solid darkslategrey;
 }

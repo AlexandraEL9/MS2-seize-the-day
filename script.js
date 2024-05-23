@@ -214,4 +214,12 @@ updateDateContinuously();
 updateClock();
 updateDisplay();
 
+//dark mode/ light mode
+document.getElementById('toggleModeBtn').addEventListener('click', function () {
+    document.body.classList.toggle('dark-mode');
+    document.querySelectorAll('.navbar, .modal-content, .btn, .list-group-item, .input-group-text, .form-control').forEach(function (el) {
+        el.classList.toggle('dark-mode');
+    });
+});
+
 
