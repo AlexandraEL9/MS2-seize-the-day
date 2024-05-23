@@ -21,3 +21,18 @@ header {
     border-bottom: 1px solid darkslategray;
     padding: 10px 0;
 }
+.content-section-title-description {
+    text-align: left;
+}
+.content-section-date-time {
+    text-align: right;
+}
+.content-section h1,
+.content-section h2 {
+            color: darkslategray;
+}
+#clockDisplay {
+    font-size: 2em;
+    font-weight: light;
+    color: darkslategrey;
+}
