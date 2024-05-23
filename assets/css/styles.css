@@ -1,0 +1,23 @@
+/*general styles*/
+body {
+    background-color: whitesmoke;
+    color: darkslategrey;
+}
+
+/*navbar*/
+.navbar {
+    background-color: white;
+    color: darkslategrey;
+    border-bottom: 1px solid darkslategrey;
+}
+.navbar-brand {
+    columns: darkslategrey;
+    font-weight: bolder;
+}
+
+/*header styles*/
+header {
+    background-color: whitesmoke;
+    border-bottom: 1px solid darkslategray;
+    padding: 10px 0;
+}
