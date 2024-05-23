@@ -9,16 +9,6 @@
     <!--<link rel="stylesheet" href="assets/css/styles.css">-->
     <style>
 /*colour mode*/
-.dark-mode body {
-    background-color: #121212;
-    color: #ffffff;
-}
-
-.dark-mode .navbar {
-    background-color: #333;
-    color: #ffffff;
-}
-/* Add more dark mode styles for other elements as needed */
 
 body {
     background-color: whitesmoke;
@@ -28,22 +18,42 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+.dark-mode body {
+    background-color: #333;
+    color: whitesmoke;
+}
+
+.dark-mode .navbar {
+    background-color: #333;
+    color: #ffffff;
+}
+/* Add more dark mode styles for other elements as needed */
 
 /*navbar*/
 .navbar {
     background-color: white;
     color: darkslategrey;
-    border-bottom: 1px solid darkslategrey;
+    border-bottom: 1px solid whitesmoke;
 }
 .navbar-brand {
     columns: darkslategrey;
     font-weight: bolder;
 }
+.dark-mode .navbar {
+    background-color: black;
+    color: whitesmoke;
+    border-bottom: 2px solid darkslategrey;
+}
 
 /*header styles*/
 header {
     background-color: whitesmoke;
-    border-bottom: 1px solid darkslategray;
+    border-bottom: 1px solid whitesmoke;
+    padding: 20px;
+}
+.dark-mode header {
+    background-color: #333;
+    border-bottom: 2px solid darkslategrey;
     padding: 20px;
 }
 .content-section-title-description {
@@ -54,12 +64,22 @@ header {
 }
 .content-section h1,
 .content-section h2 {
-            color: darkslategray;
+            color: darkslategrey;
+}
+.dark-mode .content-section h1,
+.dark-mode .content-section h2,
+.dark-mode p {
+            color: whitesmoke;
 }
 #clockDisplay {
     font-size: 2em;
     font-weight: light;
     color: darkslategrey;
+}
+.dark-mode #clockDisplay {
+    font-size: 2em;
+    font-weight: light;
+    color: whitesmoke;
 }
 
 /* Main Content Styles */
@@ -71,6 +91,9 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.dark-mode .container-main {
+    background-color: black;
 }
 
 .row-main{
@@ -89,11 +112,28 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
+.dark-mode .todo-section,
+.dark-mode .timer-section,
+.dark-mode .reminder-section {
+    background-color: #333;
+    border: 2px solid darkslategray;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
 
 .todo-section h3,
 .timer-section h3,
 .reminder-section h3 {
     color: darkslategray;
+    border-bottom: 1px solid darkslategray;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+.dark-mode .todo-section h3,
+.dark-mode .timer-section h3,
+.dark-mode .reminder-section h3 {
+    color: whitesmoke;
     border-bottom: 1px solid darkslategray;
     padding-bottom: 10px;
     margin-bottom: 15px;
@@ -112,9 +152,19 @@ main {
     border: 1px solid slategrey;
     margin: 5px;
 }
+.dark-mode .button {
+    background-color: darkslategrey;
+    color: whitesmoke;
+    border: 1px solid slategrey;
+    margin: 5px;
+}
 
 .button:hover {
     background-color: darkslategray;
+    color: whitesmoke;
+}
+.dark-mode .button:hover {
+    background-color: slategray;
     color: whitesmoke;
 }
 
@@ -123,9 +173,18 @@ main {
     color: darkslategrey;
     border: 1px solid slategrey;
 }
+.dark-mode .btn {
+    background-color: darkslategrey;
+    color: whitesmoke;
+    border: 1px solid slategrey;
+}
 
 .btn:hover {
     background-color: darkslategray;
+    color: whitesmoke;
+}
+.dark-mode .btn:hover {
+    background-color: slategray;
     color: whitesmoke;
 }
 
@@ -136,17 +195,30 @@ main {
 input {
     margin-bottom: 10px;
 }
+.dark-mode input {
+    margin-bottom: 10px;
+    background-color: #333;
+    color: slategrey;
+}
 .list-group-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
+}
+.dark-mode .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    margin-bottom: 10px;
 }
 .list-group-item.complete {
     text-decoration: line-through;
 }
 
-
-/* todo list section */
 /* pomodoro section */
 /* Timer display styling */
 .timer-display {
@@ -156,14 +228,25 @@ input {
     text-align: center;
     margin-bottom: 20px;
 }
+.dark-mode .timer-display {
+    font-size: 2em;
+    font-weight: bold;
+    color: whitesmoke;
+    text-align: center;
+    margin-bottom: 20px;
+}
  /* Footer styles */
  footer {
     background-color: #ffffff;
-    color: darkslategrey;
-    
     width: 100vw;
     padding: 10px 0;
     border-top: 1px solid darkslategrey;
+}
+.dark-mode footer {
+    background-color: black;
+    width: 100vw;
+    padding: 10px 0;
+    border-top: 2px solid darkslategrey;
 }
 
     </style>
@@ -329,13 +412,5 @@ input {
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
-<!--<script>
-//dark mode/light mode
-document.getElementById('toggleDarkModeBtn').addEventListener('click', function() {
-    console.log("Dark mode button clicked!");
-    document.body.classList.toggle('dark-mode');
-});
-
-</script>-->
 </body>
 </html>
