@@ -34,49 +34,49 @@
         </div>
     </header>
 
-    <!-- Main content -->
-    <main class="container-fluid container-main">
-        <div class="row justify-content-center row-main">
-            <!-- To-Do List Section -->
-            <section class="todo-section col-12 col-md-6 col-lg-4">
-                <h3>To-Do List</h3>
-                <div class="input-group">
-                    <input type="text" id="taskInput" placeholder="Enter task" class="form-control">
-                    <div class="input-group-append">
-                        <button id="addTaskBtn" class="btn">Add Task</button>
-                    </div>
+   <!-- Main content -->
+<main class="container-fluid container-main">
+    <div class="row justify-content-center row-main">
+        <!-- To-Do List Section -->
+        <section class="todo-section col-12 col-lg-4">
+            <h3>To-Do List</h3>
+            <div class="input-group">
+                <input type="text" id="taskInput" placeholder="Enter task" class="form-control">
+                <div class="input-group-append">
+                    <button id="addTaskBtn" class="btn">Add Task</button>
                 </div>
-                <ul id="taskList" class="list-group"></ul>
-                <button id="clearListBtn" class="btn">Clear List</button>
-            </section>
+            </div>
+            <ul id="taskList" class="list-group"></ul>
+            <button id="clearListBtn" class="btn">Clear List</button>
+        </section>
 
-            <!-- Pomodoro Timer Section -->
-            <section class="timer-section col-12 col-md-6 col-lg-4">
-                <h3>Pomodoro Timer</h3>
-                <div class="button-container">
-                    <button class="button btn" id="pomodoro-session">Pomodoro</button>
-                    <button class="button btn" id="short-break">Short Break</button>
-                    <button class="button btn" id="long-break">Long Break</button>
-                </div>
-                <div class="timer-display">
-                    <span id="minutes">25</span>:<span id="seconds">00</span>
-                </div>
-                <button id="startTimerBtn" class="btn">Start</button>
-            </section>
+        <!-- Pomodoro Timer Section -->
+        <section class="timer-section col-12 col-lg-4">
+            <h3>Pomodoro Timer</h3>
+            <div class="button-container">
+                <button class="button btn" id="pomodoro-session">Pomodoro</button>
+                <button class="button btn" id="short-break">Short Break</button>
+                <button class="button btn" id="long-break">Long Break</button>
+            </div>
+            <div class="timer-display">
+                <span id="minutes">25</span>:<span id="seconds">00</span>
+            </div>
+            <button id="startTimerBtn" class="btn">Start</button>
+        </section>
 
-            <!-- Reminder Section -->
-            <section class="reminder-section col-12 col-md-6 col-lg-4">
-                <h3>Set Reminder</h3>
-                <div class="form-group">
-                    <input type="time" id="reminderTime" class="form-control">
-                    <input type="text" id="reminderMessage" class="form-control" placeholder="Reminder message">
-                    <button id="setReminderBtn" class="btn">Set Reminder</button>
-                </div>
-                <ul id="reminderList" class="list-group"></ul>
-            </section>
-        </div>
-    </main>
-    </main>
+        <!-- Reminder Section -->
+        <section class="reminder-section col-12 col-lg-4">
+            <h3>Set Reminder</h3>
+            <div class="form-group">
+                <input type="time" id="reminderTime" class="form-control">
+                <input type="text" id="reminderMessage" class="form-control" placeholder="Reminder message">
+                <button id="setReminderBtn" class="btn">Set Reminder</button>
+            </div>
+            <ul id="reminderList" class="list-group"></ul>
+        </section>
+    </div>
+</main>
+
 
     <!--modals-->
     <!--pomodoro over modal-->
