@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
     <!--<link rel="stylesheet" href="assets/css/styles.css">-->
     <style>
-/*light mode*/
+/*colour mode*/
 .dark-mode body {
     background-color: #121212;
     color: #ffffff;
@@ -242,7 +242,6 @@ input {
             </section>
         </div>
     </main>
-    
 
     <!--modals-->
     <!--pomodoro over modal-->
@@ -314,29 +313,29 @@ input {
             </div>
         </div>
     </div>
-    <!--alarm sound-->
-    <audio id="alarmSound" src="calm-alarm.wav" preload="auto"></audio>
-
-    <!--footer-->
-    <footer class="footer">
+     <!--footer-->
+     <footer class="footer">
         <div class="container container-fluid">
             <div class="row">
                 <div class="col-lg-12">
-                    <button id="toggleDarkModeBtn" class="btn">Toggle Dark Mode</button>
-
+                    <button id="toggleDarkModeBtn" class="btn">Dark Mode</button>
                 </div>
             </div>
         </div>
     </footer>
+    <!--alarm sound-->
+    <audio id="alarmSound" src="calm-alarm.wav" preload="auto"></audio>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
-    <!--<script src="script.js"></script>-->
-    <script>
-        document.getElementById('toggleDarkModeBtn').addEventListener('click', function() {
+    <script src="script.js"></script>
+<!--<script>
+//dark mode/light mode
+document.getElementById('toggleDarkModeBtn').addEventListener('click', function() {
+    console.log("Dark mode button clicked!");
     document.body.classList.toggle('dark-mode');
 });
 
-    </script>
+</script>-->
 </body>
 </html>

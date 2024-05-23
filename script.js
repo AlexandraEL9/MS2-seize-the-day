@@ -1,3 +1,8 @@
+//dark mode/light mode
+document.getElementById('toggleDarkModeBtn').addEventListener('click', function() {
+    console.log("Dark mode button clicked!");
+    document.body.classList.toggle('dark-mode');
+});
 document.addEventListener('DOMContentLoaded', (event) => {
     // Function to update the current date
     function updateDate() {
@@ -217,9 +222,6 @@ updateDisplay();
 //dark mode/ light mode
 document.getElementById('toggleModeBtn').addEventListener('click', function () {
     document.body.classList.toggle('dark-mode');
-    document.querySelectorAll('.navbar, .modal-content, .btn, .list-group-item, .input-group-text, .form-control').forEach(function (el) {
-        el.classList.toggle('dark-mode');
-    });
 });
 
 
