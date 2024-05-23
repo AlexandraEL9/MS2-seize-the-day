@@ -34,7 +34,7 @@ function addTask() {
         listItem.classList.add('list-group-item');
         const completeBtn = document.createElement('button');
         completeBtn.textContent = 'Done';
-        completeBtn.classList.add('btn', 'btn-sm', 'btn-success', 'ml-2');
+        completeBtn.classList.add('btn', 'btn-sm');
         completeBtn.addEventListener('click', function() {
             listItem.classList.toggle('complete');
         });
