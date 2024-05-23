@@ -14,7 +14,7 @@
         <span class="navbar-brand">Seize the Day</span>
     </nav>
     <header>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <!-- Title and Description Section -->
                 <div class="col-lg-6 col-md-6">
@@ -35,10 +35,10 @@
     </header>
 
     <!-- Main content -->
-    <main class="container my-4">
-        <div class="row">
+    <main class="container-fluid container-main">
+        <div class="row justify-content-center row-main">
             <!-- To-Do List Section -->
-            <section class="todo-section col-12 col-md-6 col-lg-4 mb-4">
+            <section class="todo-section col-12 col-md-6 col-lg-4">
                 <h3>To-Do List</h3>
                 <div class="input-group">
                     <input type="text" id="taskInput" placeholder="Enter task" class="form-control">
@@ -51,9 +51,9 @@
             </section>
 
             <!-- Pomodoro Timer Section -->
-            <section class="timer-section col-12 col-md-6 col-lg-4 mb-4">
+            <section class="timer-section col-12 col-md-6 col-lg-4">
                 <h3>Pomodoro Timer</h3>
-                <div class="button-container mb-3">
+                <div class="button-container">
                     <button class="button btn" id="pomodoro-session">Pomodoro</button>
                     <button class="button btn" id="short-break">Short Break</button>
                     <button class="button btn" id="long-break">Long Break</button>
@@ -65,7 +65,7 @@
             </section>
 
             <!-- Reminder Section -->
-            <section class="reminder-section col-12 col-md-6 col-lg-4 mb-4">
+            <section class="reminder-section col-12 col-md-6 col-lg-4">
                 <h3>Set Reminder</h3>
                 <div class="form-group">
                     <input type="time" id="reminderTime" class="form-control">
@@ -75,6 +75,7 @@
                 <ul id="reminderList" class="list-group"></ul>
             </section>
         </div>
+    </main>
     </main>
 
     <!--modals-->

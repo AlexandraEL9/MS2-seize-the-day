@@ -2,6 +2,7 @@
 body {
     background-color: whitesmoke;
     color: darkslategrey;
+    width: 100%;
 }
 
 /*navbar*/
@@ -19,7 +20,7 @@ body {
 header {
     background-color: whitesmoke;
     border-bottom: 1px solid darkslategray;
-    padding: 10px 0;
+    padding: 20px;
 }
 .content-section-title-description {
     text-align: left;
@@ -35,4 +36,56 @@ header {
     font-size: 2em;
     font-weight: light;
     color: darkslategrey;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px 0;
+}
+.container-main {
+    display: flex;
+    justify-content: center;
+}
+
+.row-main{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.todo-section,
+.timer-section,
+.reminder-section {
+    background-color: white;
+    border: 1px solid darkslategray;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.todo-section h3,
+.timer-section h3,
+.reminder-section h3 {
+    color: darkslategray;
+    border-bottom: 1px solid darkslategray;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Styles for the button containers */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: slategray;
+    color: white;
+    border: none;
+}
+
+.button:hover {
+    background-color: darkslategray;
 }
