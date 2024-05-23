@@ -1,4 +1,3 @@
-/*light mode*/
 body {
     background-color: whitesmoke;
     color: darkslategrey;
@@ -7,22 +6,40 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+.dark-mode body {
+    background-color: #333;
+    color: whitesmoke;
+}
+.dark-mode .navbar {
+    background-color: #333;
+    color: #ffffff;
+}
 
 /*navbar*/
 .navbar {
     background-color: white;
     color: darkslategrey;
-    border-bottom: 1px solid darkslategrey;
+    border-bottom: 1px solid whitesmoke;
 }
 .navbar-brand {
-    columns: darkslategrey;
+    color: darkslategrey;
     font-weight: bolder;
+}
+.dark-mode .navbar {
+    background-color: black;
+    color: whitesmoke;
+    border-bottom: 2px solid darkslategrey;
 }
 
 /*header styles*/
 header {
     background-color: whitesmoke;
-    border-bottom: 1px solid darkslategray;
+    border-bottom: 1px solid whitesmoke;
+    padding: 20px;
+}
+.dark-mode header {
+    background-color: #333;
+    border-bottom: 2px solid darkslategrey;
     padding: 20px;
 }
 .content-section-title-description {
@@ -33,12 +50,22 @@ header {
 }
 .content-section h1,
 .content-section h2 {
-            color: darkslategray;
+    color: darkslategrey;
+}
+.dark-mode .content-section h1,
+.dark-mode .content-section h2,
+.dark-mode p {
+    color: whitesmoke;
 }
 #clockDisplay {
     font-size: 2em;
     font-weight: light;
     color: darkslategrey;
+}
+.dark-mode #clockDisplay {
+    font-size: 2em;
+    font-weight: light;
+    color: whitesmoke;
 }
 
 /* Main Content Styles */
@@ -51,8 +78,11 @@ main {
     justify-content: center;
     align-items: center;
 }
+.dark-mode .container-main {
+    background-color: black;
+}
 
-.row-main{
+.row-main {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -68,11 +98,28 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
+.dark-mode .todo-section,
+.dark-mode .timer-section,
+.dark-mode .reminder-section {
+    background-color: #333;
+    border: 2px solid darkslategray;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
 
 .todo-section h3,
 .timer-section h3,
 .reminder-section h3 {
     color: darkslategray;
+    border-bottom: 1px solid darkslategray;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+.dark-mode .todo-section h3,
+.dark-mode .timer-section h3,
+.dark-mode .reminder-section h3 {
+    color: whitesmoke;
     border-bottom: 1px solid darkslategray;
     padding-bottom: 10px;
     margin-bottom: 15px;
@@ -91,9 +138,19 @@ main {
     border: 1px solid slategrey;
     margin: 5px;
 }
+.dark-mode .button {
+    background-color: darkslategrey;
+    color: whitesmoke;
+    border: 1px solid slategrey;
+    margin: 5px;
+}
 
 .button:hover {
     background-color: darkslategray;
+    color: whitesmoke;
+}
+.dark-mode .button:hover {
+    background-color: slategray;
     color: whitesmoke;
 }
 
@@ -102,9 +159,18 @@ main {
     color: darkslategrey;
     border: 1px solid slategrey;
 }
+.dark-mode .btn {
+    background-color: darkslategrey;
+    color: whitesmoke;
+    border: 1px solid slategrey;
+}
 
 .btn:hover {
     background-color: darkslategray;
+    color: whitesmoke;
+}
+.dark-mode .btn:hover {
+    background-color: slategray;
     color: whitesmoke;
 }
 
@@ -115,17 +181,30 @@ main {
 input {
     margin-bottom: 10px;
 }
+.dark-mode input {
+    margin-bottom: 10px;
+    background-color: #333;
+    color: slategrey;
+}
 .list-group-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
+}
+.dark-mode .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    margin-bottom: 10px;
 }
 .list-group-item.complete {
     text-decoration: line-through;
 }
 
-
-/* todo list section */
 /* pomodoro section */
 /* Timer display styling */
 .timer-display {
@@ -135,12 +214,47 @@ input {
     text-align: center;
     margin-bottom: 20px;
 }
- /* Footer styles */
- footer {
-    background-color: #ffffff;
+.dark-mode .timer-display {
+    font-size: 2em;
+    font-weight: bold;
+    color: whitesmoke;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Reminder list styling */
+#reminderList {
+    list-style: none;
+    padding: 0;
+}
+
+#reminderList .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
     color: darkslategrey;
-    
+    border: 1px solid darkslategrey;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.dark-mode #reminderList .list-group-item {
+    background-color: black;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+}
+
+/* Footer styles */
+footer {
+    background-color: #ffffff;
     width: 100vw;
     padding: 10px 0;
     border-top: 1px solid darkslategrey;
+}
+.dark-mode footer {
+    background-color: black;
+    width: 100vw;
+    padding: 10px 0;
+    border-top: 2px solid darkslategrey;
 }
