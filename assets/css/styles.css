@@ -73,7 +73,7 @@ main {
     margin-bottom: 15px;
 }
 
-/* Styles for the button containers */
+/* Styles for the button containers and btn/ buttons */
 .button-container {
     display: flex;
     justify-content: space-between;
@@ -81,11 +81,38 @@ main {
 }
 
 .button {
-    background-color: slategray;
-    color: white;
-    border: none;
+    background-color: whitesmoke;
+    color: darkslategrey;
+    border: 1px solid slategrey;
+    margin: 5px;
 }
 
 .button:hover {
     background-color: darkslategray;
+    color: whitesmoke;
 }
+
+.btn {
+    background-color: whitesmoke;
+    color: darkslategrey;
+    border: 1px solid slategrey;
+    margin: 5px;
+}
+
+.btn:hover {
+    background-color: darkslategray;
+    color: whitesmoke;
+}
+
+/* todo list section */
+/* pomodoro section */
+/* Timer display styling */
+.timer-display {
+    font-size: 2em;
+    font-weight: bold;
+    color: darkslategray;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* reminder section */
