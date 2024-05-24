@@ -11,19 +11,21 @@ Seize the Day is a productivity companion web application designed to help users
 
 ## Planning
 
-**Target Audience**
+**Target Audience:**
 People who wish to get out of the post-it/ write it on your hand trap! Keeping track of commitments is hard, particularly in this busy world. Seize the day is for anyone who wants a todo list, reminder tracker and timer in one. I'ts for anyone wishing to streamline their productivity and use their time more effectively.
 
 **User Goals**
 - Access the app with ease and resize to the required dimensions on desktop and mobile.
 - Create to-do list items which can be added to, marked as completed and cleared in a simple and user friendly manner.
-- Learn about the Pomodoro time blocking technique.
+- Learn about the Pomodoro time blocking technique as a means to enhancing productivity and work/life balance.
 - Use the Pomodoro timer as a means to block times of focus and ensure worklife balance with the introduction of breaks too.
 - Set reminders for tasks which need to be completed at certain times of the day, for example, 'Attend tutor meeting- 4pm'.
 - Exercise choice of display (dark/ light mode) for personal, or medical reasons.
 
 **Site Owner Goals**
-- I made this as a tool to help myself with my own organisation and productivity. It is a helpful tool.
+- Initially, I made this as a tool to help myself with my own organisation and productivity. It is a helpful tool.
+- Increase User Productivity: The primary goal of the site is to help users manage their tasks and time effectively, ultimately increasing their productivity. This involves providing tools such as to-do lists, timers, and reminders.
+- Enhance User Experience: to create an intuitive and user-friendly interface that makes it easy for users to navigate the application, add tasks, set timers, and receive reminders.
 
 
 ## User Experience (UX)
@@ -32,21 +34,18 @@ People who wish to get out of the post-it/ write it on your hand trap! Keeping t
 
  **First Time Visitor Goals**
 
-1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the bar, its location and ethos.
-2. As a First Time Visitor, I want to be able to easily navigate throughout the site to find key information about the bar.
-3. As a First Time Visitor, I want to be able to look at images and menus to help me decide if this is a place I would want to visit.
-4. As a First Time Visitor, I want to be able to locate linked social media to find more information from other sources, for example, reviews and comments of customers.
+1. As a First Time Visitor, I want to easily understand the main purpose of the site/ platform.
+2. As a First Time Visitor, I want to be able to easily navigate throughout the platform and be able to interpret what I see clearly.
+3. As a First Time Visitor, I would expect intuitive user interfaces, helpful tooltips, and possibly a guide me in the use and usefulness of the key functionalities.
 
   **Returning Visitor Goals**
 
-1. As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have about events or to make bookings.
-2. As a Returning Visitor, I want to find prices for menu items and view the menu before my visit or direct this information to my friends.
-3. As a Returning Visitor, I want to locate their social media links to join their followings on social media. 
+1. Efficient Task Management: Returning visitors would aim to efficiently manage their tasks using the platform's features. They would want to quickly add, edit tasks to stay organized and productive.
+ 
 
   **Frequent User Goals**
 
-1. As a Frequent User, I want to check to see if there are any new products or menu items.
-2. As a Frequent User, I want to be able to sign up to updates about what is going on at the bar and be the first to know about any promotional offers.
+1. Community Engagement: Frequent users might seek opportunities for community engagement, such as participating in forums, sharing productivity tips, or attending webinars or workshops hosted by the Seize the Day community.
 
 
 **Planned Features To Achieve These Goals**
@@ -76,6 +75,9 @@ People who wish to get out of the post-it/ write it on your hand trap! Keeping t
 - Receive timely reminders displayed in a modal window.
 - Track and manage reminders conveniently with a dynamically updated reminder list.
 
+### Join the community Section
+- 
+
 
  ### Design
 
@@ -93,10 +95,15 @@ The dark gray (#333) serves as the background in dark mode, providing a sleek an
 
 Dark slate gray (#darkslategrey) is predominantly used for headers, outlines, and certain text elements, adding emphasis to important sections. Slate gray (#slategrey) is reserved for button borders and certain text elements, providing a subtle contrast against the darker background.
 
+Contrast between text and background colors is carefully considered to ensure optimal legibility. Dark text on a light background is used for body text to maximize readability, while lighter text on a dark background is used for headings to create visual interest and hierarchy.
+
 These colours are used across both dark and light modes to maintain a sense of continuity however the usage of them differs across the modes to get the required effect.
 
 #### Typography
-- The Roboto font is the main font used throughout the whole website, with Sans Serif as the back-up font in case Roboto isn't being imported into the site correctly. Roboto is a clean and simple font which is clear and easy to read and is used frequently so it is both attractive and fit for purpose.
+- The typography for Seize the Day prioritizes readability, clarity, with a modern aesthetic to enhance the user experience. 
+1. Font Family: The primary font is sans-serif, providing a clean and contemporary look. This choice enhances readability, especially on digital screens. It is also a very standard font so will be legiable on all browser etc.
+2. Font Weight: Various font weights are utilized throughout the design to create visual hierarchy and emphasis. For example, bold weights are used for headings (h1, h2, h3) to make them stand out and grab attention, while lighter weights are used for body text to maintain readability.
+3. Consistency: Consistency in typography across the website ensures a cohesive and unified design. The same font family, weights, and sizes are used consistently throughout various sections of the website, contributing to a harmonious visual aesthetic.
 
 #### Imagery
 -   I chose not to include images to keep the design clean and focused on utility.
@@ -326,13 +333,9 @@ Lighthouse was used to assess the accessibiity of the project to ensure the site
 - - I then used css to change the width to 100% so the image will not push out its container.
 
 ### Improvements/ scalability 
-- Improve load performance.
-- improve SEO score through adding a meta description tag.
-- **Gallery Page** as image library grows, consider grouping images into albulms/ folders and adding search or filtering/ sorting functions.
-- **Menus Page** Add content for special/ seasonal menus to create buzz and excitement.
-- **Frequent Users** Reward frequent customers and visitors to the site with special offers accessed through the website.
-- **Response to Business need** As the info in the site is compartmentalised into pages, as the business grows, so too can the site. For example, an events page with a calendar could be added. A booking page linked to a back end system could be added also, or a page dedicated to education about the brewing process. Similarly, current pages could be adapted to growing need, for example, adapting the gallery page to have filters as the image gallery grows.
-
+- Drive User Engagement: develop the site further and aim to encourage users to spend more time on the platform by offering more of a range engaging features such as interactive timers, customizable to-do lists, and helpful reminders. A range of backgrounds could also be provided making the UI more personal to users.
+- Build more functionality for greater customization and personalization: Frequent users may value customization options that allow them to tailor the platform to their preferences. They might want to customize task categories, timer durations, reminder settings, and the overall layout to suit their workflow. This could also include extra functionality tracking healthy habits such as water drinking, portions of fruit and veg or active minutes.
+- Tracking Progress: Returning/ frequent visitors may be interested in tracking their progress over time. They would use features such as task completion tracking and time logs to monitor their productivity and identify areas for improvement.
 ## Deployment
 
 ### GitHub Pages
