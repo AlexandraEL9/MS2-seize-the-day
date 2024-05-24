@@ -10,10 +10,6 @@ body {
     background-color: #333;
     color: whitesmoke;
 }
-.dark-mode .navbar {
-    background-color: #333;
-    color: #ffffff;
-}
 
 /*navbar*/
 .navbar {
@@ -21,6 +17,12 @@ body {
     color: darkslategrey;
     border-bottom: 1px solid whitesmoke;
 }
+.dark-mode .navbar {
+    background-color: black;
+    color: whitesmoke;
+    border-bottom: 2px solid darkslategrey;
+}
+
 .navbar-brand {
     color: darkslategrey;
     font-weight: bolder;
@@ -28,11 +30,6 @@ body {
 .dark-mode .navbar-brand {
     color: whitesmoke;
     font-weight: bolder;
-}
-.dark-mode .navbar {
-    background-color: black;
-    color: whitesmoke;
-    border-bottom: 2px solid darkslategrey;
 }
 
 /*header styles*/
@@ -46,12 +43,14 @@ header {
     border-bottom: 2px solid darkslategrey;
     padding: 20px;
 }
+
 .content-section-title-description {
     text-align: left;
 }
 .content-section-date-time {
     text-align: right;
 }
+
 .content-section h1,
 .content-section h2 {
     color: darkslategrey;
@@ -61,6 +60,7 @@ header {
 .dark-mode p {
     color: whitesmoke;
 }
+
 #clockDisplay {
     font-size: 2em;
     font-weight: light;
@@ -72,11 +72,12 @@ header {
     color: whitesmoke;
 }
 
-/* Main Content Styles */
+/* main content styles */
 main {
     padding: 20px 0;
     flex-grow: 1;
 }
+
 .container-main {
     display: flex;
     justify-content: center;
@@ -129,7 +130,7 @@ main {
     margin-bottom: 15px;
 }
 
-/* Styles for the button containers and btn/ buttons */
+/* button containers and button styles */
 .button-container {
     display: flex;
     justify-content: space-between;
@@ -178,10 +179,11 @@ main {
     color: whitesmoke;
 }
 
-/* inputs and lists styling */
+/* inputs and lists styles */
 .input-group {
     margin-bottom: 20px;
 }
+
 input {
     margin-bottom: 10px;
 }
@@ -190,6 +192,7 @@ input {
     background-color: #333;
     color: slategrey;
 }
+
 .list-group-item {
     display: flex;
     justify-content: space-between;
@@ -205,12 +208,13 @@ input {
     border: 1px solid whitesmoke;
     margin-bottom: 10px;
 }
+
 .list-group-item.complete {
     text-decoration: line-through;
 }
 
 /* pomodoro section */
-/* Timer display styling */
+/* timer display styles */
 .timer-display {
     font-size: 2em;
     font-weight: bold;
@@ -247,7 +251,7 @@ input {
     color: whitesmoke;
     border: 1px solid whitesmoke;
     margin-bottom: 10px;
-    padding: 10px; /* Added padding for better visibility */
+    padding: 10px;
 }
 
 /* footer styles */
@@ -276,12 +280,14 @@ footer {
     color: whitesmoke;
     box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
 }
+
 .modal-dialog {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
 }
+
 .modal-header {
     border-bottom: 1px solid darkslategrey;
     display: flex;
@@ -303,12 +309,14 @@ footer {
 .dark-mode .close {
     color: whitesmoke;
 }
+
 .modal-body {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
+
 .modal-body p {
     color: darkslategrey;
 }
