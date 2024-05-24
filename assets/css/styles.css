@@ -246,10 +246,7 @@ input {
     padding: 10px; /* Added padding for better visibility */
 }
 
-
-
-
-/* Footer styles */
+/* footer styles */
 footer {
     background-color: #ffffff;
     width: 100vw;
@@ -261,4 +258,41 @@ footer {
     width: 100vw;
     padding: 10px 0;
     border-top: 2px solid darkslategrey;
+}
+
+/* modal styles */
+.modal-content {
+    background-color: whitesmoke;
+    color: darkslategrey;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.dark-mode .modal-content {
+    background-color: #333;
+    color: whitesmoke;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+.modal-header {
+    border-bottom: 1px solid darkslategrey;
+}
+
+.dark-mode .modal-header {
+    border-bottom: 2px solid whitesmoke;
+}
+
+.modal-title {
+    font-weight: bold;
+}
+
+.close {
+    color: darkslategrey;
+}
+.dark-mode .close {
+    color: whitesmoke;
+}
+.modal-body p {
+    color: darkslategrey;
+}
+.dark-mode .modal-body p {
+    color: whitesmoke;
 }
