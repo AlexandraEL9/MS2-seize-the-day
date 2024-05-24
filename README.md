@@ -129,22 +129,19 @@ When I was creating my website, the design plan was changed but only small place
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [Vanilla JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
 ### Frameworks, Libraries & Programs Used
 
 1. [Bootstrap 4.1.3:](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
 - Bootstrap was used to assist with the responsiveness and styling of components in the website.
-2. [Google Fonts:](https://fonts.google.com/)
-- Google fonts were used to import the 'Roboto' font into the style.css file which is used on all pages throughout the project.
-3. [Font Awesome:](https://fontawesome.com/)
-- Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
-4. [jQuery:](https://jquery.com/)
+2. [jQuery:](https://jquery.com/)
 - jQuery came with Bootstrap to make the navbar responsive.
-5. [Git](https://git-scm.com/)
+3. [Git](https://git-scm.com/)
 - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
-6. [GitHub:](https://github.com/)
+4. [GitHub:](https://github.com/)
 - GitHub is used to store the projects code after being pushed from Git.
-7. [Balsamiq:](https://balsamiq.com/)
+5. [Balsamiq:](https://balsamiq.com/)
 - Balsamiq was used to create the wireframes as part of the design process.
 
 ## Testing
