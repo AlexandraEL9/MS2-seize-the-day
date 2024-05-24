@@ -25,6 +25,10 @@ body {
     color: darkslategrey;
     font-weight: bolder;
 }
+.dark-mode .navbar-brand {
+    color: whitesmoke;
+    font-weight: bolder;
+}
 .dark-mode .navbar {
     background-color: black;
     color: whitesmoke;
