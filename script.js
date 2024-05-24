@@ -189,42 +189,59 @@ closeButtons.forEach(button => {
 });
 
 // Alarm/reminder section
+
+//dom elements
 const reminderTimeInput = document.getElementById('reminderTime');
 const reminderMessageInput = document.getElementById('reminderMessage');
 const setReminderBtn = document.getElementById('setReminderBtn');
 const reminderList = document.getElementById('reminderList');
 const reminderModal = new bootstrap.Modal(document.getElementById('reminderModal'));
 const reminderModalMessage = document.querySelector('#reminderModal .modal-body p');
+//array to store reminders
 let reminders = [];
 
+//event listener for setting a reminder
 setReminderBtn.addEventListener('click', () => {
-    const reminderTime = reminderTimeInput.value;
-    const reminderMessage = reminderMessageInput.value;
-
+    const reminderTime = reminderTimeInput.value; //get the reminder time from the input
+    const reminderMessage = reminderMessageInput.value; //get the reminder message from the input
+    //check if both time and message are provided
     if (reminderTime && reminderMessage) {
+        //add reminder to array
         reminders.push({ time: reminderTime, message: reminderMessage });
+        //create the list item to display the reminder
         const li = document.createElement('li');
         li.textContent = `${reminderTime} - ${reminderMessage}`;
         reminderList.appendChild(li);
+        //clear the input fields
         reminderTimeInput.value = '';
         reminderMessageInput.value = '';
     }
 });
 
+//function to check for reminders
 function checkReminders() {
+    //get the current time
     const currentTime = new Date().toLocaleTimeString('en-GB', { hour12: false }).slice(0, 5);
+    //loop through the reminders array
     reminders.forEach((reminder, index) => {
+        //check if reminder time matches current time
         if (reminder.time === currentTime) {
+            //display reminder message in the modal
             reminderModalMessage.textContent = reminder.message;
             reminderModal.show();
+            //remove reminder from array
             reminders.splice(index, 1);
+            //update reminder list display
             updateReminderList();
         }
     });
 }
 
+//function to update the reminder list display
 function updateReminderList() {
+    //clear current list items
     reminderList.innerHTML = '';
+    //repopulate list with remaining reminders
     reminders.forEach(reminder => {
         const li = document.createElement('li');
         li.textContent = `${reminder.time} - ${reminder.message}`;
