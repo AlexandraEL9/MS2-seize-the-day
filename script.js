@@ -41,34 +41,43 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 // to-do list section
+
 //function to add a task
 function addTask() {
     const taskInput = document.getElementById('taskInput');
     const taskList = document.getElementById('taskList');
     const taskText = taskInput.value.trim();
+    //check the task text is not empty
     if (taskText !== '') {
-        const listItem = document.createElement('li');
-        listItem.textContent = taskText;
-        listItem.classList.add('list-group-item');
-        const completeBtn = document.createElement('button');
-        completeBtn.textContent = 'Done';
-        completeBtn.classList.add('btn', 'btn-sm');
+        const listItem = document.createElement('li'); //create a new list item element
+        listItem.textContent = taskText; //set the text content of the list item
+        listItem.classList.add('list-group-item');//add class 'list-group-item' to list item
+
+        const completeBtn = document.createElement('button'); //create a button for completing a task
+        completeBtn.textContent = 'Done'; //set the button text to 'done'
+        completeBtn.classList.add('btn', 'btn-sm'); //add classes to button to target it
+        //add event listener to complete button
         completeBtn.addEventListener('click', function() {
             listItem.classList.toggle('complete');
         });
+        //add/ append the complete button to the list item
         listItem.appendChild(completeBtn);
+        //add/ append the list item to the task list container
         taskList.appendChild(listItem);
+        //clear the input field ready for a new reminder
         taskInput.value = '';
     }
 }
+
 //button to add task
 const addTaskBtn = document.getElementById('addTaskBtn');
+//add event listener to add task button to call function
 addTaskBtn.addEventListener('click', addTask);
 
 //function to clear the task list
 function clearList() {
-    const taskList = document.getElementById('taskList');
-    taskList.innerHTML = '';
+    const taskList = document.getElementById('taskList');//get the tasklist container
+    taskList.innerHTML = '';//clear the tasklist
 }
 //button to clear task
 const clearListBtn = document.getElementById('clearListBtn');
