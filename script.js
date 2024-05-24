@@ -270,5 +270,10 @@ function updateReminderList() {
 
 setInterval(checkReminders, 1000); // Checks reminders every second
 
-
+//join us
+// javaScript to trigger subscription modal
+document.getElementById('joinUsBtn').addEventListener('click', function() {
+    // Show the subscription modal
+    $('#subscriptionModal').modal('show');
+});
 
