@@ -272,8 +272,17 @@ footer {
     color: whitesmoke;
     box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
 }
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
 .modal-header {
     border-bottom: 1px solid darkslategrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .dark-mode .modal-header {
@@ -289,6 +298,12 @@ footer {
 }
 .dark-mode .close {
     color: whitesmoke;
+}
+.modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .modal-body p {
     color: darkslategrey;
