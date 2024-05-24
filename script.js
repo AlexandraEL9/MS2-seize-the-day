@@ -2,6 +2,13 @@
 document.getElementById('toggleDarkModeBtn').addEventListener('click', function() {
     console.log("Dark mode button clicked!");
     document.body.classList.toggle('dark-mode');
+
+    //update button text based on current mode
+    if (document.body.classList.contains('dark-mode')) {
+        this.textContent = 'Light Mode';
+    } else {
+        this.textContent = 'Dark Mode';
+    }
 });
 document.addEventListener('DOMContentLoaded', (event) => {
     // Function to update the current date
