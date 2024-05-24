@@ -48,35 +48,36 @@ People who wish to get out of the post-it/ write it on your hand trap! Keeping t
 1. Community Engagement: Frequent users might seek opportunities for community engagement, such as participating in forums, sharing productivity tips, or attending webinars or workshops hosted by the Seize the Day community.
 
 
-**Planned Features To Achieve These Goals**
+### Planned Features To Achieve These Goals
 
 - The website will use responsive design so it can be seen on different devices easily.<br>
 
-### Dark Mode/Light Mode Toggle
+**Dark Mode/Light Mode Toggle**
 - Switch between dark and light modes for comfortable viewing in different lighting environments.
 - Dark mode enhances visibility in low-light conditions and reduces eye strain.
 
-### Automatic Date and Time Updates
+**Automatic Date and Time Updates**
 - Real-time display of the current date and time.
 - Date and time automatically update every minute and second, respectively, providing accurate timekeeping.
 
-### To-Do List
+**To-Do List**
 - Easily add tasks to a dynamic to-do list.
 - Mark tasks as completed with a single click for efficient task management.
 - Clear the entire task list with a single button click.
 
-### Pomodoro Timer
+**Pomodoro Timer**
 - Implement the Pomodoro technique to enhance productivity and focus.
 - Set customizable timers for Pomodoro sessions, short breaks, and long breaks.
 - Receive visual and auditory notifications when each timer session ends.
+- audio 'alarm' when timer finishes.
 
-### Reminder Section
+**Reminder Section**
 - Set reminders with specific time and message inputs.
 - Receive timely reminders displayed in a modal window.
 - Track and manage reminders conveniently with a dynamically updated reminder list.
 
-### Join the community Section
-- 
+**Join the community Section**
+- sign up to recieve newsletters
 
 
  ### Design
@@ -108,33 +109,19 @@ These colours are used across both dark and light modes to maintain a sense of c
 #### Imagery
 -   I chose not to include images to keep the design clean and focused on utility.
 
-* ### Wireframes
+### Wireframes
 I used [Balsamiq Wireframes](https://balsamiq.com/wireframes/) to create wireframes before starting the project to help me plan the layout and flow of the project.<br>
 When I was creating my website, the design plan was changed. Having never done the process before and lacking experience, my first designs were far to simple and lacking content and I had more time to add extra features to the site to add value, for examle, adding page specific reviews with images and a subscription form on every page.
 
  ### Homepage Wireframes
 
-- [**Desktop**](./wireframes/home-desktop.png)
-- [**Tablet**](./wireframes/home-tablet.png)
+- [**Desktop and tablet**](./wireframes/home-desktop.png)
 - [**Mobile**](./wireframes/home-mobile.png)
 
-#### Gallery Page Wireframes
+#### Error Page Wireframes
 
-- [**Desktop**](./wireframes/gallery-page-desktop.png)
-- [**Tablet**](./wireframes/gallery-page-tablet.png)
+- [**Desktop and tablet**](./wireframes/gallery-page-desktop.png)
 - [**Mobile**](./wireframes/gallery-page-mobile.png)
-
-#### Contact Page Wireframes
-
-- [**Desktop**](./wireframes/contact-page-desktop.png)
-- [**Tablet**](./wireframes/contact-page-tablet.png)
-- [**Mobile**](./wireframes/contact-page-mobile.png)
-
-#### Menus Page Wireframes
-
-- [**Desktop**](./wireframes/menus-page-desktop.png)
-- [**Tablet**](./wireframes/menus-page-tablet.png)
-- [**Mobile**](./wireframes/menus-page-mobile.png)
 
 ## Technologies Used
 
