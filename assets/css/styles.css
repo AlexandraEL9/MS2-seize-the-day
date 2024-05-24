@@ -15,7 +15,7 @@ body {
 .navbar {
     background-color: white;
     color: darkslategrey;
-    border-bottom: 1px solid whitesmoke;
+    border-bottom: 1px solid darkslategrey;
 }
 .dark-mode .navbar {
     background-color: black;
@@ -35,7 +35,7 @@ body {
 /*header styles*/
 header {
     background-color: whitesmoke;
-    border-bottom: 1px solid whitesmoke;
+    border-bottom: 1px solid darkslategrey;
     padding: 20px;
 }
 .dark-mode header {
