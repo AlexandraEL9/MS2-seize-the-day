@@ -16,9 +16,13 @@ document.getElementById('toggleDarkModeBtn').addEventListener('click', function 
 document.addEventListener('DOMContentLoaded', (event) => {
     // Function to update the current date
     function updateDate() {
+        //get date element
         const dateElement = document.getElementById('currentDate');
+        //get current date
         const currentDate = new Date();
+        //format the date
         const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        //update date element folowing format above
         dateElement.textContent = currentDate.toLocaleDateString(undefined, options);
     }
     // initialize date
@@ -28,10 +32,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Function to update the clock display
     function updateClock() {
+        //get clock element
         const clockElement = document.getElementById('clockDisplay');
+        //get current time
         const currentTime = new Date();
+        //format hours and mins
         const hours = String(currentTime.getHours()).padStart(2, '0');
         const minutes = String(currentTime.getMinutes()).padStart(2, '0');
+        //update clock element folowing format above
         clockElement.textContent = `${hours}:${minutes}`;
     }
 
