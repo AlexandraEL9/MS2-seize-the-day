@@ -111,16 +111,16 @@ These colours are used across both dark and light modes to maintain a sense of c
 
 ### Wireframes
 I used [Balsamiq Wireframes](https://balsamiq.com/wireframes/) to create wireframes before starting the project to help me plan the layout and flow of the project.<br>
-When I was creating my website, the design plan was changed. Having never done the process before and lacking experience, my first designs were far to simple and lacking content and I had more time to add extra features to the site to add value, for examle, adding page specific reviews with images and a subscription form on every page.
+When I was creating my website, the design plan was changed but only small placement changes.
 
  ### Homepage Wireframes
 
-- [**Desktop and tablet**](./wireframes/home-desktop.png)
-- [**Mobile**](./wireframes/home-mobile.png)
+- [**Desktop and tablet**](./wireframes/main-page-desktop-tablet.png)
+- [**Mobile**](./wireframes/main-page-tablet.png)
 
 #### Error Page Wireframes
 
-- [**Desktop and tablet**](./wireframes/gallery-page-desktop.png)
+- [**Desktop and tablet**](./wireframes/ga-page-desktop.png)
 - [**Mobile**](./wireframes/gallery-page-mobile.png)
 
 ## Technologies Used
