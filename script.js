@@ -1,9 +1,10 @@
-//dark mode/light mode toggle button
-document.getElementById('toggleDarkModeBtn').addEventListener('click', function() {
-    console.log("Dark mode button clicked!");
+// Dark mode / Light mode toggle
+
+//add event listener to button
+document.getElementById('toggleDarkModeBtn').addEventListener('click', function () {
     document.body.classList.toggle('dark-mode');
 
-    //update button text based on current mode
+    // Update button text based on current mode
     if (document.body.classList.contains('dark-mode')) {
         this.textContent = 'Light Mode';
     } else {
@@ -11,6 +12,7 @@ document.getElementById('toggleDarkModeBtn').addEventListener('click', function(
     }
 });
 
+//updating date and time automatically
 document.addEventListener('DOMContentLoaded', (event) => {
     // Function to update the current date
     function updateDate() {
