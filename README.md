@@ -145,6 +145,71 @@ When I was creating my website, the design plan was changed but only small place
 - Balsamiq was used to create the wireframes as part of the design process.
 
 ## Testing
+# Seize the Day Website Testing Matrix
+
+## Test Categories and Cases
+
+### Functional Testing
+
+| Test Case ID | Test Description                                                                                             | Expected Result                                                                                       | Pass/Fail | Comments                       |
+|--------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|-----------|-------------------------------|
+| FT-01        | Verify the homepage loads correctly and displays the mission statement and feature overview                  | Homepage loads with a clear mission statement and an overview of key features                          |           |                               |
+| FT-02        | Verify navigation bar links (Home, To-Do List, Timer, Reminders, Community) work correctly                   | Each link navigates to the correct section                                                            |           |                               |
+| FT-03        | Verify the to-do list functionality (add, edit, complete, delete tasks)                                      | Users can add, edit, mark as complete, and delete tasks successfully                                   |           |                               |
+| FT-04        | Verify Pomodoro timer starts, pauses, and resets correctly                                                   | Timer functions (start, pause, reset) work as expected                                                 |           |                               |
+| FT-05        | Verify reminders can be set and notifications are received                                                   | Reminders can be set, and notifications are received at the correct time                               |           |                               |
+| FT-06        | Verify dark mode toggle changes the website theme                                                           | Dark mode toggle switches the theme between light and dark modes                                       |           |                               |
+| FT-07        | Verify community forum functionalities (post, comment, like)                                                 | Users can post, comment, and like in the community forums                                              |           |                               |
+
+### Usability Testing
+
+| Test Case ID | Test Description                                                                                             | Expected Result                                                                                       | Pass/Fail | Comments                       |
+|--------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|-----------|-------------------------------|
+| UT-01        | Verify the homepage clearly communicates the purpose of the site to first-time visitors                      | First-time visitors can easily understand the site's purpose                                           |           |                               |
+| UT-02        | Verify tooltips provide helpful information about key functionalities                                        | Tooltips appear on hover and provide clear, helpful information                                        |           |                               |
+| UT-03        | Verify the guided tour or help section explains the main features effectively                                | Guided tour or help section provides a comprehensive overview of the main features                     |           |                               |
+| UT-04        | Verify the user interface is intuitive and easy to navigate                                                  | Users can easily navigate the site without confusion                                                   |           |                               |
+
+### Performance Testing
+
+| Test Case ID | Test Description                                                                                             | Expected Result                                                                                       | Pass/Fail | Comments                       |
+|--------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|-----------|-------------------------------|
+| PT-01        | Verify the website loads within an acceptable time frame (e.g., under 3 seconds)                             | Website loads within the acceptable time frame                                                         |           |                               |
+| PT-02        | Verify the Pomodoro timer continues to run accurately without performance degradation over extended use      | Timer runs accurately without performance issues                                                       |           |                               |
+| PT-03        | Verify the to-do list can handle a large number of tasks without slowing down                                | To-do list performs efficiently even with a large number of tasks                                      |           |                               |
+
+### Security Testing
+
+| Test Case ID | Test Description                                                                                             | Expected Result                                                                                       | Pass/Fail | Comments                       |
+|--------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|-----------|-------------------------------|
+| ST-01        | Verify user data is encrypted and securely stored                                                           | User data is encrypted and securely stored                                                             |           |                               |
+| ST-02        | Verify user authentication and authorization mechanisms work correctly                                       | Users are authenticated and authorized correctly, preventing unauthorized access                       |           |                               |
+| ST-03        | Verify the website is protected against common vulnerabilities (e.g., SQL injection, XSS)                    | Website is tested for and protected against common vulnerabilities                                     |           |                               |
+
+### Compatibility Testing
+
+| Test Case ID | Test Description                                                                                             | Expected Result                                                                                       | Pass/Fail | Comments                       |
+|--------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|-----------|-------------------------------|
+| CT-01        | Verify the website works correctly on different browsers (Chrome, Firefox, Safari, Edge)                     | Website functions correctly on all major browsers                                                      |           |                               |
+| CT-02        | Verify the website is responsive and works on various devices (desktop, tablet, mobile)                      | Website is responsive and works on various devices                                                     |           |                               |
+
+### Accessibility Testing
+
+| Test Case ID | Test Description                                                                                             | Expected Result                                                                                       | Pass/Fail | Comments                       |
+|--------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|-----------|-------------------------------|
+| AT-01        | Verify the website meets accessibility standards (e.g., WCAG 2.1)                                            | Website meets accessibility standards, ensuring it is usable by people with disabilities               |           |                               |
+| AT-02        | Verify that all images have appropriate alt text                                                             | All images have descriptive alt text                                                                   |           |                               |
+
+## Explanation
+
+- **Functional Testing**: Ensures all features work correctly, including navigation, task management, and community interactions.
+- **Usability Testing**: Focuses on the user experience, ensuring the site is easy to understand and navigate, and that tooltips and guides are effective.
+- **Performance Testing**: Ensures the site loads quickly and performs well even under heavy use.
+- **Security Testing**: Verifies that user data is secure and the site is protected against vulnerabilities.
+- **Compatibility Testing**: Ensures the site works across different browsers and devices.
+- **Accessibility Testing**: Ensures the site is accessible to all users, including those with disabilities.
+
+This testing matrix helps ensure that "Seize the Day" meets the needs and expectations of all user types, providing a robust, secure, and user-friendly experience.
 
 ### Navigation bar links. 
 Home, Gallery, Contact and Menus pages jump to the respective places when clicked. 
@@ -248,7 +313,7 @@ Lighthouse was used to assess the accessibiity of the project to ensure the site
 
 - #### First Time Visitor Goals
 1. As a First Time Visitor, I want to easily understand the main purpose of the site/ platform.<br>
-**1a.** 
+**1a.** Solution: The website's landing page features a clear and concise tagline or mission statement that explains the main purpose of the platform: to help users manage their time and tasks efficiently. Additionally, the homepage includes a brief overview of key features such as the Pomodoro timer, to-do list, reminders, and dark mode toggle. This immediate clarity helps first-time visitors understand what the site offers.
 <br>
 ![User Stories Homepage Top](./docs/testing/user-stories/user-stories-homepage-top.png)
 - The main basic information is put across first (who,what,where,when)<br>
@@ -256,23 +321,22 @@ Lighthouse was used to assess the accessibiity of the project to ensure the site
 
 
 2. As a First Time Visitor, I want to be able to easily navigate throughout the platform and be able to interpret what I see clearly.<br>
-**2a** 
-
+**2a** Solution: The website uses a simple, intuitive layout with a top navigation bar that clearly labels each section (e.g., Home, To-Do List, Timer, Reminders, Community). Each section is also accessible from the homepage via prominent buttons or links. The use of icons and clear headings further aids navigation, making it easy for users to find and understand each feature. The design for inputs etc has been deliberatly chosen to be familiar with tools and functions used often ensuring ease of understanding and use.
 
 3. As a First Time Visitor, I would expect intuitive user interfaces, helpful tooltips, and possibly a guide me in the use and usefulness of the key functionalities.<br>
-**3a** 
+**3a** Solution: The user interface is designed to be intuitive, with interactive elements like buttons and input fields clearly marked. A guide is provided for the function which may or ma not be familaiar to the user, (the pomodoro timer), explaining what the function is and how it can be beneficial to the user. It is a modal which is accessed via a button close to the heading
 
 ![User Stories Homepage Top](./docs/testing/user-stories/user-stories-gallery.png) ![User Stories Homepage Top](./docs/testing/user-stories/user-stories-menus.png)
 ![User Stories Homepage Top](./docs/testing/user-stories/user-stories-reviews.png)
 
 - #### Returning Visitor Goals
 1. Efficient Task Management: Returning visitors would aim to efficiently manage their tasks using the platform's features. They would want to quickly add, edit tasks to stay organized and productive.<br>
-**1a** 
+**1a** Solution: Returning visitors can quickly manage their tasks through the streamlined to-do list feature. Tasks can be easily added, edited, marked as complete, or deleted. The interface is designed for quick access and minimal clicks, ensuring users can update their tasks efficiently.
 ![User Stories contact Page](./docs/testing/user-stories/user-stories-contact.png)
 
 - #### Frequent User Goals
 1. Community Engagement: Frequent users might seek opportunities for community engagement, such as participating in forums, sharing productivity tips, or attending webinars or workshops hosted by the Seize the Day community.<br>
-**1a** C
+**1a** Solution: The website fosters community engagement through an option to be put on a mailing list to be kept up to dat with upgrades, news etc.
 
 ### Further Testing
 -   A large amount of repeated testing was done to ensure that all pages were linking correctly.
@@ -341,31 +405,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 -  All content was written by the developer unless otherwise stated in the credits.
 
 ### Media
-- Google Map (Used a screenshot of Salford Quays with a pin drop and added to the home page 'General Info section )<br>
-- [Canva](https://www.canva.com/templates/) was used to create the example menus using a template.
-- I utilised [Coolors](https://coolors.co/28262c-998fc7-d4c2fc-f9f5ff-14248a/) Palette Generator to create the color palette image in my README.md
-- Images were sourced from [Unsplash](https://unsplash.com/)
-
-| Image File Name      | Image Source|
-| ---------------------| ------------|
-|bar-taps.jpg          |https://unsplash.com/photos/blue-and-white-round-container-83HwuZirc-c|
-|bar-main.jpg          |https://unsplash.com/photos/photo-of-turn-on-white-bar-neon-sign-YGllNX_ol-A|
-|group-cheers.jpg      |https://unsplash.com/photos/people-holding-drinks-during-day-0yqa0rMCsYk|
-|beer-flight.jpg       |https://unsplash.com/photos/clear-drinking-glasses-on-brown-wooden-table-OGTEP0LyYNk|
-|goodtimes.jpg         |https://unsplash.com/photos/selective-focus-photography-of-pink-good-times-neon-light-signage-nQl9tHiMSww|
-|guy-drinking.jpg      |https://unsplash.com/photos/man-drinking-beer-on-selective-focus-photography-DIwADVevISg|
-|no-photos.jpg         |https://unsplash.com/es/fotos/hombre-con-chaqueta-azul-de-pie-en-la-puerta-77ugJW-GtyA|
-|roast-dinner.jpg      |https://unsplash.com/photos/cooked-meat-on-white-ceramic-plate-kFJ8tL53qcg|
-|brunch.jpg            |https://unsplash.com/photos/hamburger-fried-eggs-avocado-slices-and-bread-on-round-gray-plate-mEDCaC8qfxU|
-|nachos.jpg            |https://unsplash.com/photos/taco-on-plate-aZOqcEK2KuQ|
-|jane-potter.jpg       |https://unsplash.com/photos/woman-in-pink-blazer-smiling-7JmGPyljOSE|
-|tania-burrows.jpg     |https://unsplash.com/photos/closeup-photography-of-woman-smiling-mEZ3PoFGs_k|
-|jon-donnelly.jpg      |https://unsplash.com/photos/man-in-blue-button-up-shirt-C2Nf5iPOnz0|
-|jayne-ike-chidebe.jpg |https://unsplash.com/photos/women-holding-her-collar-standing-near-wall-J1OScm_uHUQ|
-|johnny-chambers.jpg   |https://unsplash.com/photos/man-standing-near-white-wall-d1UPkiFd04A|
-|robert-downey.jpg     |https://unsplash.com/photos/man-in-black-crew-neck-shirt-wearing-black-knit-cap-vXgV5XUlTog|
-|map.jpg               | screenshot taken from https://www.google.com/maps/@53.4709467,-2.29653,17z?entry=ttu|
-
+- Sound file for pomodoro alarm.
 
 
 
