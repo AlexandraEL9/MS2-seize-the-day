@@ -150,43 +150,36 @@ When I was creating my website, the design plan was changed but only small place
 ## Test Categories and Cases
 
 ### Functional Testing
+- **Functional Testing**: Ensures all features work correctly, including navigation, task management, and timer functions etc.
 
 | Test Case ID | Test Description                                                                                             | Expected Result                                                                                       | Pass/Fail | Comments                       |
 |--------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|-----------|-------------------------------|
-| FT-01        | Verify the homepage loads correctly and displays the mission statement and feature overview                  | Homepage loads with a clear mission statement and an overview of key features                          |           |                               |
-| FT-02        | Verify navigation bar links (Home, To-Do List, Timer, Reminders, Community) work correctly                   | Each link navigates to the correct section                                                            |           |                               |
-| FT-03        | Verify the to-do list functionality (add, edit, complete, delete tasks)                                      | Users can add, edit, mark as complete, and delete tasks successfully                                   |           |                               |
-| FT-04        | Verify Pomodoro timer starts, pauses, and resets correctly                                                   | Timer functions (start, pause, reset) work as expected                                                 |           |                               |
-| FT-05        | Verify reminders can be set and notifications are received                                                   | Reminders can be set, and notifications are received at the correct time                               |           |                               |
-| FT-06        | Verify dark mode toggle changes the website theme                                                           | Dark mode toggle switches the theme between light and dark modes                                       |           |                               |
-| FT-07        | Verify community forum functionalities (post, comment, like)                                                 | Users can post, comment, and like in the community forums                                              |           |                               |
+| FT-01        | Verify the homepage loads correctly and displays the mission statement and feature overview                  | Homepage loads with a clear mission statement and an overview of key features                          |      Pass     |    Page loads quickly and correctly. Info clear on first view of page.                           |
+| FT-02        | Verify navigation bar links (Join Us! button) work correctly                   | Link navigates to the modal to enter email to subscribe to the newsletter.                                                            |     Pass      |    Button opens email subscription modal                           |
+| FT-03        | Verify the to-do list functionality (add, edit, complete, delete tasks)                                      | Users can add, edit, mark as complete, and delete tasks successfully                                   |     Pass      |                - Functions work as expected. <br>- Text input enters correctly. (Yes)<br> -Add task button creates new list item underneath input. (Yes) <br>-To-do section expands as list lengthens, when required (Yes)<br>-done button draws line through completed task (Yes)<br> -Clear List button deletes entire list section (Yes)|
+| FT-04        | Verify Pomodoro timer starts, pauses, and resets correctly                                                   | Timer functions (start, pause, reset) work as expected                                                 |     Pass      |            All timer functions work correctly and as expected: <br> '?' button opens Pomodoro explainer model (Yes)<br>-Timer displays correct timer interval when either Pomodoro(25:00mins), Short Break(5:00mins) or Long Break(15:00mins) are clicked(Yes)<br>-When timer buttons clicked, timer displays but does not start (Yes)<br>-Start button starts countdown timer (yes)<br>-Start button toggles to 'Pause' when timer running (Yes)<br>-When pause button clicked, timer pauses (Yes)<br>-When pause button clicked, timer button toggles to 'Start'(Yes)<br>-When timer re-started, it resumes from last time, not starting again(Yes)<br>-When timer completes, an alarm sounds (once) (Yes)<br>-When timer completes, a modal appears telling users to either focus or take a break, depending on the timer type.(Yes)                 |
+| FT-05        | Verify reminders can be set and notifications are received                                                   | Reminders can be set, and notifications are received at the correct time                               |     Pass      | Reminder functionality works:<br>-Time input works(yes)<br>-Message input works(Yes)<br>-set reminder button creates new list item underneath with time and reminder message (Yes)<br>-Modal triggered with reminder at correct time (yes)                              |
+| FT-06        | Verify dark mode toggle changes the website theme                                                           | Dark mode toggle switches the theme between light and dark modes                                       |   Pass        |              Function works correctly:<br> -When pressed- page theme changes (Yes)<br>-When pressed, button display toggles between dark mode and light mode. (Yes)<br>-When in differing modes, externals like modals are also set to the correct theme (Yes)                 |
+| FT-07        | Page displays the correct date and time                                             |      Page displays the correct date and time and updates when required     |                 Pass             |Functions work correctly:<br>-On load correct date shows(Yes)<br>-On load, page displays correct time, HH:MM (Yes)<br>-When time changes, display changes to show correct time. (Yes)
 
 ### Usability Testing
+- **Usability Testing**: Focuses on the user experience, ensuring the site is easy to understand and navigate, and that guides are effective.
 
 | Test Case ID | Test Description                                                                                             | Expected Result                                                                                       | Pass/Fail | Comments                       |
 |--------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|-----------|-------------------------------|
-| UT-01        | Verify the homepage clearly communicates the purpose of the site to first-time visitors                      | First-time visitors can easily understand the site's purpose                                           |           |                               |
-| UT-02        | Verify tooltips provide helpful information about key functionalities                                        | Tooltips appear on hover and provide clear, helpful information                                        |           |                               |
-| UT-03        | Verify the guided tour or help section explains the main features effectively                                | Guided tour or help section provides a comprehensive overview of the main features                     |           |                               |
-| UT-04        | Verify the user interface is intuitive and easy to navigate                                                  | Users can easily navigate the site without confusion                                                   |           |                               |
+| UT-01        | Verify the homepage clearly communicates the purpose of the site to first-time visitors                      | First-time visitors can easily understand the site's purpose                                           |      Pass     |             Purpose and intent evident                  |
+| UT-02        | Verify site provides helpful information about key functionalities                                        | Site includes helpful information helpful information for possibly unclear/new time management technique, promoting benefit to user.                                      |       Pass    |      '?' button in Pomodoro section opens a modal which explains the use of a Pomodoro timer to aid productivity and work/life balance.                         |                   
+| UT-03        | Verify the user interface is intuitive and easy to navigate                                                  | Users can easily navigate the site without confusion                                                   |    Pass       |   Site uses commonly recognised tools and layout features and tools which will be known to users. Site is well spaced, with only key content used in order to remain uncluttered. Buttons linking to modals allow for more info to be given without cluttering up the interface and can be accessed only as and when the user feels they may need it.                            | 
 
 ### Performance Testing
+- **Performance Testing**: Ensures the site loads quickly and performs well.
 
 | Test Case ID | Test Description                                                                                             | Expected Result                                                                                       | Pass/Fail | Comments                       |
 |--------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|-----------|-------------------------------|
 | PT-01        | Verify the website loads within an acceptable time frame (e.g., under 3 seconds)                             | Website loads within the acceptable time frame                                                         |           |                               |
-| PT-02        | Verify the Pomodoro timer continues to run accurately without performance degradation over extended use      | Timer runs accurately without performance issues                                                       |           |                               |
-| PT-03        | Verify the to-do list can handle a large number of tasks without slowing down                                | To-do list performs efficiently even with a large number of tasks                                      |           |                               |
-
-### Security Testing
-
-| Test Case ID | Test Description                                                                                             | Expected Result                                                                                       | Pass/Fail | Comments                       |
-|--------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|-----------|-------------------------------|
-| ST-01        | Verify user data is encrypted and securely stored                                                           | User data is encrypted and securely stored                                                             |           |                               |
-| ST-02        | Verify user authentication and authorization mechanisms work correctly                                       | Users are authenticated and authorized correctly, preventing unauthorized access                       |           |                               |
-| ST-03        | Verify the website is protected against common vulnerabilities (e.g., SQL injection, XSS)                    | Website is tested for and protected against common vulnerabilities                                     |           |                               |
 
 ### Compatibility Testing
+- **Compatibility Testing**: Ensures the site works across different browsers and devices.
 
 | Test Case ID | Test Description                                                                                             | Expected Result                                                                                       | Pass/Fail | Comments                       |
 |--------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|-----------|-------------------------------|
@@ -194,22 +187,21 @@ When I was creating my website, the design plan was changed but only small place
 | CT-02        | Verify the website is responsive and works on various devices (desktop, tablet, mobile)                      | Website is responsive and works on various devices                                                     |           |                               |
 
 ### Accessibility Testing
+- **Accessibility Testing**: Ensures the site is accessible to all users, including those with disabilities.
 
 | Test Case ID | Test Description                                                                                             | Expected Result                                                                                       | Pass/Fail | Comments                       |
 |--------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|-----------|-------------------------------|
 | AT-01        | Verify the website meets accessibility standards (e.g., WCAG 2.1)                                            | Website meets accessibility standards, ensuring it is usable by people with disabilities               |           |                               |
-| AT-02        | Verify that all images have appropriate alt text                                                             | All images have descriptive alt text                                                                   |           |                               |
 
-## Explanation
+### Validator Testing
+- **Validator Testing**: Ensures that the website's code adheres to established standards and best practices, which helps improve functionality, accessibility, and cross-browser compatibility.
 
-- **Functional Testing**: Ensures all features work correctly, including navigation, task management, and community interactions.
-- **Usability Testing**: Focuses on the user experience, ensuring the site is easy to understand and navigate, and that tooltips and guides are effective.
-- **Performance Testing**: Ensures the site loads quickly and performs well even under heavy use.
-- **Security Testing**: Verifies that user data is secure and the site is protected against vulnerabilities.
-- **Compatibility Testing**: Ensures the site works across different browsers and devices.
-- **Accessibility Testing**: Ensures the site is accessible to all users, including those with disabilities.
+| Test Case ID | Test Description                                                                                             | Expected Result                                                                                       | Pass/Fail | Comments                       |
+|--------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|-----------|-------------------------------|
+| VT-01        | HTML: code adheres to standards and best practices when run through the validator               |           |                               |
+| VT-02        | CSS: code adheres to standards and best practices when run through the validator               |           |                               |
+| VT-03        | JavaScript: code adheres to standards and best practices when run through the validator               |           |                               |
 
-This testing matrix helps ensure that "Seize the Day" meets the needs and expectations of all user types, providing a robust, secure, and user-friendly experience.
 
 ### Navigation bar links. 
 Home, Gallery, Contact and Menus pages jump to the respective places when clicked. 
