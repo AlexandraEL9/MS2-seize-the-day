@@ -84,7 +84,7 @@ People who wish to get out of the post-it/ write it on your hand trap! Keeping t
 
 **Colour Scheme**
 
-![Colour scheme](colour-pallet.png)
+![Colour scheme](docs/colour-pallet.png)
 
 
 - `#333`: Dark gray, primarily used for background in dark mode and for certain text elements.
