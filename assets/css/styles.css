@@ -5,201 +5,201 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-.dark-mode body {
+  }
+  .dark-mode body {
     background-color: #333;
     color: whitesmoke;
-}
-
-/*navbar*/
-.navbar {
+  }
+  
+  /*navbar*/
+  .navbar {
     background-color: white;
     color: darkslategrey;
     border-bottom: 1px solid darkslategrey;
-}
-.dark-mode .navbar {
+  }
+  .dark-mode .navbar {
     background-color: black;
     color: whitesmoke;
     border-bottom: 2px solid darkslategrey;
-}
-
-.navbar-brand {
+  }
+  
+  .navbar-brand {
     color: darkslategrey;
     font-weight: bolder;
-}
-.dark-mode .navbar-brand {
+  }
+  .dark-mode .navbar-brand {
     color: whitesmoke;
     font-weight: bolder;
-}
-
-/*header styles*/
-header {
+  }
+  
+  /*header styles*/
+  header {
     background-color: whitesmoke;
     border-bottom: 1px solid darkslategrey;
     padding: 20px;
-}
-.dark-mode header {
+  }
+  .dark-mode header {
     background-color: #333;
     border-bottom: 2px solid darkslategrey;
     padding: 20px;
-}
-
-.content-section-title-description {
+  }
+  
+  .content-section-title-description {
     text-align: left;
-}
-.content-section-date-time {
+  }
+  .content-section-date-time {
     text-align: right;
-}
-
-.content-section h1,
-.content-section h2 {
+  }
+  
+  .content-section h1,
+  .content-section h2 {
     color: darkslategrey;
-}
-.dark-mode .content-section h1,
-.dark-mode .content-section h2,
-.dark-mode p {
+  }
+  .dark-mode .content-section h1,
+  .dark-mode .content-section h2,
+  .dark-mode p {
     color: whitesmoke;
-}
-
-#clockDisplay {
+  }
+  
+  #clockDisplay {
     font-size: 2em;
     font-weight: light;
     color: darkslategrey;
-}
-.dark-mode #clockDisplay {
+  }
+  .dark-mode #clockDisplay {
     font-size: 2em;
     font-weight: light;
     color: whitesmoke;
-}
-
-/* main content styles */
-main {
+  }
+  
+  /* main content styles */
+  main {
     padding: 20px 0;
     flex-grow: 1;
-}
-
-.container-main {
+  }
+  
+  .container-main {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.dark-mode .container-main {
+  }
+  .dark-mode .container-main {
     background-color: black;
-}
-
-.row-main {
+  }
+  
+  .row-main {
     display: flex;
     justify-content: space-between;
     width: 100%;
-}
-
-.todo-section,
-.timer-section,
-.reminder-section {
+  }
+  
+  .todo-section,
+  .timer-section,
+  .reminder-section {
     background-color: white;
     border: 1px solid darkslategray;
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
-.dark-mode .todo-section,
-.dark-mode .timer-section,
-.dark-mode .reminder-section {
+  }
+  .dark-mode .todo-section,
+  .dark-mode .timer-section,
+  .dark-mode .reminder-section {
     background-color: #333;
     border: 2px solid darkslategray;
     padding: 15px;
     border-radius: 5px;
     text-align: center;
-}
-
-.todo-section h3,
-.timer-section h3,
-.reminder-section h3 {
+  }
+  
+  .todo-section h3,
+  .timer-section h3,
+  .reminder-section h3 {
     color: darkslategray;
     border-bottom: 1px solid darkslategray;
     padding-bottom: 10px;
     margin-bottom: 15px;
-}
-.dark-mode .todo-section h3,
-.dark-mode .timer-section h3,
-.dark-mode .reminder-section h3 {
+  }
+  .dark-mode .todo-section h3,
+  .dark-mode .timer-section h3,
+  .dark-mode .reminder-section h3 {
     color: whitesmoke;
     border-bottom: 1px solid darkslategray;
     padding-bottom: 10px;
     margin-bottom: 15px;
-}
-
-/* button containers and button styles */
-.button-container {
+  }
+  
+  /* button containers and button styles */
+  .button-container {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
-}
-
-.button {
+  }
+  
+  .button {
     background-color: whitesmoke;
     color: darkslategrey;
     border: 1px solid slategrey;
     margin: 5px;
-}
-.dark-mode .button {
+  }
+  .dark-mode .button {
     background-color: darkslategrey;
     color: whitesmoke;
     border: 1px solid slategrey;
     margin: 5px;
-}
-
-.button:hover {
+  }
+  
+  .button:hover {
     background-color: darkslategray;
     color: whitesmoke;
-}
-.dark-mode .button:hover {
+  }
+  .dark-mode .button:hover {
     background-color: slategray;
     color: whitesmoke;
-}
-
-.btn {
+  }
+  
+  .btn {
     background-color: whitesmoke;
     color: darkslategrey;
     border: 1px solid slategrey;
-}
-.dark-mode .btn {
+  }
+  .dark-mode .btn {
     background-color: darkslategrey;
     color: whitesmoke;
     border: 1px solid slategrey;
-}
-
-.btn:hover {
+  }
+  
+  .btn:hover {
     background-color: darkslategray;
     color: whitesmoke;
-}
-.dark-mode .btn:hover {
+  }
+  .dark-mode .btn:hover {
     background-color: slategray;
     color: whitesmoke;
-}
-
-/* inputs and lists styles */
-.input-group {
+  }
+  
+  /* inputs and lists styles */
+  .input-group {
     margin-bottom: 20px;
-}
-
-input {
+  }
+  
+  input {
     margin-bottom: 10px;
-}
-.dark-mode input {
+  }
+  .dark-mode input {
     margin-bottom: 10px;
     background-color: #333;
     color: slategrey;
-}
-
-.list-group-item {
+  }
+  
+  .list-group-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
-}
-.dark-mode .list-group-item {
+  }
+  .dark-mode .list-group-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -207,36 +207,36 @@ input {
     color: whitesmoke;
     border: 1px solid whitesmoke;
     margin-bottom: 10px;
-}
-
-.list-group-item.complete {
+  }
+  
+  .list-group-item.complete {
     text-decoration: line-through;
-}
-
-/* pomodoro section */
-/* timer display styles */
-.timer-display {
+  }
+  
+  /* pomodoro section */
+  /* timer display styles */
+  .timer-display {
     font-size: 2em;
     font-weight: bold;
     color: darkslategray;
     text-align: center;
     margin-bottom: 20px;
-}
-.dark-mode .timer-display {
+  }
+  .dark-mode .timer-display {
     font-size: 2em;
     font-weight: bold;
     color: whitesmoke;
     text-align: center;
     margin-bottom: 20px;
-}
-
-/* Reminder list styling */
-#reminderList {
+  }
+  
+  /* Reminder list styling */
+  #reminderList {
     list-style: none;
     padding: 0;
-}
-
-#reminderList .list-group-item {
+  }
+  
+  #reminderList .list-group-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -244,82 +244,83 @@ input {
     color: darkslategrey;
     margin-bottom: 10px;
     border-radius: 5px;
-}
-
-.dark-mode #reminderList .list-group-item {
+  }
+  
+  .dark-mode #reminderList .list-group-item {
     background-color: black;
     color: whitesmoke;
     border: 1px solid whitesmoke;
     margin-bottom: 10px;
     padding: 10px;
-}
-
-/* footer styles */
-footer {
+  }
+  
+  /* footer styles */
+  footer {
     background-color: #ffffff;
     width: 100vw;
     padding: 10px 0;
     border-top: 1px solid darkslategrey;
-}
-.dark-mode footer {
+  }
+  .dark-mode footer {
     background-color: black;
     width: 100vw;
     padding: 10px 0;
     border-top: 2px solid darkslategrey;
-}
-
-/* modal styles */
-.modal-content {
+  }
+  
+  /* modal styles */
+  .modal-content {
     background-color: whitesmoke;
     color: darkslategrey;
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-.dark-mode .modal-content {
+  }
+  .dark-mode .modal-content {
     background-color: #333;
     color: whitesmoke;
     box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
-}
-
-.modal-dialog {
+  }
+  
+  .modal-dialog {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-}
-
-.modal-header {
+  }
+  
+  .modal-header {
     border-bottom: 1px solid darkslategrey;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.dark-mode .modal-header {
+  }
+  
+  .dark-mode .modal-header {
     border-bottom: 2px solid whitesmoke;
-}
-
-.modal-title {
+  }
+  
+  .modal-title {
     font-weight: bold;
-}
-
-.close {
+  }
+  
+  .close {
     color: darkslategrey;
-}
-.dark-mode .close {
+  }
+  .dark-mode .close {
     color: whitesmoke;
-}
-
-.modal-body {
+  }
+  
+  .modal-body {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-.modal-body p {
+  }
+  
+  .modal-body p {
     color: darkslategrey;
-}
-.dark-mode .modal-body p {
+  }
+  .dark-mode .modal-body p {
     color: whitesmoke;
-}
+  }
+  
