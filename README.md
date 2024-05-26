@@ -145,9 +145,8 @@ When I was creating my website, the design plan was changed but only small place
 - Balsamiq was used to create the wireframes as part of the design process.
 
 ## Testing
-# Seize the Day Website Testing Matrix
-
-## Test Categories and Cases
+# Behavioural testing
+- **Behavioural Testing**: involves verifying that the site's features and user interactions function as intended from the end-user's perspective. This includes ensuring that first-time visitors can easily understand and navigate the site, returning visitors can efficiently manage tasks, and frequent users can sign up to the newsletter/ join the community. By simulating real-world use cases, behavioural testing helps identify and address any issues in the user experience, ensuring the platform is intuitive, reliable, and meets the needs of its users. Throughout the development of this project, I did extensive behavioural testing was done as a means to check code was working as expected and problems fixed as and when need arised. The below table shows tests complete at the end of the project. 
 
 ### Functional Testing
 - **Functional Testing**: Ensures all features work correctly, including navigation, task management, and timer functions etc.
@@ -202,6 +201,11 @@ When I was creating my website, the design plan was changed but only small place
 | VT-02        | CSS: code adheres to standards and best practices when run through the validator               |           |                               |
 | VT-03        | JavaScript: code adheres to standards and best practices when run through the validator               |           |                               |
 
+# Automated testing
+- **Automated Testing**: Automated testing is the use of software tools and scripts to execute pre-defined test cases on a software application without manual intervention. It aims to verify that the application functions correctly and meets specified requirements. Automated testing can significantly speed up the testing process, improve accuracy by eliminating human error, and allow for more frequent and thorough testing, especially for repetitive tasks and regression tests. This approach is especially useful in continuous integration and continuous deployment (CI/CD) pipelines, ensuring that new code changes do not introduce defects.
+- **Possible Uses in this project**:
+- 
+-
 
 ### Navigation bar links. 
 Home, Gallery, Contact and Menus pages jump to the respective places when clicked. 
