@@ -247,55 +247,32 @@ Lighthouse was used to assess the accessibiity of the project to ensure the site
 ### Testing User Stories from User Experience (UX) Section
 
 - #### First Time Visitor Goals
-1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the bar, its location and ethos.<br>
-**1a.** Upon entering the site, users are automatically greeted with a clean and easily readable navigation bar to go to the page of their choice. Underneath there is a Hero Image with text making the site's content and purpose clear.<br>
+1. As a First Time Visitor, I want to easily understand the main purpose of the site/ platform.<br>
+**1a.** 
+<br>
 ![User Stories Homepage Top](./docs/testing/user-stories/user-stories-homepage-top.png)
 - The main basic information is put across first (who,what,where,when)<br>
 ![User Stories Homepage Middle](./docs/testing/user-stories/user-stories-homepage-middle.png)
 
 
-2. As a First Time Visitor, I want to be able to easily navigate throughout the site to find key information about the bar.<br>
-**2a** The user has options, use the navigation bar to enter specific site pages scroll down to read more generic info about the bar, subscribe to recieve newsletters or finally,to view the bar's social media through the links in the footer.
+2. As a First Time Visitor, I want to be able to easily navigate throughout the platform and be able to interpret what I see clearly.<br>
+**2a** 
 
-3. As a First Time Visitor, I want to be able to look at images and menus to help me decide if this is a place I would want to visit.<br>
-**3a** The site has 2 pages dedicated to this information accessed from the navbar. Page content specific reviews are on each page so patrons see a relevent review to the content they are reading about.
+
+3. As a First Time Visitor, I would expect intuitive user interfaces, helpful tooltips, and possibly a guide me in the use and usefulness of the key functionalities.<br>
+**3a** 
 
 ![User Stories Homepage Top](./docs/testing/user-stories/user-stories-gallery.png) ![User Stories Homepage Top](./docs/testing/user-stories/user-stories-menus.png)
 ![User Stories Homepage Top](./docs/testing/user-stories/user-stories-reviews.png)
 
-4. As a First Time Visitor, I want to be able to locate linked social media to find more information from other sources, for example, reviews and comments of customers.<br>
-**4a** The site includes a footer on every page with links to relevent social media.
-
-![User Stories Navbar](./docs/testing/user-stories/user-stories-navbar.png) 
-![User Stories Footer](./docs/testing/user-stories/user-stories-footer.png)
-
 - #### Returning Visitor Goals
-1. As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have about events or to make bookings.<br>
-**1a** The website has a Contact Us page easily accessible from the navbar.
+1. Efficient Task Management: Returning visitors would aim to efficiently manage their tasks using the platform's features. They would want to quickly add, edit tasks to stay organized and productive.<br>
+**1a** 
 ![User Stories contact Page](./docs/testing/user-stories/user-stories-contact.png)
 
-
-2. As a Returning Visitor, I want to find prices for menu items and view the menu before my visit or direct this information to my friends.<br>
-**2a** From the navbar and so from any page, customers can view a dedicated Menus page with buttons to access copies of the current menus with prices. All menus open in a new tab.
-
-![User Stories Menus Page](./docs/testing/user-stories/user-stories-menus-page.png)
-![User Stories Example Menu](./docs/testing/user-stories/user-stories-menu-example.png)
-
-
-3. As a Returning Visitor, I want to locate their social media links to join their followings on social media.<br>
-**3a** The site includes a footer on every page with links to relevent social media. 
-
 - #### Frequent User Goals
-1. As a Frequent User, I want to look at gallery images.<br>
-**1a** Currently, there is a dedicated gallery page with a carousel of images. This could be adapted as the site builds to become filterable by newest/oldest or by night/event.
-2. As a Frequent User, I want to check to see be able to refer to menu items.<br>
-**2a** The dedicated menu page has up to date menus. This page could be enhanced with a "Coming Soon!" section for new/ seasonal menus. Customers can also choose to be kept up to date via the newsletter subscription.
-
-3. As a Frequent User, I want to be able to sign up to updates about what is going on at the bar and be the first to know about any promotional offers.<br>
-**3a** As per the wishes of the company to have a way to reach out to their customers, each page includes a form through which customers can sign up to a newsletter subscription.
-
-![User Stories Newsletter Signup](./docs/testing/user-stories/user-stories-newsletter-signup.png)
-
+1. Community Engagement: Frequent users might seek opportunities for community engagement, such as participating in forums, sharing productivity tips, or attending webinars or workshops hosted by the Seize the Day community.<br>
+**1a** C
 
 ### Further Testing
 -   A large amount of repeated testing was done to ensure that all pages were linking correctly.
