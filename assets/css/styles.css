@@ -63,12 +63,12 @@ body {
   
   #clockDisplay {
     font-size: 2em;
-    font-weight: light;
+    font-weight: lighter;
     color: darkslategrey;
   }
   .dark-mode #clockDisplay {
     font-size: 2em;
-    font-weight: light;
+    font-weight: lighter;
     color: whitesmoke;
   }
   
