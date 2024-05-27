@@ -11,10 +11,10 @@
   </head>
   <body>
     <!-- navbar -->
-    <nav class="navbar">
-      <span class="navbar-brand">Seize the Day</span>
+    <nav class="navbar navbar-light bg-light">
+      <span class="navbar-brand mb-0 h1">Seize the Day</span>
       <!-- "Join Us" button -->
-      <button id="joinUsBtn" class="btn">Join Us</button>
+      <button id="joinUsBtn" class="btn btn-primary">Join Us</button>
     </nav>
     <!-- header section -->
     <header>
@@ -49,57 +49,66 @@
           <div class="input-group">
             <input type="text" id="taskInput" placeholder="Enter task" class="form-control">
             <div class="input-group-append">
-              <button id="addTaskBtn" class="btn">Add Task</button>
+              <button id="addTaskBtn" class="btn btn-primary">Add Task</button>
             </div>
           </div>
           <!-- task list display -->
           <ul id="taskList" class="list-group"></ul>
           <!-- clear list button -->
-          <button id="clearListBtn" class="btn">Clear List</button>
+          <button id="clearListBtn" class="btn btn-secondary">Clear List</button>
         </section>
         <!-- pomodoro timer and reminder section -->
         <section class="col-lg-6 col-md-6 col-sm-12">
           <div class="row">
             <!-- pomodoro timer section -->
             <div class="timer-section col-12">
-              <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#pomodoroModal"> ? </button>
+              <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#pomodoroModal"> ? </button>
               <h3>Pomodoro Timer</h3>
               <!-- timer control buttons -->
               <div class="button-container">
-                <button class="button btn" id="pomodoro-session">Pomodoro</button>
-                <button class="button btn" id="short-break">Short Break</button>
-                <button class="button btn" id="long-break">Long Break</button>
+                <button class="button btn btn-primary" id="pomodoro-session">Pomodoro</button>
+                <button class="button btn btn-primary" id="short-break">Short Break</button>
+                <button class="button btn btn-primary" id="long-break">Long Break</button>
               </div>
               <!-- timer display -->
               <div class="timer-display">
-                <span id="minutes">25</span>: <span id="seconds">00</span>
+                <span id="minutes">25</span>:<span id="seconds">00</span>
               </div>
               <!-- start timer button -->
-              <button id="startTimerBtn" class="btn">Start</button>
+              <button id="startTimerBtn" class="btn btn-success">Start</button>
             </div>
             <!-- Reminder section -->
             <section class="reminder-section col-12">
               <h3>Set Reminder</h3>
               <!-- Reminder input fields -->
               <div class="input-group">
-                <input type="time" id="reminderTime" class="form-control" placeholder="Set time">
+                <label for="reminderTime" class="sr-only">Reminder Time</label>
+                <input type="time" id="reminderTime" class="form-control">
+                
+                <label for="reminderMessage" class="sr-only">Reminder Message</label>
                 <input type="text" id="reminderMessage" class="form-control" placeholder="Reminder message...">
+                
                 <div class="input-group-append">
-                  <button id="setReminderBtn" class="btn">Set Reminder</button>
+                  <button id="setReminderBtn" class="btn btn-primary">Set Reminder</button>
                 </div>
               </div>
               <!-- Reminder list display -->
               <ul id="reminderList" class="list-group"></ul>
             </section>
+          </div>
+        </section>
+      </div>
     </main>
     <!-- modals -->
     <!-- Subscription Modal -->
-    <div id="subscriptionModal" class="modal">
+    <div id="subscriptionModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="subscriptionModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Subscribe to Seize the Day</h5>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h5 class="modal-title" id="subscriptionModalLabel">Subscribe to Seize the Day</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
           <div class="modal-body">
             <form id="subscriptionForm" name="contact" action="https://formdump.codeinstitute.net/" target="_blank" method="POST">
@@ -107,7 +116,7 @@
                 <label for="email">Email address:</label>
                 <input type="email" class="form-control" id="email" placeholder="Enter email" required>
               </div>
-              <button type="submit" class="btn">Subscribe</button>
+              <button type="submit" class="btn btn-primary">Subscribe</button>
             </form>
           </div>
         </div>
@@ -115,7 +124,7 @@
     </div>
     <!-- modal what is pomodoro ? -->
     <!-- adapted bootstrap code -->
-    <div class="modal fade" id="pomodoroModal" tabindex="-1" aria-labelledby="pomodoroModalLabel" aria-hidden="true">
+    <div class="modal fade" id="pomodoroModal" tabindex="-1" role="dialog" aria-labelledby="pomodoroModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -134,7 +143,7 @@
     <!-- modals for timer alerts -->
     <!-- pomodoro over modal -->
     <!-- adapted bootstrap code -->
-    <div class="modal" id="pomodoroOverModal" tabindex="-1" aria-labelledby="pomodoroOverModalLabel" aria-hidden="true">
+    <div class="modal fade" id="pomodoroOverModal" tabindex="-1" role="dialog" aria-labelledby="pomodoroOverModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -151,7 +160,7 @@
     </div>
     <!-- short break over modal -->
     <!-- adapted bootstrap code -->
-    <div class="modal" id="shortBreakOverModal" tabindex="-1" aria-labelledby="shortBreakOverModalLabel" aria-hidden="true">
+    <div class="modal fade" id="shortBreakOverModal" tabindex="-1" role="dialog" aria-labelledby="shortBreakOverModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -168,7 +177,7 @@
     </div>
     <!-- long break over modal -->
     <!-- adapted bootstrap code -->
-    <div class="modal" id="longBreakOverModal" tabindex="-1" aria-labelledby="longBreakOverModalLabel" aria-hidden="true">
+    <div class="modal fade" id="longBreakOverModal" tabindex="-1" role="dialog" aria-labelledby="longBreakOverModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -185,7 +194,7 @@
     </div>
     <!-- reminder modal -->
     <!-- adapted bootstrap code -->
-    <div class="modal" id="reminderModal" tabindex="-1" aria-labelledby="reminderModalLabel" aria-hidden="true">
+    <div class="modal fade" id="reminderModal" tabindex="-1" role="dialog" aria-labelledby="reminderModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -195,9 +204,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <p>
-              <!-- populated at input -->
-            </p>
+            <p id="reminderMessageContent"><!-- populated at input --></p>
           </div>
         </div>
       </div>
@@ -207,11 +214,10 @@
       <div class="container container-fluid">
         <div class="row">
           <div class="col-lg-6">
-            <button id="toggleDarkModeBtn" class="btn">Dark Mode</button>
+            <button id="toggleDarkModeBtn" class="btn btn-dark">Dark Mode</button>
           </div>
           <div class="col-lg-6 text-lg-right">
-            <p>Visit our website: <a target="_blank" href="error.html">www.seizetheday.com</a>
-            </p>
+            <p>Visit our website: <a target="_blank" href="error.html">www.seizetheday.com</a></p>
           </div>
         </div>
       </div>
