@@ -224,60 +224,60 @@ let reminders = [];
 
 // Event listener for setting a reminder
 setReminderBtn.addEventListener('click', () => {
-    const reminderTime = reminderTimeInput.value; // Get the reminder time from the input
-    const reminderMessage = reminderMessageInput.value; // Get the reminder message from the input
+  const reminderTime = reminderTimeInput.value; // Get the reminder time from the input
+  const reminderMessage = reminderMessageInput.value; // Get the reminder message from the input
 
-    // Check if both time and message are provided
-    if (reminderTime && reminderMessage) {
-        // Add reminder to array
-        reminders.push({ time: reminderTime, message: reminderMessage });
+  // Check if both time and message are provided
+  if (reminderTime && reminderMessage) {
+    // Add reminder to array
+    reminders.push({ time: reminderTime, message: reminderMessage });
 
-        // Create the list item to display the reminder
-        const li = document.createElement('li');
-        li.classList.add('list-group-item'); // Add Bootstrap class for styling
-        li.textContent = `${reminderTime} - ${reminderMessage}`;
-        reminderList.appendChild(li);
+    // Create the list item to display the reminder
+    const li = document.createElement('li');
+    li.classList.add('list-group-item'); // Add Bootstrap class for styling
+    li.textContent = `${reminderTime} - ${reminderMessage}`;
+    reminderList.appendChild(li);
 
-        // Clear the input fields
-        reminderTimeInput.value = '';
-        reminderMessageInput.value = '';
-    }
+    // Clear the input fields
+    reminderTimeInput.value = '';
+    reminderMessageInput.value = '';
+  }
 });
 
 // Function to check for reminders
 function checkReminders() {
-    // Get the current time
-    const currentTime = new Date().toLocaleTimeString('en-GB', { hour12: false }).slice(0, 5);
+  // Get the current time
+  const currentTime = new Date().toLocaleTimeString('en-GB', { hour12: false }).slice(0, 5);
 
-    // Loop through the reminders array
-    reminders.forEach((reminder, index) => {
-        // Check if reminder time matches current time
-        if (reminder.time === currentTime) {
-            // Display reminder message in the modal
-            reminderModalMessage.textContent = reminder.message;
-            reminderModal.show();
+  // Loop through the reminders array
+  reminders.forEach((reminder, index) => {
+    // Check if reminder time matches current time
+    if (reminder.time === currentTime) {
+      // Display reminder message in the modal
+      reminderModalMessage.textContent = reminder.message;
+      reminderModal.show();
 
-            // Remove reminder from array
-            reminders.splice(index, 1);
+      // Remove reminder from array
+      reminders.splice(index, 1);
 
-            // Update reminder list display
-            updateReminderList();
-        }
-    });
+      // Update reminder list display
+      updateReminderList();
+    }
+  });
 }
 
 // Function to update the reminder list display
 function updateReminderList() {
-    // Clear current list items
-    reminderList.innerHTML = '';
+  // Clear current list items
+  reminderList.innerHTML = '';
 
-    // Repopulate list with remaining reminders
-    reminders.forEach(reminder => {
-        const li = document.createElement('li');
-        li.classList.add('list-group-item'); // Add Bootstrap class for styling
-        li.textContent = `${reminder.time} - ${reminder.message}`;
-        reminderList.appendChild(li);
-    });
+  // Repopulate list with remaining reminders
+  reminders.forEach(reminder => {
+    const li = document.createElement('li');
+    li.classList.add('list-group-item'); // Add Bootstrap class for styling
+    li.textContent = `${reminder.time} - ${reminder.message}`;
+    reminderList.appendChild(li);
+  });
 }
 
 // Set interval to check reminders every second
@@ -285,13 +285,6 @@ setInterval(checkReminders, 1000);
 
 // JavaScript to trigger subscription modal
 document.getElementById('joinUsBtn').addEventListener('click', function() {
-    // Show the subscription modal
-    $('#subscriptionModal').modal('show');
+  // Show the subscription modal
+  $('#subscriptionModal').modal('show');
 });
-
-// JavaScript to trigger subscription modal
-document.getElementById('joinUsBtn').addEventListener('click', function() {
-    // Show the subscription modal
-    $('#subscriptionModal').modal('show');
-});
-

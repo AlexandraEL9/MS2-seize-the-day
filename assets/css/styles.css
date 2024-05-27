@@ -234,16 +234,16 @@ body {
   #reminderList {
     list-style: none;
     padding: 0;
+    text-align: center; /* Center text */
   }
   
-  #reminderList .list-group-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    color: darkslategrey;
-    margin-bottom: 10px;
-    border-radius: 5px;
+  #reminderList li {
+    display: inline-block; /* Make each list item an inline block to center */
+    width: 100%; /* Ensure it spans the full width */
+    text-align: center; /* Center text within each list item */
+    border: 1px solid #ddd; /* Optional: add a border to distinguish items */
+    padding: 10px; /* Optional: add some padding */
+    margin-bottom: 5px; /* Optional: add some margin between items */
   }
   
   .dark-mode #reminderList .list-group-item {
