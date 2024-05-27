@@ -58,3 +58,14 @@ footer {
     border-top: 1px solid darkslategrey;
     text-align: center;
 }
+a {
+    color: black; /* link color */
+    text-decoration: underline; /* Underline for accessibility */
+  }
+  a:focus, a:hover {
+    font-weight: bold;
+    outline: 2px solid darkslategrey;
+  }
+  a:active {
+    font-weight: bolder; 
+}
