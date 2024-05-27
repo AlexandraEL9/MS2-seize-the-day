@@ -220,16 +220,48 @@ A guide is provided for the function which may or ma5 not be familaiar to the us
 
 - #### Returning Visitor Goals
 1. Efficient Task Management: Returning visitors would aim to efficiently manage their tasks using the platform's features. 
-- - 1.1 They would want to quickly add, edit tasks to stay organized and productive.<br>
-- - 1.2 They would want to set timers for focus and break times to stay productive.
-- - 1.3 They may wish to set reminders for tasks which need to be done at a certain time eg. 4pm- attend Teams meeting.
-- - 1.4 They may wish to change/ toggle the display of the site to suit either the room/time of day/ light they are in for medical or personal reasons<br>
-**1a** Solution: Returning visitors can quickly manage their tasks through the streamlined to-do list feature. Tasks can be easily added, edited, marked as complete, or deleted. The interface is designed for quick access and minimal clicks, ensuring users can update their tasks efficiently.
-![User Stories contact Page](./docs/testing/user-stories/user-stories-contact.png)
+- 1.1 They would want to quickly add, edit tasks to stay organized and productive.<br>
+- - *Solution:* Returning visitors can quickly manage their tasks through the streamlined to-do list feature. Tasks can be easily added, edited, marked as complete, or deleted. The interface is designed for quick access and minimal clicks, ensuring users can update their tasks efficiently.<br>
+![User Stories To-Do List](./docs/testing/user-stories/user-stories-todo.png)
+- 1.2 They would want to set timers for focus and break times to stay productive.
+- - *Solution:* Users have the ability to use the Pomodoro timer feature to set focus sessions (Pomodoro, 25mins), short break sessions(5mins) or long break sessions (15min). The timer display will count down and at the end a 'calm alarm sounds and a modal displays telling the user to either focus for another 25mins or take a break.<br>
+<div style="display: flex; justify-content: space-between;">
+  <img src="./docs/testing/user-stories/user-stories-pomodoro.png" alt="User Stories To-Do List" style="width: 45%;"/>
+  <img src="./docs/testing/user-stories/user-stories-pomodoro-countdown.png" alt="User Stories To-Do List Countdown" style="width: 45%;"/>
+</div>
+<br>
+<div style="display: flex; justify-content: space-between;">
+  <img src="./docs/testing/user-stories/user-stories-pomodoro-break-over.png" alt="User Stories To-Do List" style="width: 45%;"/>
+  <img src="./docs/testing/user-stories/user-stories-pomodoro-take-a-break.png" alt="User Stories To-Do List Countdown" style="width: 45%;"/>
+</div>
+<br>
+- 1.3 They may wish to set reminders for tasks which need to be done at a certain time eg. 4pm- attend Teams meeting.
+- - *Solution:* Users have the ability to set time sensitive reminders using the 'Set Reminder' section. The user sets a time and message and the information is added to a list below the input. Once the time is met, a modal with the reminder will display reminding the user what they need to do.<br>
+
+![User Stories To-Do List](./docs/testing/user-stories/user-stories-reminder.png)
+<div style="display: flex; justify-content: space-between;">
+  <img src="./docs/testing/user-stories/user-stories-reminder-list.png" alt="User Stories To-Do List Countdown" style="width: 45%;"/>
+  <img src="./docs/testing/user-stories/user-stories-reminder-modal.png" alt="User Stories To-Do List Countdown" style="width: 45%;"/>
+</div>
+<br>
+-  1.4 They may wish to change/ toggle the display of the site to suit either the room/time of day/ light they are in for medical or personal reasons<br>
+- - *Solution:* Users have the ability to set the mode/colour scheme of the page with the use of a Dark Mode/ Light Mode toggler button in the footer. The display text on this button changes depending on the mode the page is in.<br>
+<div style="display: flex; justify-content: space-between;">
+  <img src="./docs/testing/user-stories/user-stories-light-mode.png" alt="User Stories To-Do List Countdown" style="width: 45%;"/>
+  <img src="./docs/testing/user-stories/user-stories-dark-mode.png" alt="User Stories To-Do List Countdown" style="width: 45%;"/>
+</div>
+<br>
 
 - #### Frequent User Goals
 1. Community Engagement: Frequent users might seek opportunities for community engagement, such as participating in forums, sharing productivity tips, or attending webinars or workshops hosted by the Seize the Day community.<br>
-**1a** Solution: The website fosters community engagement through an option to be put on a mailing list to be kept up to dat with upgrades, news etc.
+- - *Solution:* The website fosters community engagement through an option to be put on a mailing list to be kept up to date with upgrades, news etc. Through a 'Join Us' button in the navbar, a modal appears with a form to enter your email to sunscribe to the mailing list<br>
+![User Stories To-Do List](./docs/testing/user-stories/user-stories-join.png)
+
+### Further Features
+- **Error Page**: In the footer there is a link to 'www.seizetheday.com'. As this is simply a project and not a real site there is nowhere for it to go. as such, this links to an error page which opens in a new window.
+![User Stories To-Do List](./docs/testing/user-stories/user-stories-error-page.png)<br>
+This page contains a message for the user and a 10sec countdown timer which then automatically sends the user back to the main page without intervention from the user through navigation controls/ buttons etc.
+
 
 ### Further Testing
 -   A large amount of repeated testing was done to ensure that all pages were linking correctly.
