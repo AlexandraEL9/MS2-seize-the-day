@@ -4,10 +4,10 @@ Seize the Day is a productivity companion web application designed to help users
 
 - This project was completed for the Milestone 2 project in Level 5 Web Application and Development. It is designed to be responsive and accessible on a range of devices, making it easy to navigate for potential and returning patrons.
 
-[View the live project here.](https://alexandrael9.github.io/MS1-dock9bar/index.html)
+[View the live project here.](https://alexandrael9.github.io/MS2-seize-the-day/)
 
 
-<h2 align="center"><img src="./docs/responsive-layout.png"></h2>
+<h2 align="center"><img src="docs/testing/responsive-layout.png"></h2>
 
 ## Planning
 
@@ -166,16 +166,9 @@ When I was creating my website, the design plan was changed but only small place
 
 | Test Case ID | Test Description                                                                                             | Expected Result                                                                                       | Pass/Fail | Comments                       |
 |--------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|-----------|-------------------------------|
-| UT-01        | Verify the homepage clearly communicates the purpose of the site to first-time visitors                      | First-time visitors can easily understand the site's purpose                                           |      Pass     |             Purpose and intent evident                  |
+| UT-01        | Verify the homepage clearly communicates the purpose of the site to first-time visitors                      | First-time visitors can easily understand the site's purpose.                                          |      Pass     |             Purpose and intent evident. It has a title and description section which explains the site in the first instance.                  |
 | UT-02        | Verify site provides helpful information about key functionalities                                        | Site includes helpful information helpful information for possibly unclear/new time management technique, promoting benefit to user.                                      |       Pass    |      '?' button in Pomodoro section opens a modal which explains the use of a Pomodoro timer to aid productivity and work/life balance.                         |                   
 | UT-03        | Verify the user interface is intuitive and easy to navigate                                                  | Users can easily navigate the site without confusion                                                   |    Pass       |   Site uses commonly recognised tools and layout features and tools which will be known to users. Site is well spaced, with only key content used in order to remain uncluttered. Buttons linking to modals allow for more info to be given without cluttering up the interface and can be accessed only as and when the user feels they may need it.                            | 
-
-### Performance Testing
-- **Performance Testing**: Ensures the site loads quickly and performs well.
-
-| Test Case ID | Test Description                                                                                             | Expected Result                                                                                       | Pass/Fail | Comments                       |
-|--------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|-----------|-------------------------------|
-| PT-01        | Verify the website loads within an acceptable time frame (e.g., under 3 seconds)                             | Website loads within the acceptable time frame                                                         |           |                               |
 
 ### Compatibility Testing
 - **Compatibility Testing**: Ensures the site works across different browsers and devices.
