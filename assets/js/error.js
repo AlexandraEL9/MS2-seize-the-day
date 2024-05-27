@@ -5,6 +5,7 @@ var clockDisplay = document.getElementById("clock");
 function updateClock() {
     clockDisplay.textContent = "Countdown: " + countdown + " seconds";
     countdown--;
+
     if (countdown < 0) {
         window.location.href = "index.html";
     } else {
