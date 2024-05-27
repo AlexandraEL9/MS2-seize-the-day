@@ -190,7 +190,7 @@ When I was creating my website, the design plan was changed but only small place
 
 | Test Case ID | Test Description                                                                                             | Expected Result                                                                                       | Pass/Fail | Comments                       |
 |--------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|-----------|-------------------------------|
-| AT-01        | Verify the website meets accessibility standards (e.g., WCAG 2.1)                                            | Website meets accessibility standards, ensuring it is usable by people with disabilities               |           |                               |
+| AT-01        | Verify the website meets accessibility standards (e.g., chrome DevTools, lighthouse)                                            | Website meets accessibility standards, ensuring it is usable by people with disabilities<br>Accessibility score in the green (90-100)              |   Pass       |          Main page on mobile scores 100 for accessibility and best practices<br>![Google DevTools Lighthouse](/docs/testing/lighthouse-main-page-test-mobile.png)<br>Main page on desktop scores 100 for accessibility and best practices<br>![Google DevTools Lighthouse](/docs/testing/lighthouse-main-page-test-desktop.png)<br><br>Error page on desktop scores 100 for accessibility and best practices<br>![Google DevTools Lighthouse](/docs/testing/lighthouse-error-page-test-desktop.png)<br>Error page on mobile scores 100 for accessibility and best practices<br>![Google DevTools Lighthouse](/docs/testing/lighthouse-error-page-test-mobile.png)                    | 
 
 ### Validator Testing
 - **Validator Testing**: Ensures that the website's code adheres to established standards and best practices, which helps improve functionality, accessibility, and cross-browser compatibility.
@@ -261,27 +261,6 @@ Tested gallery controls checking carousel only moves on as a result of user inpu
 ![Form Media Query small screens](./docs/testing/responsive-form-sml.png)
 ![Form Media Query meduim and large screens](./docs/testing/responsive-form-md-lg.png)
 
-### Validator Testing
-
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
-
-**HTML**
-
--   [W3C Markup Validator index.html](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](/docs/testing/w3c-index.html-validator.png)
-- - There were some 'Warnings' to do with header elements however these warnings do not take into account that the header for the content is in the previous section and the 'possible' misuse of an aria-label on my map. As these are warnings and not errors I ignored them.<br>
-
-
--   [W3C Markup Validator gallery.html](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](/docs/testing/w3c-gallery.html-validator.png)
-
--   [W3C Markup Validator contact.html](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](/docs/testing/w3c-contact.html-validator.png)
-- - There was an issue with duplicate tags as this page had two forms on - one for contact and one for subscription- I edited the id's and labels to section specific ones. This fixed the issue.
-
--   [W3C Markup Validator menus.html](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](/docs/testing/w3c-menus.html-validator.png)
-- - There was an issue with duplicate and stray div tags. Quick format and check and removed eroneous tag.
-
-**CSS**
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](/docs/testing/w3c-css-validator-1.png)
--This brought the above error. I rectified it and retested. - [Results](/docs/testing/w3c-css-validator-2.png)
 
 ### Chrome's DevTools Audit Report
 
