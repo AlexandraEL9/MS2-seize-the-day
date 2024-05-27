@@ -211,65 +211,83 @@ closeButtons.forEach(button => {
 
 // Alarm/reminder section
 
-//dom elements
+// DOM elements
 const reminderTimeInput = document.getElementById('reminderTime');
 const reminderMessageInput = document.getElementById('reminderMessage');
 const setReminderBtn = document.getElementById('setReminderBtn');
 const reminderList = document.getElementById('reminderList');
 const reminderModal = new bootstrap.Modal(document.getElementById('reminderModal'));
 const reminderModalMessage = document.querySelector('#reminderModal .modal-body p');
-//array to store reminders
+
+// Array to store reminders
 let reminders = [];
 
-//event listener for setting a reminder
+// Event listener for setting a reminder
 setReminderBtn.addEventListener('click', () => {
-    const reminderTime = reminderTimeInput.value; //get the reminder time from the input
-    const reminderMessage = reminderMessageInput.value; //get the reminder message from the input
-    //check if both time and message are provided
+    const reminderTime = reminderTimeInput.value; // Get the reminder time from the input
+    const reminderMessage = reminderMessageInput.value; // Get the reminder message from the input
+
+    // Check if both time and message are provided
     if (reminderTime && reminderMessage) {
-        //add reminder to array
+        // Add reminder to array
         reminders.push({ time: reminderTime, message: reminderMessage });
-        //create the list item to display the reminder
+
+        // Create the list item to display the reminder
         const li = document.createElement('li');
+        li.classList.add('list-group-item'); // Add Bootstrap class for styling
         li.textContent = `${reminderTime} - ${reminderMessage}`;
         reminderList.appendChild(li);
-        //clear the input fields
+
+        // Clear the input fields
         reminderTimeInput.value = '';
         reminderMessageInput.value = '';
     }
 });
 
-//function to check for reminders
+// Function to check for reminders
 function checkReminders() {
-    //get the current time
+    // Get the current time
     const currentTime = new Date().toLocaleTimeString('en-GB', { hour12: false }).slice(0, 5);
-    //loop through the reminders array
+
+    // Loop through the reminders array
     reminders.forEach((reminder, index) => {
-        //check if reminder time matches current time
+        // Check if reminder time matches current time
         if (reminder.time === currentTime) {
-            //display reminder message in the modal
+            // Display reminder message in the modal
             reminderModalMessage.textContent = reminder.message;
             reminderModal.show();
-            //remove reminder from array
+
+            // Remove reminder from array
             reminders.splice(index, 1);
-            //update reminder list display
+
+            // Update reminder list display
             updateReminderList();
         }
     });
 }
 
-//function to update the reminder list display
+// Function to update the reminder list display
 function updateReminderList() {
-    //clear current list items
+    // Clear current list items
     reminderList.innerHTML = '';
-    //repopulate list with remaining reminders
+
+    // Repopulate list with remaining reminders
     reminders.forEach(reminder => {
         const li = document.createElement('li');
+        li.classList.add('list-group-item'); // Add Bootstrap class for styling
         li.textContent = `${reminder.time} - ${reminder.message}`;
         reminderList.appendChild(li);
     });
 }
-setInterval(checkReminders, 1000); // Checks reminders every second// JavaScript to trigger subscription modal
+
+// Set interval to check reminders every second
+setInterval(checkReminders, 1000);
+
+// JavaScript to trigger subscription modal
+document.getElementById('joinUsBtn').addEventListener('click', function() {
+    // Show the subscription modal
+    $('#subscriptionModal').modal('show');
+});
 
 // JavaScript to trigger subscription modal
 document.getElementById('joinUsBtn').addEventListener('click', function() {

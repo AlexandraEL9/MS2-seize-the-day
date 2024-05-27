@@ -206,22 +206,24 @@ When I was creating my website, the design plan was changed but only small place
 1. As a First Time Visitor, I want to easily understand the main purpose of the site/ platform.<br>
 **1a.** Solution: The website's landing page features a clear and concise tagline or mission statement that explains the main purpose of the platform: to help users manage their time and tasks efficiently. Additionally, the homepage includes a brief overview of key features such as the Pomodoro timer, to-do list, reminders, and dark mode toggle. This immediate clarity helps first-time visitors understand what the site offers.
 <br>
-![User Stories Homepage Top](./docs/testing/user-stories/user-stories-homepage-top.png)
-- The main basic information is put across first (who,what,where,when)<br>
-![User Stories Homepage Middle](./docs/testing/user-stories/user-stories-homepage-middle.png)
+![User Stories Main Page Top](./docs/testing/user-stories/user-stories-main-page-top.png)
 
 
 2. As a First Time Visitor, I want to be able to easily navigate throughout the platform and be able to interpret what I see clearly.<br>
-**2a** Solution: The website uses a simple, intuitive layout with a top navigation bar that clearly labels each section (e.g., Home, To-Do List, Timer, Reminders, Community). Each section is also accessible from the homepage via prominent buttons or links. The use of icons and clear headings further aids navigation, making it easy for users to find and understand each feature. The design for inputs etc has been deliberatly chosen to be familiar with tools and functions used often ensuring ease of understanding and use.
+**2a** Solution: The website uses a simple, intuitive layout with a top navigation bar and clearly defined section and a footer at the base. The use of icons and clear headings further aids navigation, making it easy for users to find and understand each feature. The design for inputs etc has been deliberatly chosen to be familiar with tools and functions used often ensuring ease of understanding and use.
+![User Stories Main Page Whole](./docs/testing/user-stories/user-stories-main-page-whole.png)
 
-3. As a First Time Visitor, I would expect intuitive user interfaces, helpful tooltips, and possibly a guide me in the use and usefulness of the key functionalities.<br>
-**3a** Solution: The user interface is designed to be intuitive, with interactive elements like buttons and input fields clearly marked. A guide is provided for the function which may or ma not be familaiar to the user, (the pomodoro timer), explaining what the function is and how it can be beneficial to the user. It is a modal which is accessed via a button close to the heading
-
-![User Stories Homepage Top](./docs/testing/user-stories/user-stories-gallery.png) ![User Stories Homepage Top](./docs/testing/user-stories/user-stories-menus.png)
-![User Stories Homepage Top](./docs/testing/user-stories/user-stories-reviews.png)
+3. As a First Time Visitor, I would expect intuitive user interfaces, helpful tooltips, and possibly a guide to aid me in the use and usefulness of the key or unfamiliar functionalities.<br>
+**3a** Solution: The user interface is designed to be intuitive, with interactive elements like buttons and input fields clearly marked.
+A guide is provided for the function which may or ma5 not be familaiar to the user, (the pomodoro timer), explaining what the function is and how it can be beneficial to the user. It is a modal which is accessed via a button close to the heading.
+![User Stories Main Page Whole](./docs/testing/user-stories/user-stories-main-page-pomodoro-modal.png)
 
 - #### Returning Visitor Goals
-1. Efficient Task Management: Returning visitors would aim to efficiently manage their tasks using the platform's features. They would want to quickly add, edit tasks to stay organized and productive.<br>
+1. Efficient Task Management: Returning visitors would aim to efficiently manage their tasks using the platform's features. 
+- - 1.1 They would want to quickly add, edit tasks to stay organized and productive.<br>
+- - 1.2 They would want to set timers for focus and break times to stay productive.
+- - 1.3 They may wish to set reminders for tasks which need to be done at a certain time eg. 4pm- attend Teams meeting.
+- - 1.4 They may wish to change/ toggle the display of the site to suit either the room/time of day/ light they are in for medical or personal reasons<br>
 **1a** Solution: Returning visitors can quickly manage their tasks through the streamlined to-do list feature. Tasks can be easily added, edited, marked as complete, or deleted. The interface is designed for quick access and minimal clicks, ensuring users can update their tasks efficiently.
 ![User Stories contact Page](./docs/testing/user-stories/user-stories-contact.png)
 
