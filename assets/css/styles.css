@@ -253,7 +253,26 @@ body {
     margin-bottom: 10px;
     padding: 10px;
   }
-  
+/* Custom CSS to style the label and input */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: bold; /* Optional: to make the label stand out */
+}
+
+.form-control {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+
+
+
   /* footer styles */
   footer {
     background-color: #ffffff;
