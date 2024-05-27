@@ -268,24 +268,46 @@ This page contains a message for the user and a 10sec countdown timer which then
 -   Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
 
 ### Known Bugs/ issues
-**Performance**
-- Performance needs to be enhanced, especially load time, and investigation work done around images slowing page performance down without sacrificing image quality.
 
 **Coding issues**
-- I came across an issue while building the site. This issue was made evident when viewing the menu page in smaller screens. Some horizontal sections of the page had white, empty space on the right hand side.
-- - In the first instance, I added "container-fluid" to the required sections. While this worked with some sections - the coloured background spread to fit the viewport - the section with the menu cards and images was still pushing out to the edges and creating white space. I looked deeper into the bootstrap code.
 
-![Bootstrap card default](./docs/testing/bootstrap-card-default.png)
+- - *Reminder time input and accessibility:* I had repeated issues with accessibility in relation to the time input element in the reminder section.<br>
+![Reminder section](./docs/testing/user-stories/user-stories-reminder.png)<br>
+Any label I tried to add wuld result in some catestrophic change ing the styling and alignment of the section. After some research on w3 schools and bootstrap, I found th 'sr-only' bootstrap class. This allowed me to add the labels but for 'screen-readers only' meaning the page has the needed accessibility without hampering the layout. <br>
+<div style="display: flex; justify-content: space-between;">
+  <img src="./docs/bugs-fixes/bugs-labels-1.png" alt="User Stories To-Do List Countdown" style="width: 45%;"/>
+  <img src="./docs/bugs-fixes/bugs-labels-2.png" alt="User Stories To-Do List Countdown" style="width: 45%;"/>
+</div>
+<br>
 
-- - Firstly I removed any default dimensions and measurements relating to the card image so that I could control this in css. 
-![Menu Card HTML](./docs/testing/menu-card-html.png) ![Menu Card CSS](./docs/testing/menu-card-css.png) 
+- - *Updating the time and date:* I had some learning to do with 'when' things update automatically. The header of the site has a date and time section which I wnated to automatically populate and update so the header is always up to date and correct.<br>
+![Header section](./docs/testing/user-stories/user-stories-main-page-top.png)<br>
+ <br>
+ The first iteration of the code looked like this:
 
-- - I then used css to change the width to 100% so the image will not push out its container.
+ ![Header section](./docs/bugs-fixes/bugs-current-time-1.png)<br>
+This was updating but not on the minute in line with actual 
+time (it was updating every minuite from the page load), when checked with incidental/ in development testing.Research on https://www.freecodecamp.org/news/how-to-format-dates-in-javascript/ allowed me to isolate the 'checking' part of the code and I adapted to check every second.
+![Header section](./docs/bugs-fixes/bugs-current-time-2.png)
+<br>
+
+- - *Pomodoro timer- :* I had some learning to do with 'when' things update automatically. The header of the site has a date and time section which I wnated to automatically populate and update so the header is always up to date and correct.<br>
+![Header section](./docs/testing/user-stories/user-stories-main-page-top.png)<br>
+ <br>
+ The first iteration of the code looked like this:
+
+ ![Header section](./docs/bugs-fixes/bugs-current-time-1.png)<br>
+This was updating but not on the minute in line with actual 
+time (it was updating every minuite from the page load), when checked with incidental/ in development testing.Research on https://www.freecodecamp.org/news/how-to-format-dates-in-javascript/ allowed me to isolate the 'checking' part of the code and I adapted to check every second.
+![Header section](./docs/bugs-fixes/bugs-current-time-2.png)
+<br>
+
 
 ### Improvements/ scalability 
 - Drive User Engagement: develop the site further and aim to encourage users to spend more time on the platform by offering more of a range engaging features such as interactive timers, customizable to-do lists, and helpful reminders. A range of backgrounds could also be provided making the UI more personal to users.
 - Build more functionality for greater customization and personalization: Frequent users may value customization options that allow them to tailor the platform to their preferences. They might want to customize task categories, timer durations, reminder settings, and the overall layout to suit their workflow. This could also include extra functionality tracking healthy habits such as water drinking, portions of fruit and veg or active minutes.
 - Tracking Progress: Returning/ frequent visitors may be interested in tracking their progress over time. They would use features such as task completion tracking and time logs to monitor their productivity and identify areas for improvement.
+
 ## Deployment
 
 ### GitHub Pages
