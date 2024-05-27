@@ -278,9 +278,15 @@ body {
   a:active {
     font-weight: bolder; 
 }
+.dark-mode a {
+  color: white; /* link color */
+  text-decoration: underline; /* Underline for accessibility */
+}
+a:focus, a:hover {
+  font-weight: bold;
+  outline: 2px solid darkslategrey;
+}
 
-
-  
   /* modal styles */
   .modal-content {
     background-color: whitesmoke;
