@@ -175,107 +175,30 @@ When I was creating my website, the design plan was changed but only small place
 
 | Test Case ID | Test Description                                                                                             | Expected Result                                                                                       | Pass/Fail | Comments                       |
 |--------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|-----------|-------------------------------|
-| CT-01        | Verify the website works correctly on different browsers (Chrome, Firefox, Safari, Edge)                     | Website functions correctly on all major browsers                                                      |           |                               |
-| CT-02        | Verify the website is responsive and works on various devices (desktop, tablet, mobile)                      | Website is responsive and works on various devices                                                     |           |                               |
+| CT-01        | Verify the website works correctly on different browsers (Chrome, Firefox, Safari, Edge)                     | Website functions correctly on all major browsers                                                      |      Pass     |                 Website tested on differing browsers with no issues              |
+| CT-02        | Verify the website is responsive and works on various devices (desktop, tablet, mobile)                      | Website is responsive and works on various devices                                                     |      Pass     |    ![Responsive layout](docs/testing/responsive-layout.png)                           |
 
 ### Accessibility Testing
 - **Accessibility Testing**: Ensures the site is accessible to all users, including those with disabilities.
 
 | Test Case ID | Test Description                                                                                             | Expected Result                                                                                       | Pass/Fail | Comments                       |
 |--------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|-----------|-------------------------------|
-| AT-01        | Verify the website meets accessibility standards (e.g., chrome DevTools, lighthouse)                                            | Website meets accessibility standards, ensuring it is usable by people with disabilities<br>Accessibility score in the green (90-100)              |   Pass       |          Main page on mobile scores 100 for accessibility and best practices<br>![Google DevTools Lighthouse](/docs/testing/lighthouse-main-page-test-mobile.png)<br>Main page on desktop scores 100 for accessibility and best practices<br>![Google DevTools Lighthouse](/docs/testing/lighthouse-main-page-test-desktop.png)<br><br>Error page on desktop scores 100 for accessibility and best practices<br>![Google DevTools Lighthouse](/docs/testing/lighthouse-error-page-test-desktop.png)<br>Error page on mobile scores 100 for accessibility and best practices<br>![Google DevTools Lighthouse](/docs/testing/lighthouse-error-page-test-mobile.png)                    | 
+| AT-01        | Verify the website meets accessibility standards (e.g., chrome DevTools, lighthouse)                                            | Website meets accessibility standards, ensuring it is usable by people with disabilities<br>Accessibility score in the green (90-100)              |   Pass       |          Main page on mobile scores 100 for accessibility and best practices<br>![Google DevTools Lighthouse](docs/testing/lighthouse-main-page-test-mobile.png)<br>Main page on desktop scores 100 for accessibility and best practices<br>![Google DevTools Lighthouse](docs/testing/lighthouse-main-page-test-desktop.png)<br><br>Error page on desktop scores 100 for accessibility and best practices<br>![Google DevTools Lighthouse](docs/testing/lighthouse-error-page-test-desktop.png)<br>Error page on mobile scores 100 for accessibility and best practices<br>![Google DevTools Lighthouse](docs/testing/lighthouse-error-page-test-mobile.png)                    | 
 
 ### Validator Testing
 - **Validator Testing**: Ensures that the website's code adheres to established standards and best practices, which helps improve functionality, accessibility, and cross-browser compatibility.
 
 | Test Case ID | Test Description                                                                                             | Expected Result                                                                                       | Pass/Fail | Comments                       |
 |--------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|-----------|-------------------------------|
-| VT-01        | HTML: code adheres to standards and best practices when run through the validator               |   Code passes through the validator with no errors        |           Pass                    |[W3C Markup Validator index.html](https://validator.w3.org/nu/#textarea) - [Results](/docs/testing/w3c-index.html-validator.png)<br>-validator passed index.html with only one warning, however, this particular h2 is populated by javaScript to ensure the correct date is displayed.<br>[W3C Markup Validator index.html](https://validator.w3.org/nu/#textarea) - [Results](/docs/testing/w3c-error.html-validator.png)<br>-validator passed error.html no errors or warnings.
-| VT-02        | CSS: code adheres to standards and best practices when run through the validator               | Code passes through the validator with no errors           |  Pass                             |[W3C Markup Validator index.html](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](/docs/testing/w3c-styles.css-validator.png)<br>-validator passed styles.css with no errors or warnings.<br>[W3C Markup Validator index.html](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](/docs/testing/w3c-error.css-validator.png)<br>-validator passed styles.css with no errors or warnings.
-| VT-03        | JavaScript: code adheres to standards and best practices when run through the validator<br>              |   Code passes through the validator with no errors        |          Pass                     |[jshint Markup Validator script.js](https://jshint.com/) - [Results](/docs/testing/jshint-script.js-validator.png)<br>-validator passed styles.css with no errors or warnings.<br>[jshint Markup Validator error.js](https://jshint.com/) - [Results](/docs/testing/jshint-error.js-validator.png)<br>-validator passed styles.css with no errors or warnings.
+| VT-01        | HTML: code adheres to standards and best practices when run through the validator               |   Code passes through the validator with no errors        |           Pass                    |[W3C Markup Validator index.html](https://validator.w3.org/nu/#textarea) - ![Results](/docs/testing/w3c-index.html-validator.png)<br>-validator passed index.html with only one warning, however, this particular h2 is populated by javaScript to ensure the correct date is displayed.<br>[W3C Markup Validator index.html](https://validator.w3.org/nu/#textarea) - ![Results](/docs/testing/w3c-error.html-validator.png)<br>-validator passed error.html no errors or warnings.
+| VT-02        | CSS: code adheres to standards and best practices when run through the validator               | Code passes through the validator with no errors           |  Pass                             |[W3C Markup Validator index.html](https://jigsaw.w3.org/css-validator/#validate_by_input) - ![Results](/docs/testing/w3c-styles.css-validator.png)<br>-validator passed styles.css with no errors or warnings.<br>[W3C Markup Validator index.html](https://jigsaw.w3.org/css-validator/#validate_by_input) - ![Results](/docs/testing/w3c-error.css-validator.png)<br>-validator passed styles.css with no errors or warnings.
+| VT-03        | JavaScript: code adheres to standards and best practices when run through the validator<br>              |   Code passes through the validator with no errors        |          Pass                     |[jshint Markup Validator script.js](https://jshint.com/) - ![Results](/docs/testing/jshint-script.js-validator.png)<br>-validator passed styles.css with no errors or warnings.<br>[jshint Markup Validator error.js](https://jshint.com/) - ![Results](/docs/testing/jshint-error.js-validator.png)<br>-validator passed styles.css with no errors or warnings.
 
 # A Word on Automated testing
 - **Automated Testing**: Automated testing is the use of software tools and scripts to execute pre-defined test cases on a software application without manual intervention. It aims to verify that the application functions correctly and meets specified requirements. Automated testing can significantly speed up the testing process, improve accuracy by eliminating human error, and allow for more frequent and thorough testing, especially for repetitive tasks and regression tests. This approach is especially useful in continuous integration and continuous deployment (CI/CD) pipelines, ensuring that new code changes do not introduce defects.
 - **Possible Uses in this project**:
 - 
 -
-
-### Navigation bar links. 
-Home, Gallery, Contact and Menus pages jump to the respective places when clicked. 
-- These were tested a number of times. An issue arose when the site moved from the local browswe to published throu Girhub Pages. When this happend the links stopped working and an 'Error 404' page was shown. This was rectified by editing the filepaths to remove "/" at the beginning.
-![Navbar Links](/docs/testing/navbar-links-matrix.png)
-
-### Carousel Controls. 
-Tested gallery controls checking carousel only moves on as a result of user input.
-- The default of the Bootstrap carousel was that it would run automatically however I only wanted the image carousel to move as a result of user input. 
- ![Bootstarp carousel default](./docs/testing/carousel-controls-1.png)
-- My first attempt was the change the 'data-ride="carousel"' to 'data-ride="none"'. However, this only changed the behaviour of the first slide, once past the first slide, the rest of the carousel ran automatically.
-- After a deep dive into Bootstrap's documentation I added data-interval="false"' to the carousel div to disable the automatic cycling through the slides. 
-![Bootstarp carousel fixed](./docs/testing/carousel-controls-2.png)
-
-
-### Social media links open in the correct destination and in a new tab when clicked.
-
-![Footer links](/docs/testing/footer-links.png)
-
-- All links include 'target="_blank"' to ensure links open in a new tab.
-
-![Footer Links Matrix](/docs/testing/footer-links-matrix.png)
-
-### Contact Page Form. 
-- Tested the form on the Contact page. All required fields worked and the submission button worked.
-![Contact Form Matrix](/docs/testing/contact-form-matrix.png)
-
-### Subscription Form.
-- Tested the form on the Contact page. All required fields worked and the submission button worked.
-![Subscription Form Matrix](/docs/testing/subscription-form-matrix.png) 
-
-
-### Browser Testing.
-- Tested with different browsers such as Chrome, Firefox, and Safari(using my phone).
-
-### Screensize and responsivity Testing.
-- Tested with different screen sizes using the developer tool (Galaxy Fold, iPad, and my laptop)
-    - - The site uses bootstrap across all pages to use a 1, 2, or 3 column layout. One column for small screen sizes, 2 columns for medium screen sizes and 3 columns for large screen sizes.<br>
-
-**Homepage examples**
-
-![Responsive homepage](./docs/responsive-homepage-2.png)
-
-**Navbar examples**
-- The site utilises a bootstrap component to collapse the navbar menu items into a toggle when viewing the site on small screens to keep the page neat and tidy.
-
-![Responsive navbar](./docs/testing/responsive-navbar.png)
-![Responsive navbar](./docs/testing/responsive-navbar-lg.png)
-
-**Form examples**
-- The site utilises media queries to organise form elements on the page in order ro manage space and content effectively. While the site as a whole uses a 3-2-1 bootstrap column design, I found that while this worked on small screens, it was not effective on medium to large screens as the half header half form weighting was not an effective use of space. After some reading I decided to add a media query to both the contact form and the subscription form. This media query and html changed the page make-up so that the header took up one third of the horixontal space while the form element took up two thirds. I also centered the header vertically to even out the use of space.
-
-![Form Media Query small screens](./docs/testing/responsive-form-sml.png)
-![Form Media Query meduim and large screens](./docs/testing/responsive-form-md-lg.png)
-
-
-### Chrome's DevTools Audit Report
-
-The Google Page-speed Services were used to assess the accessibiity of the project to ensure the site met expected accessible standards on desktop and mobile.
-
-- In early development of the site, the site used two shades of green as opposed to blue. Through testing while coding, it became apparent that these colours did not work well from an accessibility standpoint as there was not enouth contrast. As part of the iterative process, I changed my scheme from green to blues which offered better contrast and accessibility.
-
-![Google Page-Speed Insights Desktop](/docs/testing/page-speed-desktop.png)
-![Google Page-Speed Insights Mobile](/docs/testing/page-speed-mobile.png)
-
--SEO score could be improved by adding a meta description tag to the head.<br>
--Page performance is an issue- possibly down to the large size of the main image on the site. Next steps would be to investigate reducing images without sacrificing quality.
-
-### Lighthouse DevTools Audit Report
-
-Lighthouse was used to assess the accessibiity of the project to ensure the site met expected accessible standards on desktop and mobile.
-
-![Google Page-Speed Insights Desktop](/docs/testing/lighthouse-page-test-desktop.png)
-![Google Page-Speed Insights Mobile](/docs/testing/lighthouse-page-test-mobile.png)
-
--SEO score could be improved by adding a meta description tag to the head.<br>
--Page performance is an issue- possibly down to the large size of the main image on the site. As above, Next steps would be to investigate reducing images without sacrificing quality.
 
 ### Testing User Stories from User Experience (UX) Section
 
