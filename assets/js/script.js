@@ -1,3 +1,5 @@
+/* global bootstrap, $ */
+
 // Dark mode / Light mode toggle
 
 //add event listener to button
@@ -274,5 +276,4 @@ document.getElementById('joinUsBtn').addEventListener('click', function() {
     // Show the subscription modal
     $('#subscriptionModal').modal('show');
 });
-
 
