@@ -291,16 +291,19 @@ time (it was updating every minuite from the page load), when checked with incid
 ![Header section](./docs/bugs-fixes/bugs-current-time-2.png)
 <br>
 
-- - *Pomodoro timer- :* I had some learning to do with 'when' things update automatically. The header of the site has a date and time section which I wnated to automatically populate and update so the header is always up to date and correct.<br>
-![Header section](./docs/testing/user-stories/user-stories-main-page-top.png)<br>
+- - *Button displays and changing/ 'toggling' the display- :* This refers to the 'Dark Mode/ Light Mode' button and the Pomodoro Timer's 'Start/ Pause' button. In the initial build, these displayed as they are above with both options on or- in the case of the Pomodoro timer- as two separate button. This made the buttons to large, not clear/ specific, or -in the case of the pomodoro timer- the use of two buttons made the interface busy and I want to keep the page as clean and clear as possible. <br>
+Through research and a tutorial on 'scrimba', I found a way to change the display using 'text.content' which <br>
+The basic code looked like this:
+![Basic code from tutorial](./docs/bugs-fixes/bugs-button-display-1.png)<br>
  <br>
- The first iteration of the code looked like this:
-
- ![Header section](./docs/bugs-fixes/bugs-current-time-1.png)<br>
-This was updating but not on the minute in line with actual 
-time (it was updating every minuite from the page load), when checked with incidental/ in development testing.Research on https://www.freecodecamp.org/news/how-to-format-dates-in-javascript/ allowed me to isolate the 'checking' part of the code and I adapted to check every second.
-![Header section](./docs/bugs-fixes/bugs-current-time-2.png)
+ I was able to adapt into my own code and add some if/else logic to to ensure the buttons showed the appropriate text at the time, with the adapted code looking like this:<br>
+ <div style="display: flex; justify-content: space-between;">
+  <img src="./docs/bugs-fixes/bugs-button-display-2.png" alt="User Stories To-Do List Countdown" style="width: 45%;"/>
+  <img src="./docs/bugs-fixes/bugs-button-display-3.png" alt="User Stories To-Do List Countdown" style="width: 45%;"/>
+</div>
 <br>
+
+
 
 
 ### Improvements/ scalability 
