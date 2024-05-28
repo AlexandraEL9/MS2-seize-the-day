@@ -267,11 +267,11 @@ This page contains a message for the user and a 10sec countdown timer which then
 For this project, I chhose not to use automated testing. My reasons for this are that, due to the complexity of the project and my own level of competence with javaScript, I had neither the bandwith nor the time due to deadlines and commitments. Were this project to continue developing, I would possibly use TDD in the following ways:
 - **Possible Uses in this project**:
 - *To-do list feature:* Test that a new item can be added. Test that an item can be marked as complete. Test that the list is cleared.
-- *Timer feature:* Test that the timer starts when the button is clicked. 
+- *Timer feature:* Test that the timer starts when the button is clicked. Test the alarm is triggerd at the end of a timer.
 - *Reminder feature:* Test that a new reminder can be added.
 - *Subscription modal:* Test that the modal opens when the 'Join Us' button is clicked. 
 
-Automated testing would have been handy, particularly as the development of this project went through many stages of development and changes often impacted other elements. Automated testing may have helped catch issues. There are also a number of timed elements which were onerous to check manually every time I logged in to check nothing had happened during development.
+Automated testing would have been handy, particularly as the development of this project went through many stages of development and changes often impacted other elements. Automated testing may have helped catch issues. There are also a number of timed elements which were onerous to check manually every time I logged in to check nothing had happened during development/ seemingly overnight.
 
 ### Known Bugs/ issues
 
