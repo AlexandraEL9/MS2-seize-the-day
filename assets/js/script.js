@@ -7,6 +7,7 @@ document.getElementById('toggleDarkModeBtn').addEventListener('click', function 
     document.body.classList.toggle('dark-mode');
 
     // Update button text based on current mode
+    //credit: code for changing display of button (.textContent) adapted from https://v2.scrimba.com/learn-javascript-c0v:details
     if (document.body.classList.contains('dark-mode')) {
         this.textContent = 'Light Mode';
     } else {
@@ -15,6 +16,7 @@ document.getElementById('toggleDarkModeBtn').addEventListener('click', function 
 });
 
 //updating date and time automatically
+//credit: code for display of date adapted from https://www.freecodecamp.org/news/javascript-date-format-how-to-format-a-date-in-js/
 document.addEventListener('DOMContentLoaded', (event) => {
     // Function to update the current date
     function updateDate() {
@@ -33,6 +35,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     setInterval(updateDate, 60000); //update every minute
 
     // Function to update the clock display
+    //credit: code for display of time adapted from https://www.freecodecamp.org/news/javascript-date-format-how-to-format-a-date-in-js/
     function updateClock() {
         //get clock element
         const clockElement = document.getElementById('clockDisplay');
@@ -55,6 +58,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 // to-do list section
 
 //function to add a task
+//credit: code for to do list adapted/ inspired by learning from https://dev.to/karandeveloper/creating-todo-list-using-vanilla-javascript-2l7l
 function addTask() {
     const taskInput = document.getElementById('taskInput');
     const taskList = document.getElementById('taskList');
@@ -64,7 +68,8 @@ function addTask() {
         const listItem = document.createElement('li'); //create a new list item element
         listItem.textContent = taskText; //set the text content of the list item
         listItem.classList.add('list-group-item');//add class 'list-group-item' to list item
-
+        //task done/ complete button
+        //credit: code for javascript button addage adapted/ inspired by learning from https://www.altcademy.com/blog/how-to-create-a-button-in-javascript/
         const completeBtn = document.createElement('button'); //create a button for completing a task
         completeBtn.textContent = 'Done'; //set the button text to 'done'
         completeBtn.classList.add('btn', 'btn-sm'); //add classes to button to target it
@@ -72,6 +77,7 @@ function addTask() {
         completeBtn.addEventListener('click', function() {
             listItem.classList.toggle('complete');
         });
+        //credit: code for javascript adding list items from learning from https://www.altcademy.com/blog/how-to-create-a-button-in-javascript/
         //add/ append the complete button to the list item
         listItem.appendChild(completeBtn);
         //add/ append the list item to the task list container
@@ -96,6 +102,7 @@ const clearListBtn = document.getElementById('clearListBtn');
 clearListBtn.addEventListener('click', clearList);
 
 // Pomodoro timer section
+//credit: code for pomodoro timer adapted/ inspired by learning from https://webdesign.tutsplus.com/create-a-pomodoro-timer-with-html-css-and-vanilla-javascript--cms-108069t
 
 // Initialize variables
 let isPaused = true;
@@ -153,29 +160,8 @@ function countdown() {
 }
 
 // Function to set the timer duration and update display
-function setTimer(duration) {
-    clearInterval(timer); // Clear any existing timer
-    isPaused = true; // Pause the timer
-    minutes = duration; // Set minutes for the timer
-    seconds = 0; // Reset seconds to 0
-    updateDisplay(); // Update timer display
-    startButton.textContent = 'Start'; // Reset start button text
-}
-
 // Event listeners for timer control buttons
-
-// Start and pause button
-startButton.addEventListener('click', () => {
-    isPaused = !isPaused; // Toggle timer pause state
-    if (!isPaused) {
-        timer = setInterval(countdown, 1000); // Start timer interval
-        startButton.textContent = 'Pause'; // Change button text to pause
-    } else {
-        clearInterval(timer); // Pause timer interval
-        startButton.textContent = 'Start'; // Change button text to 'start'
-    }
-});
-
+//credit: code for buttons and 'active' class adapted/ inspired by learning from https://www.youtube.com/watch?v=6zQPteD5Mvc
 // Pomodoro button
 pomodoroButton.addEventListener('click', () => {
     setTimer(25); // Set timer for pomodoro session (25 mins)
@@ -199,6 +185,28 @@ longBreakButton.addEventListener('click', () => {
     shortBreakButton.classList.remove('active'); // Remove active state from short break button
     longBreakButton.classList.add('active'); // Mark long break button as 'active'
 });
+function setTimer(duration) {
+    clearInterval(timer); // Clear any existing timer
+    isPaused = true; // Pause the timer
+    minutes = duration; // Set minutes for the timer
+    seconds = 0; // Reset seconds to 0
+    updateDisplay(); // Update timer display
+    startButton.textContent = 'Start'; // Reset start button text
+}
+
+// Start and pause button
+//credit: code starting timer adapted/ inspired by learning from https://webdesign.tutsplus.com/create-a-pomodoro-timer-with-html-css-and-vanilla-javascript--cms-108069t
+startButton.addEventListener('click', () => {
+    isPaused = !isPaused; // Toggle timer pause state
+    if (!isPaused) {
+        timer = setInterval(countdown, 1000); // Start timer interval
+        startButton.textContent = 'Pause'; // Change button text to pause
+    } else {
+        clearInterval(timer); // Pause timer interval
+        startButton.textContent = 'Start'; // Change button text to 'start'
+    }
+});
+
 
 // Event listeners for close buttons in modals
 $('.modal .close').on('click', function () {
@@ -206,6 +214,7 @@ $('.modal .close').on('click', function () {
 });
 
 // Alarm/reminder section
+//credit: code for reminder app adapted/ inspired by tutorial from https://www.youtube.com/watch?v=3e7qkpByx84
 
 // DOM elements
 const reminderTimeInput = document.getElementById('reminderTime');
@@ -229,6 +238,7 @@ setReminderBtn.addEventListener('click', () => {
     reminders.push({ time: reminderTime, message: reminderMessage });
 
     // Create the list item to display the reminder
+    //credit: code for javascript adding list items from learning from https://www.altcademy.com/blog/how-to-create-a-button-in-javascript/
     const li = document.createElement('li');
     li.classList.add('list-group-item'); // Add Bootstrap class for styling
     li.textContent = `${reminderTime} - ${reminderMessage}`;
@@ -263,6 +273,7 @@ function checkReminders() {
 }
 
 // Function to update the reminder list display
+//credit: code for javascript adding list items from learning from https://www.altcademy.com/blog/how-to-create-a-button-in-javascript/
 function updateReminderList() {
   // Clear current list items
   reminderList.innerHTML = '';
