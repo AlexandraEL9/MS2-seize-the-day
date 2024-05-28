@@ -303,9 +303,6 @@ The basic code looked like this:
 </div>
 <br>
 
-
-
-
 ### Improvements/ scalability 
 - Drive User Engagement: develop the site further and aim to encourage users to spend more time on the platform by offering more of a range engaging features such as interactive timers, customizable to-do lists, and helpful reminders. A range of backgrounds could also be provided making the UI more personal to users.
 - Build more functionality for greater customization and personalization: Frequent users may value customization options that allow them to tailor the platform to their preferences. They might want to customize task categories, timer durations, reminder settings, and the overall layout to suit their workflow. This could also include extra functionality tracking healthy habits such as water drinking, portions of fruit and veg or active minutes.
@@ -349,6 +346,24 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 - I also referred to [StackOverflow] (https://stackoverflow.com/)
 - I adapted the basic code from notes following the "Whiskey Drop" tutorials from the Code Institute website to achieve the navbar and the reviews sections.
 - I utilised [Free Formatter](https://www.freeformatter.com/) to check the formatting of my code.
+
+### Tutorials used
+- In preparaton and throughout the build of this project I used a number of online resources and tutorials to build the skills required for this project.
+
+| Tutorial Name     | Website Source        | Description of Use                                       | Comments                            |
+|-------------------|-----------------------|----------------------------------------------------------|-------------------------------------|
+| Free CodeCamp- *How to Format Dates in JavaScript*        | [FreeCodeCamp](https://www.freecodecamp.org/news/javascript-date-format-how-to-format-a-date-in-js/) | Introduction to formatting Dates                  | Used in the header inparticular. Used and adapted to format the display of the date and adapted to display the current time also.                 |
+| SheCodes post *How can I display the date and time using javaScript* | [SheCodes](https://www.shecodes.io/athena/38917-how-to-display-the-current-date-and-time-in-javascript#:~:text=To%20display%20the%20current%20date%20and%20time%20in%20JavaScript%2C%20you,()%20object%20and%20its%20methods.&text=In%20the%20code%20above%2C%20we,the%20current%20date%20and%20time.) | Blog post on date and time display    | Adapted for header            |
+| DEV Community *Create To-do List using Vanilla JavaScript*    | [Dev Community Tutorial](https://dev.to/karandeveloper/creating-todo-list-using-vanilla-javascript-2l7l) | To-do list project         | A great bolg post by 'Karan Developer' |
+| Tutorial blog post from Medium.com by Linda Ikechukwu *Building a To-do List App with Vanilla JavaScript*   | [Medium](https://medium.com/@Linda_Ikechukwu/building-a-to-do-list-app-with-vanilla-javascript-e27dda195fea) | Creating to do lists                    | Particularly good for understanding set up and functionality as a 1st step. |
+| Tutorial blog post by Vanshika Rana *Building a Simple Timer with JavaScript*   | [aahiknsv](https://aahiknsv.hashnode.dev/building-a-simple-timer-with-vanilla-javascript) | Creating a countdown timer                    | Understanding countdowns and timer setting |
+| Tutsplus *Create a Pomodoro Timer with HTML, CSS and Vanilla JavaScript* by esther Vaati  | [Tutsplus](https://webdesign.tutsplus.com/create-a-pomodoro-timer-with-html-css-and-vanilla-javascript--cms-108069t) | Pomodoro timer project       | A walk through of a pomodoro timer project     | adapted basic structure and set up for my own.
+| Freshman.tech *How to build a Ponodoro Timer App with JavaScript* | [Freshman.tech](https://freshman.tech/pomodoro-timer/) | IAnother tutorial on Pomodoro timers | Simpler design and different ways of working to above.  |
+| Dev Drawer Tutorial *Learn How to Make a Digital Clock with an alarm in JavaScript*  | [YouTube](https://www.youtube.com/watch?v=j1vmQI1pvqg) | Learn how to sdisplay clock and set up reminders.                      | Good for understanding of digital clock display and reminder set up functions"         |
+|  YouTube tutorial by Madhuri Bansode *Alarm-Clock using Vanilla JavaScript*     | [YouTube](https://www.youtube.com/watch?app=desktop&v=UYtZsLR3xLs) | Tutorial for setting a digital clock, alarms etc.                         |  |
+| Scrimba javaScript course        | [Scrimba.org](https://v2.scrimba.com/learn-javascript-c0v:details) | Basics of javaScript management                     | introduced text.content idea and how this can change the display of elements |
+
+
 
 ### Content
 
