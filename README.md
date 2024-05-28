@@ -145,7 +145,7 @@ When I was creating my website, the design plan was changed but only small place
 - Balsamiq was used to create the wireframes as part of the design process.
 
 ## Testing
-# Behavioural testing
+# Behavioural testing/ BDD
 - **Behavioural Testing**: involves verifying that the site's features and user interactions function as intended from the end-user's perspective. This includes ensuring that first-time visitors can easily understand and navigate the site, returning visitors can efficiently manage tasks, and frequent users can sign up to the newsletter/ join the community. By simulating real-world use cases, behavioural testing helps identify and address any issues in the user experience, ensuring the platform is intuitive, reliable, and meets the needs of its users. Throughout the development of this project, I did extensive behavioural testing was done as a means to check code was working as expected and problems fixed as and when need arised. The below table shows tests complete at the end of the project. 
 
 ### Functional Testing
@@ -193,12 +193,6 @@ When I was creating my website, the design plan was changed but only small place
 | VT-01        | HTML: code adheres to standards and best practices when run through the validator               |   Code passes through the validator with no errors        |           Pass                    |[W3C Markup Validator index.html](https://validator.w3.org/nu/#textarea) - ![Results](/docs/testing/w3c-index.html-validator.png)<br>-validator passed index.html with only one warning, however, this particular h2 is populated by javaScript to ensure the correct date is displayed.<br>[W3C Markup Validator index.html](https://validator.w3.org/nu/#textarea) - ![Results](/docs/testing/w3c-error.html-validator.png)<br>-validator passed error.html no errors or warnings.
 | VT-02        | CSS: code adheres to standards and best practices when run through the validator               | Code passes through the validator with no errors           |  Pass                             |[W3C Markup Validator index.html](https://jigsaw.w3.org/css-validator/#validate_by_input) - ![Results](/docs/testing/w3c-styles.css-validator.png)<br>-validator passed styles.css with no errors or warnings.<br>[W3C Markup Validator index.html](https://jigsaw.w3.org/css-validator/#validate_by_input) - ![Results](/docs/testing/w3c-error.css-validator.png)<br>-validator passed styles.css with no errors or warnings.
 | VT-03        | JavaScript: code adheres to standards and best practices when run through the validator<br>              |   Code passes through the validator with no errors        |          Pass                     |[jshint Markup Validator script.js](https://jshint.com/) - ![Results](/docs/testing/jshint-script.js-validator.png)<br>-validator passed styles.css with no errors or warnings.<br>[jshint Markup Validator error.js](https://jshint.com/) - ![Results](/docs/testing/jshint-error.js-validator.png)<br>-validator passed styles.css with no errors or warnings.
-
-# A Word on Automated testing
-- **Automated Testing**: Automated testing is the use of software tools and scripts to execute pre-defined test cases on a software application without manual intervention. It aims to verify that the application functions correctly and meets specified requirements. Automated testing can significantly speed up the testing process, improve accuracy by eliminating human error, and allow for more frequent and thorough testing, especially for repetitive tasks and regression tests. This approach is especially useful in continuous integration and continuous deployment (CI/CD) pipelines, ensuring that new code changes do not introduce defects.
-- **Possible Uses in this project**:
-- 
--
 
 ### Testing User Stories from User Experience (UX) Section
 
@@ -266,6 +260,18 @@ This page contains a message for the user and a 10sec countdown timer which then
 ### Further Testing
 -   A large amount of repeated testing was done to ensure that all pages were linking correctly.
 -   Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
+
+# A Word on Automated testing (TDD)
+- **Automated Testing**: Automated testing is the use of software tools and scripts to execute pre-defined test cases on a software application without manual intervention. It aims to verify that the application functions correctly and meets specified requirements. Automated testing can significantly speed up the testing process, improve accuracy by eliminating human error, and allow for more frequent and thorough testing, especially for repetitive tasks.
+
+For this project, I chhose not to use automated testing. My reasons for this are that, due to the complexity of the project and my own level of competence with javaScript, I had neither the bandwith nor the time due to deadlines and commitments. Were this project to continue developing, I would possibly use TDD in the following ways:
+- **Possible Uses in this project**:
+- *To-do list feature:* Test that a new item can be added. Test that an item can be marked as complete. Test that the list is cleared.
+- *Timer feature:* Test that the timer starts when the button is clicked. 
+- *Reminder feature:* Test that a new reminder can be added.
+- *Subscription modal:* Test that the modal opens when the 'Join Us' button is clicked. 
+
+Automated testing would have been handy, particularly as the development of this project went through many stages of development and changes often impacted other elements. Automated testing may have helped catch issues. There are also a number of timed elements which were onerous to check manually every time I logged in to check nothing had happened during development.
 
 ### Known Bugs/ issues
 
