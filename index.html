@@ -14,7 +14,7 @@
     <nav class="navbar navbar-light bg-light">
       <span class="navbar-brand mb-0 h1">Seize the Day</span>
       <!-- "Join Us" button -->
-      <button id="joinUsBtn" class="btn btn-primary">Join Us</button>
+      <button id="joinUsBtn" class="btn">Join Us</button>
     </nav>
     <!-- header section -->
     <header>
@@ -49,33 +49,33 @@
           <div class="input-group">
             <input type="text" id="taskInput" placeholder="Enter task" class="form-control">
             <div class="input-group-append">
-              <button id="addTaskBtn" class="btn btn-primary">Add Task</button>
+              <button id="addTaskBtn" class="btn">Add Task</button>
             </div>
           </div>
           <!-- task list display -->
           <ul id="taskList" class="list-group"></ul>
           <!-- clear list button -->
-          <button id="clearListBtn" class="btn btn-secondary">Clear List</button>
+          <button id="clearListBtn" class="btn">Clear List</button>
         </section>
         <!-- pomodoro timer and reminder section -->
         <section class="col-lg-6 col-md-6 col-sm-12">
           <div class="row">
             <!-- pomodoro timer section -->
             <div class="timer-section col-12">
-              <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#pomodoroModal"> ? </button>
+              <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#pomodoroModal"> ? </button>
               <h3>Pomodoro Timer</h3>
               <!-- timer control buttons -->
               <div class="button-container">
-                <button class="button btn btn-primary" id="pomodoro-session">Pomodoro</button>
-                <button class="button btn btn-primary" id="short-break">Short Break</button>
-                <button class="button btn btn-primary" id="long-break">Long Break</button>
+                <button class="button btn" id="pomodoro-session">Pomodoro</button>
+                <button class="button btn" id="short-break">Short Break</button>
+                <button class="button btn" id="long-break">Long Break</button>
               </div>
               <!-- timer display -->
               <div class="timer-display">
                 <span id="minutes">25</span>:<span id="seconds">00</span>
               </div>
               <!-- start timer button -->
-              <button id="startTimerBtn" class="btn btn-success">Start</button>
+              <button id="startTimerBtn" class="btn">Start</button>
             </div>
             <!-- Reminder section -->
             <section class="reminder-section col-12">
