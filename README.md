@@ -367,15 +367,10 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ### Content
 
--  All content was written by the developer unless otherwise stated in the credits.
+-  All content was written by the developer unless otherwise stated in the credits or comments in the code.
 
 ### Media
-- Sound file for pomodoro alarm.
-
-
-
-
-
+- Sound file for pomodoro alarm. Sourced from freesound.org [freesound.org]([Scrimba.org](https://v2.scrimba.com/learn-javascript-c0v:details))
 
 
 ### Acknowledgements
@@ -383,3 +378,4 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 -   My Mentor Excellence Ilesanmi for continuous helpful feedback.
 -   My tutor from EKC Group Rachel Furlong for support in Tutor meetings.
 -   The Code Institute Slack Channel.
+-   The webDev community from the table above for sharing their skills and learning so freely and openly through tutorials and blog posts.
