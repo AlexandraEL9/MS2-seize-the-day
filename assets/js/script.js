@@ -97,13 +97,13 @@ clearListBtn.addEventListener('click', clearList);
 
 // Pomodoro timer section
 
-//initialize variables
+// Initialize variables
 let isPaused = true;
 let timer;
 let minutes = 25;
 let seconds = 0;
 
-//dom elements for timer display and control buttons
+// DOM elements for timer display and control buttons
 const minutesElement = document.getElementById('minutes');
 const secondsElement = document.getElementById('seconds');
 const startButton = document.getElementById('startTimerBtn');
@@ -111,22 +111,21 @@ const pomodoroButton = document.getElementById('pomodoro-session');
 const shortBreakButton = document.getElementById('short-break');
 const longBreakButton = document.getElementById('long-break');
 
-//modal elements for the display of timer notifications
-const pomodoroModal = document.getElementById('pomodoroOverModal');
-const shortBreakModal = document.getElementById('shortBreakOverModal');
-const longBreakModal = document.getElementById('longBreakOverModal');
-//close button to dismiss modals
-const closeButtons = document.querySelectorAll('.close');
-//audio alarm element for when timer finishes
+// Modal elements for the display of timer notifications
+const pomodoroModal = $('#pomodoroOverModal');
+const shortBreakModal = $('#shortBreakOverModal');
+const longBreakModal = $('#longBreakOverModal');
+
+// Audio alarm element for when timer finishes
 const alarmSound = document.getElementById("alarmSound");
 
-//function to update the timer display with the appropriate time
+// Function to update the timer display with the appropriate time
 function updateDisplay() {
     minutesElement.textContent = String(minutes).padStart(2, '0');
     secondsElement.textContent = String(seconds).padStart(2, '0');
 }
 
-//countdoum function to decrement timer and update timer display
+// Countdown function to decrement timer and update timer display
 function countdown() {
     if (isPaused) return;
 
@@ -134,13 +133,13 @@ function countdown() {
         if (minutes === 0) {
             clearInterval(timer);
             alarmSound.play();
-            //display modal based on whichever timer is 'active'
+            // Display modal based on whichever timer is 'active'
             if (pomodoroButton.classList.contains('active')) {
-                pomodoroModal.style.display = 'block';
+                pomodoroModal.modal('show');
             } else if (shortBreakButton.classList.contains('active')) {
-                shortBreakModal.style.display = 'block';
+                shortBreakModal.modal('show');
             } else if (longBreakButton.classList.contains('active')) {
-                longBreakModal.style.display = 'block';
+                longBreakModal.modal('show');
             }
             return;
         }
@@ -155,58 +154,55 @@ function countdown() {
 
 // Function to set the timer duration and update display
 function setTimer(duration) {
-    clearInterval(timer); //clear any existing timer
-    isPaused = true; //pause the timer
-    minutes = duration; //set minutes for the timer
-    seconds = 0; //reset seconds to 0
-    updateDisplay(); //update timer display
-    startButton.textContent = 'Start'; //reset start button text
+    clearInterval(timer); // Clear any existing timer
+    isPaused = true; // Pause the timer
+    minutes = duration; // Set minutes for the timer
+    seconds = 0; // Reset seconds to 0
+    updateDisplay(); // Update timer display
+    startButton.textContent = 'Start'; // Reset start button text
 }
 
-//event listeners for timer control buttons
+// Event listeners for timer control buttons
 
-//start and pause button
+// Start and pause button
 startButton.addEventListener('click', () => {
-    isPaused = !isPaused; //toggle timer pause state
+    isPaused = !isPaused; // Toggle timer pause state
     if (!isPaused) {
-        timer = setInterval(countdown, 1000); //start timer interval
-        startButton.textContent = 'Pause'; //change button text to pause
+        timer = setInterval(countdown, 1000); // Start timer interval
+        startButton.textContent = 'Pause'; // Change button text to pause
     } else {
-        clearInterval(timer); //pause timer interval
-        startButton.textContent = 'Start'; //change button text to 'start'
+        clearInterval(timer); // Pause timer interval
+        startButton.textContent = 'Start'; // Change button text to 'start'
     }
 });
 
-//pomodoro button
+// Pomodoro button
 pomodoroButton.addEventListener('click', () => {
-    setTimer(25); //set timer for pomodoro session (25mins)
-    pomodoroButton.classList.add('active'); //mark pomodoro button as 'active'
-    shortBreakButton.classList.remove('active'); // remove active state from short break button
-    longBreakButton.classList.remove('active'); // remove active state from long break button
+    setTimer(25); // Set timer for pomodoro session (25 mins)
+    pomodoroButton.classList.add('active'); // Mark pomodoro button as 'active'
+    shortBreakButton.classList.remove('active'); // Remove active state from short break button
+    longBreakButton.classList.remove('active'); // Remove active state from long break button
 });
 
+// Short break button
 shortBreakButton.addEventListener('click', () => {
-    setTimer(5); //set timer for short break session (5mins)
-    pomodoroButton.classList.remove('active'); // remove active state from pomodoro button
-    shortBreakButton.classList.add('active'); //mark short break button as 'active'
-    longBreakButton.classList.remove('active'); // remove active state from long break button
+    setTimer(5); // Set timer for short break session (5 mins)
+    pomodoroButton.classList.remove('active'); // Remove active state from pomodoro button
+    shortBreakButton.classList.add('active'); // Mark short break button as 'active'
+    longBreakButton.classList.remove('active'); // Remove active state from long break button
 });
 
+// Long break button
 longBreakButton.addEventListener('click', () => {
-    setTimer(15); //set timer for long break session (15mins)
-    pomodoroButton.classList.remove('active'); // remove active state from pomodoro button
-    shortBreakButton.classList.remove('active'); // remove active state from short break button
-    longBreakButton.classList.add('active'); //mark long break button as 'active'
+    setTimer(15); // Set timer for long break session (15 mins)
+    pomodoroButton.classList.remove('active'); // Remove active state from pomodoro button
+    shortBreakButton.classList.remove('active'); // Remove active state from short break button
+    longBreakButton.classList.add('active'); // Mark long break button as 'active'
 });
 
-//evemt listeners for close buttons in modals
-closeButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        //hide all modals when close button is clicked
-        pomodoroModal.style.display = 'none';
-        shortBreakModal.style.display = 'none';
-        longBreakModal.style.display = 'none';
-    });
+// Event listeners for close buttons in modals
+$('.modal .close').on('click', function () {
+    $(this).closest('.modal').modal('hide');
 });
 
 // Alarm/reminder section
