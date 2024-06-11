@@ -1,27 +1,27 @@
 body {
-    background-color: whitesmoke;
-    color: darkslategrey;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  .dark-mode body {
-    background-color: #333;
-    color: whitesmoke;
-  }
-  
-  /*navbar*/
-  .navbar {
-    background-color: white;
-    color: darkslategrey;
-    border-bottom: 1px solid darkslategrey;
-  }
-  .dark-mode .navbar {
-    background-color: black;
-    color: whitesmoke;
-    border-bottom: 2px solid darkslategrey;
-  }
+  background-color: whitesmoke;
+  color: darkslategrey;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.dark-mode body {
+  background-color: #333;
+  color: whitesmoke;
+}
+
+/*navbar*/
+.navbar {
+  background-color: white;
+  color: darkslategrey;
+  border-bottom: 1px solid darkslategrey;
+}
+.dark-mode .navbar {
+  background-color: black;
+  color: whitesmoke;
+  border-bottom: 2px solid darkslategrey;
+}
   
   .navbar-brand {
     color: darkslategrey;
