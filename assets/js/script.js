@@ -1,5 +1,3 @@
-/* global bootstrap, $ */
-
 // Dark mode / Light mode toggle
 
 //add event listener to button
@@ -25,7 +23,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
         //get current date
         const currentDate = new Date();
         //format the date
-        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const options = {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        };
         //update date element folowing format above
         dateElement.textContent = currentDate.toLocaleDateString(undefined, options);
     }
@@ -67,14 +70,14 @@ function addTask() {
     if (taskText !== '') {
         const listItem = document.createElement('li'); //create a new list item element
         listItem.textContent = taskText; //set the text content of the list item
-        listItem.classList.add('list-group-item');//add class 'list-group-item' to list item
+        listItem.classList.add('list-group-item'); //add class 'list-group-item' to list item
         //task done/ complete button
         //credit: code for javascript button addage adapted/ inspired by learning from https://www.altcademy.com/blog/how-to-create-a-button-in-javascript/
         const completeBtn = document.createElement('button'); //create a button for completing a task
         completeBtn.textContent = 'Done'; //set the button text to 'done'
         completeBtn.classList.add('btn', 'btn-sm'); //add classes to button to target it
         //add event listener to complete button
-        completeBtn.addEventListener('click', function() {
+        completeBtn.addEventListener('click', function () {
             listItem.classList.toggle('complete');
         });
         //credit: code for javascript adding list items from learning from https://www.altcademy.com/blog/how-to-create-a-button-in-javascript/
@@ -94,8 +97,8 @@ addTaskBtn.addEventListener('click', addTask);
 
 //function to clear the task list
 function clearList() {
-    const taskList = document.getElementById('taskList');//get the tasklist container
-    taskList.innerHTML = '';//clear the tasklist
+    const taskList = document.getElementById('taskList'); //get the tasklist container
+    taskList.innerHTML = ''; //clear the tasklist
 }
 //button to clear task
 const clearListBtn = document.getElementById('clearListBtn');
@@ -185,6 +188,7 @@ longBreakButton.addEventListener('click', () => {
     shortBreakButton.classList.remove('active'); // Remove active state from short break button
     longBreakButton.classList.add('active'); // Mark long break button as 'active'
 });
+
 function setTimer(duration) {
     clearInterval(timer); // Clear any existing timer
     isPaused = true; // Pause the timer
@@ -229,69 +233,74 @@ let reminders = [];
 
 // Event listener for setting a reminder
 setReminderBtn.addEventListener('click', () => {
-  const reminderTime = reminderTimeInput.value; // Get the reminder time from the input
-  const reminderMessage = reminderMessageInput.value; // Get the reminder message from the input
+    const reminderTime = reminderTimeInput.value; // Get the reminder time from the input
+    const reminderMessage = reminderMessageInput.value; // Get the reminder message from the input
 
-  // Check if both time and message are provided
-  if (reminderTime && reminderMessage) {
-    // Add reminder to array
-    reminders.push({ time: reminderTime, message: reminderMessage });
+    // Check if both time and message are provided
+    if (reminderTime && reminderMessage) {
+        // Add reminder to array
+        reminders.push({
+            time: reminderTime,
+            message: reminderMessage
+        });
 
-    // Create the list item to display the reminder
-    //credit: code for javascript adding list items from learning from https://www.altcademy.com/blog/how-to-create-a-button-in-javascript/
-    const li = document.createElement('li');
-    li.classList.add('list-group-item'); // Add Bootstrap class for styling
-    li.textContent = `${reminderTime} - ${reminderMessage}`;
-    reminderList.appendChild(li);
+        // Create the list item to display the reminder
+        //credit: code for javascript adding list items from learning from https://www.altcademy.com/blog/how-to-create-a-button-in-javascript/
+        const li = document.createElement('li');
+        li.classList.add('list-group-item'); // Add Bootstrap class for styling
+        li.textContent = `${reminderTime} - ${reminderMessage}`;
+        reminderList.appendChild(li);
 
-    // Clear the input fields
-    reminderTimeInput.value = '';
-    reminderMessageInput.value = '';
-  }
+        // Clear the input fields
+        reminderTimeInput.value = '';
+        reminderMessageInput.value = '';
+    }
 });
 
 // Function to check for reminders
 function checkReminders() {
-  // Get the current time
-  const currentTime = new Date().toLocaleTimeString('en-GB', { hour12: false }).slice(0, 5);
+    // Get the current time
+    const currentTime = new Date().toLocaleTimeString('en-GB', {
+        hour12: false
+    }).slice(0, 5);
 
-  // Loop through the reminders array
-  reminders.forEach((reminder, index) => {
-    // Check if reminder time matches current time
-    if (reminder.time === currentTime) {
-      // Display reminder message in the modal
-      reminderModalMessage.textContent = reminder.message;
-      reminderModal.show();
+    // Loop through the reminders array
+    reminders.forEach((reminder, index) => {
+        // Check if reminder time matches current time
+        if (reminder.time === currentTime) {
+            // Display reminder message in the modal
+            reminderModalMessage.textContent = reminder.message;
+            reminderModal.show();
 
-      // Remove reminder from array
-      reminders.splice(index, 1);
+            // Remove reminder from array
+            reminders.splice(index, 1);
 
-      // Update reminder list display
-      updateReminderList();
-    }
-  });
+            // Update reminder list display
+            updateReminderList();
+        }
+    });
 }
 
 // Function to update the reminder list display
 //credit: code for javascript adding list items from learning from https://www.altcademy.com/blog/how-to-create-a-button-in-javascript/
 function updateReminderList() {
-  // Clear current list items
-  reminderList.innerHTML = '';
+    // Clear current list items
+    reminderList.innerHTML = '';
 
-  // Repopulate list with remaining reminders
-  reminders.forEach(reminder => {
-    const li = document.createElement('li');
-    li.classList.add('list-group-item'); // Add Bootstrap class for styling
-    li.textContent = `${reminder.time} - ${reminder.message}`;
-    reminderList.appendChild(li);
-  });
+    // Repopulate list with remaining reminders
+    reminders.forEach(reminder => {
+        const li = document.createElement('li');
+        li.classList.add('list-group-item'); // Add Bootstrap class for styling
+        li.textContent = `${reminder.time} - ${reminder.message}`;
+        reminderList.appendChild(li);
+    });
 }
 
 // Set interval to check reminders every second
 setInterval(checkReminders, 1000);
 
 // JavaScript to trigger subscription modal
-document.getElementById('joinUsBtn').addEventListener('click', function() {
-  // Show the subscription modal
-  $('#subscriptionModal').modal('show');
+document.getElementById('joinUsBtn').addEventListener('click', function () {
+    // Show the subscription modal
+    $('#subscriptionModal').modal('show');
 });
