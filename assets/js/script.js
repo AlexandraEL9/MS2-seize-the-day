@@ -139,7 +139,10 @@ const shortBreakModal = $('#shortBreakOverModal');
 const longBreakModal = $('#longBreakOverModal');
 
 // Audio alarm element for when timer finishes
-const alarmSound = document.getElementById("alarmSound");
+//const alarmSound = document.getElementById("alarmSound");
+//const alarmSound = new Audio("assets/media/calm-alarm.wav");
+const alarmSound = new Audio("assets/media/calm-alarm.wav");
+alarmSound.preload = "auto"; // Preload the audio
 
 // Function to update the timer display with the appropriate time
 function updateDisplay() {
@@ -154,7 +157,10 @@ function countdown() {
     if (seconds === 0) {
         if (minutes === 0) {
             clearInterval(timer);
-            alarmSound.play();
+            //alarmSound.play();
+            alarmSound.play().catch(function(error) {
+                console.error('Failed to play audio:', error);
+            });
             // Display modal based on whichever timer is 'active'
             if (pomodoroButton.classList.contains('active')) {
                 pomodoroModal.modal('show');
@@ -222,7 +228,6 @@ startButton.addEventListener('click', () => {
         startButton.textContent = 'Start'; // Change button text to 'start'
     }
 });
-
 
 // Event listeners for close buttons in modals
 $('.modal .close').on('click', function () {
