@@ -1,16 +1,28 @@
 // Dark mode / Light mode toggle
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleDarkModeBtn = document.getElementById('toggleDarkModeBtn');
 
-//add event listener to button
-document.getElementById('toggleDarkModeBtn').addEventListener('click', function () {
-    document.body.classList.toggle('dark-mode');
-
-    // Update button text based on current mode
-    //credit: code for changing display of button (.textContent) adapted from https://v2.scrimba.com/learn-javascript-c0v:details
-    if (document.body.classList.contains('dark-mode')) {
-        this.textContent = 'Light Mode';
+    // Check the local storage for dark mode state
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        document.body.classList.add('dark-mode');
+        toggleDarkModeBtn.textContent = 'Light Mode';
     } else {
-        this.textContent = 'Dark Mode';
+        toggleDarkModeBtn.textContent = 'Dark Mode';
     }
+
+    // Add event listener to the button
+    toggleDarkModeBtn.addEventListener('click', function () {
+        document.body.classList.toggle('dark-mode');
+
+        // Save the current mode to local storage
+        if (document.body.classList.contains('dark-mode')) {
+            localStorage.setItem('darkMode', 'enabled');
+            this.textContent = 'Light Mode';
+        } else {
+            localStorage.setItem('darkMode', 'disabled');
+            this.textContent = 'Dark Mode';
+        }
+    });
 });
 
 //updating date and time automatically

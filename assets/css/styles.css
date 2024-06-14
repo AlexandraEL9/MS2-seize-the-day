@@ -361,3 +361,31 @@ a:hover {
   color: whitesmoke;
 }
 
+/*error.html page*/
+.error-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+.dark-mode .error-container{
+  background-color: #333;
+}
+.error-container h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.error-container p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+#clock {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
