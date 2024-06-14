@@ -316,3 +316,20 @@ document.getElementById('joinUsBtn').addEventListener('click', function () {
     // Show the subscription modal
     $('#subscriptionModal').modal('show');
 });
+
+//error page countdown
+document.addEventListener('DOMContentLoaded', function () {
+    let countdown = 5;
+    const clockDisplay = document.getElementById('clock');
+
+    function updateClock() {
+        clockDisplay.textContent = `Countdown: ${countdown} seconds`;
+        countdown--;
+        if (countdown < 0) {
+            window.location.href = "index.html";
+        } else {
+            setTimeout(updateClock, 1000);
+        }
+    }
+    updateClock();
+}); 

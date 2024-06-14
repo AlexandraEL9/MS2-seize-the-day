@@ -1,25 +1,43 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Initialize countdown variable
-  let countdown = 10;
-  const clockDisplay = document.getElementById("clock");
+//error page countdown
+document.addEventListener('DOMContentLoaded', function () {
+    let countdown = 5;
+    const clockDisplay = document.getElementById('clock');
 
-  function updateClock() {
-      // Update the text content of the clockDisplay element to show the current countdown value
-      clockDisplay.textContent = "Countdown: " + countdown + " seconds";
+    function updateClock() {
+        clockDisplay.textContent = `Countdown: ${countdown} seconds`;
+        countdown--;
+        if (countdown < 0) {
+            window.location.href = "index.html";
+        } else {
+            setTimeout(updateClock, 1000);
+        }
+    }
+    updateClock();
+}); 
 
-      // Decrement the countdown value by 1
-      countdown--;
+// Dark mode / Light mode toggle
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleDarkModeBtn = document.getElementById('toggleDarkModeBtn');
 
-      // Check if the countdown has reached below 0
-      if (countdown < 0) {
-          // If countdown is below 0, redirect the browser to "index.html"
-          window.location.href = "index.html";
-      } else {
-          // If countdown is not below 0, call updateClock again after 1000 milliseconds (1 second)
-          setTimeout(updateClock, 1000);
-      }
-  }
+    // Check the local storage for dark mode state
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        document.body.classList.add('dark-mode');
+        toggleDarkModeBtn.textContent = 'Light Mode';
+    } else {
+        toggleDarkModeBtn.textContent = 'Dark Mode';
+    }
 
-  // Start the countdown
-  updateClock();
+    // Add event listener to the button
+    toggleDarkModeBtn.addEventListener('click', function () {
+        document.body.classList.toggle('dark-mode');
+
+        // Save the current mode to local storage
+        if (document.body.classList.contains('dark-mode')) {
+            localStorage.setItem('darkMode', 'enabled');
+            this.textContent = 'Light Mode';
+        } else {
+            localStorage.setItem('darkMode', 'disabled');
+            this.textContent = 'Dark Mode';
+        }
+    });
 });
