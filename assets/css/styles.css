@@ -373,6 +373,7 @@ a:hover {
 }
 .dark-mode .error-container{
   background-color: #333;
+  color: whitesmoke;
 }
 .error-container h1 {
   font-size: 2rem;
@@ -381,7 +382,7 @@ a:hover {
 }
 
 .error-container p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-bottom: 20px;
 }
 
