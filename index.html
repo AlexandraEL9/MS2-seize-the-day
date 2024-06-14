@@ -14,7 +14,7 @@
     <nav class="navbar">
       <span class="navbar-brand mb-0 h1">Seize the Day</span>
       <!-- "Join Us" button -->
-      <button id="joinUsBtn" class="btn">Join Us</button>
+      <button id="joinUsBtn" class="btn" data-toggle="modal" data-target="#subscriptionModal">Join Us</button>
     </nav>
     <!-- header section -->
     <header>
@@ -99,22 +99,31 @@
     </main>
     <!-- modals -->
     <!-- Subscription Modal -->
-    <div id="subscriptionModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="subscriptionModalLabel" aria-hidden="true">
+    <div class="modal fade" id="subscriptionModal" tabindex="-1" aria-labelledby="subscriptionModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="subscriptionModalLabel">Subscribe to Seize the Day</h5>
+            <h5 class="modal-title" id="subscriptionModalLabel">Subscribe to our Monthly Newsletter</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <form id="subscriptionForm" name="contact" action="https://formdump.codeinstitute.net/" target="_blank" method="POST">
+            <!-- Subscription form -->
+            <form name="contact" method="POST" action="https://formdump.codeinstitute.net/" target="_blank">
               <div class="form-group">
-                <label for="email">Email address:</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                <label for="firstNameModal">First Name</label>
+                <input type="text" name="first-name" class="form-control" id="firstNameModal" required>
               </div>
-              <button type="submit" class="btn btn-primary">Subscribe</button>
+              <div class="form-group">
+                <label for="lastNameModal">Last Name</label>
+                <input type="text" name="last-name" class="form-control" id="lastNameModal" required>
+              </div>
+              <div class="form-group">
+                <label for="emailModal">Email address</label>
+                <input type="email" name="email" class="form-control" id="emailModal" required>
+              </div>
+              <button type="submit" class="btn">Subscribe</button>
             </form>
           </div>
         </div>
