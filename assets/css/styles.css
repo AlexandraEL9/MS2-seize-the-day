@@ -213,6 +213,18 @@ input {
   text-decoration: line-through;
 }
 
+/* todo section */
+/*congrats message */
+.congrats-message {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.2em;
+  padding: 10px;
+}
+.dark-mode .congrats-message {
+  color: whitesmoke;
+}
+
 /* pomodoro section */
 /* timer display styles */
 .timer-display {
