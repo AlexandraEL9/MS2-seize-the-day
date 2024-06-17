@@ -290,7 +290,7 @@ const reminderModal = new bootstrap.Modal(document.getElementById('reminderModal
 const reminderModalMessage = document.querySelector('#reminderModal .modal-body p');
 
 // Audio element for the calm alarm sound
-const calmAlarmSound = document.getElementById('alarmSound');
+const calmAlarmSound = document.getElementById('calmAlarmSound');
 
 // Array to store reminders
 let reminders = [];
@@ -308,12 +308,8 @@ setReminderBtn.addEventListener('click', () => {
             message: reminderMessage
         });
 
-        // Create the list item to display the reminder
-        //credit: code for javascript adding list items from learning from https://www.altcademy.com/blog/how-to-create-a-button-in-javascript/
-        const li = document.createElement('li');
-        li.classList.add('list-group-item'); // Add Bootstrap class for styling
-        li.textContent = `${reminderTime} - ${reminderMessage}`;
-        reminderList.appendChild(li);
+        // Update reminder list display
+        updateReminderList();
 
         // Clear the input fields
         reminderTimeInput.value = '';
@@ -336,8 +332,8 @@ function checkReminders() {
             reminderModalMessage.textContent = reminder.message;
             reminderModal.show();
 
-             // Play calm alarm sound
-             alarmSound.play();
+            // Play calm alarm sound
+            calmAlarmSound.play();
 
             // Remove reminder from array
             reminders.splice(index, 1);
@@ -349,16 +345,35 @@ function checkReminders() {
 }
 
 // Function to update the reminder list display
-//credit: code for javascript adding list items from learning from https://www.altcademy.com/blog/how-to-create-a-button-in-javascript/
 function updateReminderList() {
     // Clear current list items
     reminderList.innerHTML = '';
 
     // Repopulate list with remaining reminders
-    reminders.forEach(reminder => {
+    reminders.forEach((reminder, index) => {
         const li = document.createElement('li');
-        li.classList.add('list-group-item'); // Add Bootstrap class for styling
-        li.textContent = `${reminder.time} - ${reminder.message}`;
+        li.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center'); // Add Bootstrap classes for styling
+
+        // Create reminder text
+        const reminderText = document.createElement('span');
+        reminderText.textContent = `${reminder.time} - ${reminder.message}`;
+
+        // Create remove button
+        const removeBtn = document.createElement('button');
+        removeBtn.classList.add('btn', 'btn-danger', 'btn-sm');
+        removeBtn.innerHTML = '&times;'; // X symbol
+        removeBtn.addEventListener('click', () => {
+            // Remove reminder from array
+            reminders.splice(index, 1);
+            // Update reminder list display
+            updateReminderList();
+        });
+
+        // Append text and button to list item
+        li.appendChild(reminderText);
+        li.appendChild(removeBtn);
+
+        // Append list item to reminder list
         reminderList.appendChild(li);
     });
 }
