@@ -293,8 +293,8 @@ const reminderList = document.getElementById('reminderList');
 const reminderModal = new bootstrap.Modal(document.getElementById('reminderModal'));
 const reminderModalMessage = document.querySelector('#reminderModal .modal-body p');
 
-// Audio element for the calm alarm sound
-const calmAlarmSound = document.getElementById('calmAlarmSound');
+// Audio elements for sounds
+const reminderSound = document.getElementById('reminderSound');
 const clickSound = document.getElementById('clickSound');
 const doneSound = document.getElementById('doneSound');
 
@@ -342,7 +342,7 @@ function checkReminders() {
             reminderModal.show();
 
             // Play calm alarm sound
-            calmAlarmSound.play();
+            reminderSound.play();
 
             // Remove reminder from array
             reminders.splice(index, 1);
