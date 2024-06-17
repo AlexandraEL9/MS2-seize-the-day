@@ -71,56 +71,68 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 // to-do list section
+// Function to play a sound
+function playSound(soundId) {
+    const sound = document.getElementById(soundId);
+    try {
+        sound.play().then(() => {
+            // Playback succeeded
+        }).catch(error => {
+            console.error('Failed to play audio:', error);
+        });
+    } catch (error) {
+        console.error('Failed to play audio:', error);
+    }
+}
 
-//function to add a task
-//credit: code for to do list adapted/ inspired by learning from https://dev.to/karandeveloper/creating-todo-list-using-vanilla-javascript-2l7l
+// Function to add a task
+// Credit: code for to do list adapted/inspired by learning from https://dev.to/karandeveloper/creating-todo-list-using-vanilla-javascript-2l7l
 function addTask() {
     const taskInput = document.getElementById('taskInput');
     const taskList = document.getElementById('taskList');
     const taskText = taskInput.value.trim();
-    //check the task text is not empty
+    // Check the task text is not empty
     if (taskText !== '') {
-        const listItem = document.createElement('li'); //create a new list item element
-        listItem.textContent = taskText; //set the text content of the list item
-        listItem.classList.add('list-group-item'); //add class 'list-group-item' to list item
-        //task done/ complete button
-        //credit: code for javascript button addage adapted/ inspired by learning from https://www.altcademy.com/blog/how-to-create-a-button-in-javascript/
-        const completeBtn = document.createElement('button'); //create a button for completing a task
-        completeBtn.textContent = 'Done'; //set the button text to 'done'
-        completeBtn.classList.add('btn', 'btn-sm'); //add classes to button to target it
-        //add event listener to complete button
+        const listItem = document.createElement('li'); // Create a new list item element
+        listItem.textContent = taskText; // Set the text content of the list item
+        listItem.classList.add('list-group-item'); // Add class 'list-group-item' to list item
+        // Task done/complete button
+        // Credit: code for JavaScript button addition adapted/inspired by learning from https://www.altcademy.com/blog/how-to-create-a-button-in-javascript/
+        const completeBtn = document.createElement('button'); // Create a button for completing a task
+        completeBtn.textContent = 'Done'; // Set the button text to 'done'
+        completeBtn.classList.add('btn', 'btn-sm'); // Add classes to button to target it
+        // Add event listener to complete button
         completeBtn.addEventListener('click', function () {
             listItem.classList.toggle('complete');
+            playSound('doneSound'); // Play done sound when complete button is clicked
         });
-        //credit: code for javascript adding list items from learning from https://www.altcademy.com/blog/how-to-create-a-button-in-javascript/
-        //add/ append the complete button to the list item
+        // Credit: code for JavaScript adding list items from learning from https://www.altcademy.com/blog/how-to-create-a-button-in-javascript/
+        // Add/append the complete button to the list item
         listItem.appendChild(completeBtn);
-        //add/ append the list item to the task list container
+        // Add/append the list item to the task list container
         taskList.appendChild(listItem);
-        //clear the input field ready for a new reminder
+        // Clear the input field ready for a new reminder
         taskInput.value = '';
     }
 }
 
-//button to add task
+// Button to add task
 const addTaskBtn = document.getElementById('addTaskBtn');
-//add event listener to add task button to call function
-addTaskBtn.addEventListener('click', addTask);
+// Add event listener to add task button to call function
+addTaskBtn.addEventListener('click', () => {
+    addTask();
+    playSound('clickSound'); // Play click sound when add task button is clicked
+});
 
-//function to clear the task list
-function clearList() {
-    const taskList = document.getElementById('taskList'); //get the tasklist container
-    taskList.innerHTML = ''; //clear the tasklist
-}
 // Function to clear the task list and congratulate the user
 function clearList() {
     const taskList = document.getElementById('taskList'); // Get the task list container
     taskList.innerHTML = ''; // Clear the task list
-
+    
     // Play congratulatory sound
-    const clearListSound = document.getElementById('clearListSound');
+    const congratsSound = document.getElementById('clearListSound');
     try {
-        clearListSound.play().then(() => {
+        congratsSound.play().then(() => {
             // Playback succeeded
         }).catch(error => {
             console.error('Failed to play audio:', error);
@@ -137,15 +149,16 @@ function clearList() {
     // Append the congratulatory message to the task list container
     taskList.appendChild(congratsMessage);
 
-     // Remove the congratulatory message after a few seconds
-     setTimeout(() => {
+    // Optionally remove the congratulatory message after a few seconds
+    setTimeout(() => {
         congratsMessage.remove();
     }, 5000); // Remove after 5 seconds
 }
 
-//button to clear task
+// Button to clear task list
 const clearListBtn = document.getElementById('clearListBtn');
 clearListBtn.addEventListener('click', clearList);
+
 
 // Pomodoro timer section
 //credit: code for pomodoro timer adapted/ inspired by learning from https://webdesign.tutsplus.com/create-a-pomodoro-timer-with-html-css-and-vanilla-javascript--cms-108069t
