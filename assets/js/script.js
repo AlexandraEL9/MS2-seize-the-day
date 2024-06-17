@@ -136,7 +136,13 @@ function clearList() {
 
     // Append the congratulatory message to the task list container
     taskList.appendChild(congratsMessage);
+
+     // Remove the congratulatory message after a few seconds
+     setTimeout(() => {
+        congratsMessage.remove();
+    }, 5000); // Remove after 5 seconds
 }
+
 //button to clear task
 const clearListBtn = document.getElementById('clearListBtn');
 clearListBtn.addEventListener('click', clearList);
