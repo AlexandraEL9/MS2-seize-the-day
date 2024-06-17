@@ -183,10 +183,10 @@ const shortBreakModal = $('#shortBreakOverModal');
 const longBreakModal = $('#longBreakOverModal');
 
 // Audio alarm element for when timer finishes
-//const alarmSound = document.getElementById("alarmSound");
-//const alarmSound = new Audio("assets/media/calm-alarm.wav");
 const alarmSound = new Audio("assets/media/calm-alarm.wav");
 alarmSound.preload = "auto"; // Preload the audio
+// Audio element for click sound
+//const clickSound = document.getElementById('clickSound');
 
 // Function to update the timer display with the appropriate time
 function updateDisplay() {
@@ -229,6 +229,7 @@ function countdown() {
 //credit: code for buttons and 'active' class adapted/ inspired by learning from https://www.youtube.com/watch?v=6zQPteD5Mvc
 // Pomodoro button
 pomodoroButton.addEventListener('click', () => {
+    clickSound.play(); // Play click sound
     setTimer(25); // Set timer for pomodoro session (25 mins)
     pomodoroButton.classList.add('active'); // Mark pomodoro button as 'active'
     shortBreakButton.classList.remove('active'); // Remove active state from short break button
@@ -237,6 +238,7 @@ pomodoroButton.addEventListener('click', () => {
 
 // Short break button
 shortBreakButton.addEventListener('click', () => {
+    clickSound.play(); // Play click sound
     setTimer(5); // Set timer for short break session (5 mins)
     pomodoroButton.classList.remove('active'); // Remove active state from pomodoro button
     shortBreakButton.classList.add('active'); // Mark short break button as 'active'
@@ -245,6 +247,7 @@ shortBreakButton.addEventListener('click', () => {
 
 // Long break button
 longBreakButton.addEventListener('click', () => {
+    clickSound.play(); // Play click sound
     setTimer(15); // Set timer for long break session (15 mins)
     pomodoroButton.classList.remove('active'); // Remove active state from pomodoro button
     shortBreakButton.classList.remove('active'); // Remove active state from short break button
@@ -263,6 +266,7 @@ function setTimer(duration) {
 // Start and pause button
 //credit: code starting timer adapted/ inspired by learning from https://webdesign.tutsplus.com/create-a-pomodoro-timer-with-html-css-and-vanilla-javascript--cms-108069t
 startButton.addEventListener('click', () => {
+    clickSound.play(); // Play click sound
     isPaused = !isPaused; // Toggle timer pause state
     if (!isPaused) {
         timer = setInterval(countdown, 1000); // Start timer interval
