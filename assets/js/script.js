@@ -144,7 +144,7 @@ function clearList() {
     // Display congratulatory message
     const congratsMessage = document.createElement('div');
     congratsMessage.textContent = 'Congratulations on completing all your tasks!';
-    congratsMessage.classList.add('congrats-message', 'alert', 'alert-success');
+    congratsMessage.classList.add('congrats-message', 'alert');
 
     // Append the congratulatory message to the task list container
     taskList.appendChild(congratsMessage);
@@ -289,6 +289,9 @@ const reminderList = document.getElementById('reminderList');
 const reminderModal = new bootstrap.Modal(document.getElementById('reminderModal'));
 const reminderModalMessage = document.querySelector('#reminderModal .modal-body p');
 
+// Audio element for the calm alarm sound
+const calmAlarmSound = document.getElementById('alarmSound');
+
 // Array to store reminders
 let reminders = [];
 
@@ -332,6 +335,9 @@ function checkReminders() {
             // Display reminder message in the modal
             reminderModalMessage.textContent = reminder.message;
             reminderModal.show();
+
+             // Play calm alarm sound
+             alarmSound.play();
 
             // Remove reminder from array
             reminders.splice(index, 1);
