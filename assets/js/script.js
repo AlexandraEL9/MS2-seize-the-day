@@ -112,6 +112,31 @@ function clearList() {
     const taskList = document.getElementById('taskList'); //get the tasklist container
     taskList.innerHTML = ''; //clear the tasklist
 }
+// Function to clear the task list and congratulate the user
+function clearList() {
+    const taskList = document.getElementById('taskList'); // Get the task list container
+    taskList.innerHTML = ''; // Clear the task list
+
+    // Play congratulatory sound
+    const clearListSound = document.getElementById('clearListSound');
+    try {
+        clearListSound.play().then(() => {
+            // Playback succeeded
+        }).catch(error => {
+            console.error('Failed to play audio:', error);
+        });
+    } catch (error) {
+        console.error('Failed to play audio:', error);
+    }
+
+    // Display congratulatory message
+    const congratsMessage = document.createElement('div');
+    congratsMessage.textContent = 'Congratulations on completing all your tasks!';
+    congratsMessage.classList.add('congrats-message', 'alert', 'alert-success');
+
+    // Append the congratulatory message to the task list container
+    taskList.appendChild(congratsMessage);
+}
 //button to clear task
 const clearListBtn = document.getElementById('clearListBtn');
 clearListBtn.addEventListener('click', clearList);
