@@ -291,6 +291,8 @@ const reminderModalMessage = document.querySelector('#reminderModal .modal-body 
 
 // Audio element for the calm alarm sound
 const calmAlarmSound = document.getElementById('calmAlarmSound');
+const clickSound = document.getElementById('clickSound');
+const doneSound = document.getElementById('doneSound');
 
 // Array to store reminders
 let reminders = [];
@@ -307,6 +309,9 @@ setReminderBtn.addEventListener('click', () => {
             time: reminderTime,
             message: reminderMessage
         });
+
+        // Play click sound
+        clickSound.play();
 
         // Update reminder list display
         updateReminderList();
@@ -363,6 +368,8 @@ function updateReminderList() {
         removeBtn.classList.add('btn', 'btn-danger', 'btn-sm');
         removeBtn.innerHTML = '&times;'; // X symbol
         removeBtn.addEventListener('click', () => {
+             // Play done sound
+             doneSound.play();
             // Remove reminder from array
             reminders.splice(index, 1);
             // Update reminder list display
