@@ -372,6 +372,8 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 |  YouTube tutorial by Madhuri Bansode *Alarm-Clock using Vanilla JavaScript*     | [YouTube](https://www.youtube.com/watch?app=desktop&v=UYtZsLR3xLs) | Tutorial for setting a digital clock, alarms etc.                         |  |
 | YouTube Tutorial  by 'Genuine Code' *HTML5, CSS3 and JavaScript- Reminder App*       | [YouTube](https://www.youtube.com/watch?v=j5QR1GumLL4) | Project creating a reminder app                    | Introduced key points for setting up project and key learning. |
 | Scrimba javaScript course        | [Scrimba.org](https://v2.scrimba.com/learn-javascript-c0v:details) | Basics of javaScript management                     | basic principles used and adapted for project |
+| YouTube Tutorial  by 'OpenJavaScript' *Create a new HTML element with document.createElement() – JavaScript Tutorial*       | [YouTube](https://www.youtube.com/watch?v=UA4cMMyqoaM) | tutorial addin html elements within javaScript                    | used for adding elements not in html but added by javaScript functionality. |
+| Free CodeCamp- *How to Use LocalStorage in JavaScript* by Benjamin Semah       | [FreeCodeCamp](https://www.freecodecamp.org/news/use-local-storage-in-modern-applications/) | Introduction and learning on utilizing localStorage                  | Used in the dark/light mode toggle to remember mode on error page and back again            |
 
 
 ### Content
@@ -379,7 +381,12 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 -  All content was written by the developer unless otherwise stated in the credits or comments in the code.
 
 ### Media
-- Sound file for pomodoro alarm. Sourced from freesound.org [freesound.org]([Scrimba.org](https://v2.scrimba.com/learn-javascript-c0v:details))
+- Sound file for reminder alarm. Sourced from freesound.org [freesound.org](https://freesound.org/people/DAN2008/sounds/640368/)
+- Sound file for reminder alarm. Sourced from freesound.org [freesound.org](https://freesound.org/people/avreference/sounds/740018/)
+- Sound file for doneSound. Sourced from freesound.org [freesound.org](https://freesound.org/people/Foxfire-/sounds/730381/)
+- Sound file for congratsSound- for clearing of todo list. Sourced from freesound.org [freesound.org](https://freesound.org/people/desktopepics/sounds/737178/)
+- Sound file for reminder alarm. Sourced from freesound.org [freesound.org](https://freesound.org/people/sgossner/sounds/375436/)
+
 
 
 ### Acknowledgements
