@@ -1,6 +1,6 @@
 body {
-  background-color: whitesmoke;
-  color: darkslategrey;
+  background-color: #f5f5f5; /* Slightly lighter for better contrast */
+  color: #2f4f4f;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -8,43 +8,43 @@ body {
 }
 
 .dark-mode body {
-  background-color: #333;
-  color: whitesmoke;
+  background-color: #222; /* Darker for better contrast */
+  color: #f5f5f5;
 }
 
 /*navbar*/
 .navbar {
-  background-color: white;
-  color: darkslategrey;
-  border-bottom: 1px solid darkslategrey;
+  background-color: #fff;
+  color: #2f4f4f;
+  border-bottom: 1px solid #2f4f4f;
 }
 
 .dark-mode .navbar {
-  background-color: black;
-  color: whitesmoke;
-  border-bottom: 2px solid darkslategrey;
+  background-color: #111; /* Darker for better contrast */
+  color: #f5f5f5;
+  border-bottom: 2px solid #2f4f4f;
 }
 
 .navbar-brand {
-  color: darkslategrey;
+  color: #2f4f4f;
   font-weight: bolder;
 }
 
 .dark-mode .navbar-brand {
-  color: whitesmoke;
+  color: #f5f5f5;
   font-weight: bolder;
 }
 
 /*header styles*/
 header {
-  background-color: whitesmoke;
-  border-bottom: 1px solid darkslategrey;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #2f4f4f;
   padding: 20px;
 }
 
 .dark-mode header {
-  background-color: #333;
-  border-bottom: 2px solid darkslategrey;
+  background-color: #222;
+  border-bottom: 2px solid #2f4f4f;
   padding: 20px;
 }
 
@@ -58,25 +58,25 @@ header {
 
 .content-section h1,
 .content-section h2 {
-  color: darkslategrey;
+  color: #2f4f4f;
 }
 
 .dark-mode .content-section h1,
 .dark-mode .content-section h2,
 .dark-mode p {
-  color: whitesmoke;
+  color: #f5f5f5;
 }
 
 #clockDisplay {
   font-size: 2em;
   font-weight: lighter;
-  color: darkslategrey;
+  color: #2f4f4f;
 }
 
 .dark-mode #clockDisplay {
   font-size: 2em;
   font-weight: lighter;
-  color: whitesmoke;
+  color: #f5f5f5;
 }
 
 /* main content styles */
@@ -92,7 +92,7 @@ main {
 }
 
 .dark-mode .container-main {
-  background-color: black;
+  background-color: #111;
 }
 
 .row-main {
@@ -104,8 +104,8 @@ main {
 .todo-section,
 .timer-section,
 .reminder-section {
-  background-color: white;
-  border: 1px solid darkslategray;
+  background-color: #fff;
+  border: 1px solid #2f4f4f;
   padding: 15px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -115,8 +115,8 @@ main {
 .dark-mode .todo-section,
 .dark-mode .timer-section,
 .dark-mode .reminder-section {
-  background-color: #333;
-  border: 2px solid darkslategray;
+  background-color: #222;
+  border: 2px solid #2f4f4f;
   padding: 15px;
   border-radius: 5px;
   text-align: center;
@@ -125,8 +125,8 @@ main {
 .todo-section h3,
 .timer-section h3,
 .reminder-section h3 {
-  color: darkslategray;
-  border-bottom: 1px solid darkslategray;
+  color: #2f4f4f;
+  border-bottom: 1px solid #2f4f4f;
   padding-bottom: 10px;
   margin-bottom: 15px;
 }
@@ -134,8 +134,8 @@ main {
 .dark-mode .todo-section h3,
 .dark-mode .timer-section h3,
 .dark-mode .reminder-section h3 {
-  color: whitesmoke;
-  border-bottom: 1px solid darkslategray;
+  color: #f5f5f5;
+  border-bottom: 1px solid #2f4f4f;
   padding-bottom: 10px;
   margin-bottom: 15px;
 }
@@ -148,49 +148,49 @@ main {
 }
 
 .button {
-  background-color: whitesmoke;
-  color: darkslategrey;
-  border: 1px solid slategrey;
+  background-color: #f5f5f5;
+  color: #2f4f4f;
+  border: 1px solid #778899;
   margin: 5px;
 }
 
 .dark-mode .button {
-  background-color: darkslategrey;
-  color: whitesmoke;
-  border: 1px solid slategrey;
+  background-color: #2f4f4f;
+  color: #f5f5f5;
+  border: 1px solid #778899;
   margin: 5px;
 }
 
 .button:hover {
-  background-color: darkslategray;
-  color: whitesmoke;
+  background-color: #2f4f4f;
+  color: #f5f5f5;
 }
 
 .dark-mode .button:hover {
-  background-color: slategray;
-  color: whitesmoke;
+  background-color: #778899;
+  color: #f5f5f5;
 }
 
 .btn {
-  background-color: whitesmoke;
-  color: darkslategrey;
-  border: 1px solid slategrey;
+  background-color: #f5f5f5;
+  color: #2f4f4f;
+  border: 1px solid #778899;
 }
 
 .dark-mode .btn {
-  background-color: darkslategrey;
-  color: whitesmoke;
-  border: 1px solid slategrey;
+  background-color: #2f4f4f;
+  color: #f5f5f5;
+  border: 1px solid #778899;
 }
 
 .btn:hover {
-  background-color: darkslategray;
-  color: whitesmoke;
+  background-color: #2f4f4f;
+  color: #f5f5f5;
 }
 
 .dark-mode .btn:hover {
-  background-color: slategray;
-  color: whitesmoke;
+  background-color: #778899;
+  color: #f5f5f5;
 }
 
 /* inputs and lists styles */
@@ -204,8 +204,29 @@ input {
 
 .dark-mode input {
   margin-bottom: 10px;
-  background-color: #333;
-  color: slategrey;
+  background-color: #222;
+  color: #f5f5f5;
+}
+
+.dark-mode input::placeholder {
+  color: #f5f5f5; /* White placeholder text in dark mode */
+}
+
+.dark-mode .form-control {
+  background-color: #222;
+  color: #f5f5f5;
+}
+
+.dark-mode .form-control::placeholder {
+  color: #f5f5f5; /* White placeholder text in dark mode */
+}
+
+.dark-mode #reminderMessage {
+  color: #f5f5f5;
+}
+
+.dark-mode #taskInput {
+  color: #f5f5f5;
 }
 
 .list-group-item {
@@ -219,9 +240,9 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
-  color: whitesmoke;
-  border: 1px solid whitesmoke;
+  background-color: #111;
+  color: #f5f5f5;
+  border: 1px solid #f5f5f5;
   margin-bottom: 10px;
 }
 
@@ -239,7 +260,7 @@ input {
 }
 
 .dark-mode .congrats-message {
-  color: whitesmoke;
+  color: #f5f5f5;
 }
 
 /* pomodoro section */
@@ -247,7 +268,7 @@ input {
 .timer-display {
   font-size: 2em;
   font-weight: bold;
-  color: darkslategray;
+  color: #2f4f4f;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -255,7 +276,7 @@ input {
 .dark-mode .timer-display {
   font-size: 2em;
   font-weight: bold;
-  color: whitesmoke;
+  color: #f5f5f5;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -281,9 +302,9 @@ input {
 }
 
 .dark-mode #reminderList .list-group-item {
-  background-color: black;
-  color: whitesmoke;
-  border: 1px solid whitesmoke;
+  background-color: #111;
+  color: #f5f5f5;
+  border: 1px solid #f5f5f5;
   margin-bottom: 10px;
   padding: 10px;
 }
@@ -305,23 +326,27 @@ label {
   font-size: 1rem;
 }
 
+.form-control::placeholder {
+  color: darkslategrey;
+}
+
 /* footer styles */
 footer {
-  background-color: #ffffff;
+  background-color: #f5f5f5;
   width: 100vw;
   padding: 10px 0;
-  border-top: 1px solid darkslategrey;
+  border-top: 1px solid #2f4f4f;
 }
 
 .dark-mode footer {
-  background-color: black;
+  background-color: #111;
   width: 100vw;
   padding: 10px 0;
-  border-top: 2px solid darkslategrey;
+  border-top: 2px solid #2f4f4f;
 }
 
 a {
-  color: black;
+  color: #000;
   /* link color */
   text-decoration: underline;
 }
@@ -329,7 +354,7 @@ a {
 a:focus,
 a:hover {
   font-weight: bold;
-  outline: 2px solid darkslategrey;
+  outline: 2px solid #2f4f4f;
 }
 
 a:active {
@@ -337,28 +362,28 @@ a:active {
 }
 
 .dark-mode a {
-  color: white;
+  color: #fff;
   /* link color */
   text-decoration: underline;
 }
 
-a:focus,
-a:hover {
+.dark-mode a:focus,
+.dark-mode a:hover {
   font-weight: bold;
-  outline: 2px solid darkslategrey;
+  outline: 2px solid #f5f5f5;
 }
 
 /* modal styles */
 .modal-content {
-  background-color: whitesmoke;
-  color: darkslategrey;
+  background-color: #f5f5f5;
+  color: #2f4f4f;
   border-radius: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .dark-mode .modal-content {
-  background-color: #333;
-  color: whitesmoke;
+  background-color: #222;
+  color: #f5f5f5;
   box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
 }
 
@@ -370,14 +395,14 @@ a:hover {
 }
 
 .modal-header {
-  border-bottom: 1px solid darkslategrey;
+  border-bottom: 1px solid #2f4f4f;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .dark-mode .modal-header {
-  border-bottom: 2px solid whitesmoke;
+  border-bottom: 2px solid #f5f5f5;
 }
 
 .modal-title {
@@ -385,11 +410,11 @@ a:hover {
 }
 
 .close {
-  color: darkslategrey;
+  color: #2f4f4f;
 }
 
 .dark-mode .close {
-  color: whitesmoke;
+  color: #f5f5f5;
 }
 
 .modal-body {
@@ -400,11 +425,11 @@ a:hover {
 }
 
 .modal-body p {
-  color: darkslategrey;
+  color: #2f4f4f;
 }
 
 .dark-mode .modal-body p {
-  color: whitesmoke;
+  color: #f5f5f5;
 }
 
 /*error.html page*/
@@ -419,8 +444,8 @@ a:hover {
 }
 
 .dark-mode .error-container {
-  background-color: #333;
-  color: whitesmoke;
+  background-color: #222;
+  color: #f5f5f5;
 }
 
 .error-container h1 {
@@ -438,3 +463,4 @@ a:hover {
   font-size: 1.5rem;
   margin-top: 20px;
 }
+
