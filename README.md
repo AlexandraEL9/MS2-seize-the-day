@@ -120,8 +120,8 @@ When I was creating my website, the design plan was changed but only small place
 
 #### Error Page Wireframes
 
-- [**Desktop and tablet**](./wireframes/ga-page-desktop.png)
-- [**Mobile**](./wireframes/gallery-page-mobile.png)
+- [**Desktop and tablet**](./wireframes/error-desktop-tablet.png)
+- [**Mobile**](./wireframes/error-mobile.png)
 
 ## Technologies Used
 
@@ -347,10 +347,10 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ### Code
 
--   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System. Bootstrap was also used as the base code for the forms, jumbotron the image carousel.
+-   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System. Bootstrap was also used as the base code for the forms, and the creation of modals for reminders etc.
 - I referred to  the [W3 schools](https://www.w3schools.com/html/default.asp) website's HTML and CSS sections in order to check syntax.
 - I also referred to [StackOverflow] (https://stackoverflow.com/)
-- I adapted the basic code from notes following the "Whiskey Drop" tutorials from the Code Institute website to achieve the navbar and the reviews sections.
+- I adapted the basic code from a number of tutorials and websites. See below in Tutorials used.
 - I utilised [Free Formatter](https://www.freeformatter.com/) to check the formatting of my code.
 
 ### Tutorials used
@@ -385,7 +385,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 - Sound file for reminder alarm. Sourced from freesound.org [freesound.org](https://freesound.org/people/avreference/sounds/740018/)
 - Sound file for doneSound. Sourced from freesound.org [freesound.org](https://freesound.org/people/Foxfire-/sounds/730381/)
 - Sound file for congratsSound- for clearing of todo list. Sourced from freesound.org [freesound.org](https://freesound.org/people/desktopepics/sounds/737178/)
-- Sound file for reminder alarm. Sourced from freesound.org [freesound.org](https://freesound.org/people/sgossner/sounds/375436/)
+- Sound file for click sound on buttons. Sourced from freesound.org [freesound.org](https://freesound.org/people/sgossner/sounds/375436/)
 
 
 
@@ -393,5 +393,5 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 -   My Mentor Excellence Ilesanmi for continuous helpful feedback.
 -   My tutor from EKC Group Rachel Furlong for support in Tutor meetings.
--   The Code Institute Slack Channel.
+-   The Code Institute Slack Channel. Thanks to Ahmed_5p for your very kind peer review.
 -   The webDev community from the table above for sharing their skills and learning so freely and openly through tutorials and blog posts.
