@@ -285,7 +285,14 @@ Any label I tried to add wuld result in some catestrophic change ing the styling
   <img src="./docs/bugs-fixes/bugs-labels-2.png" alt="User Stories To-Do List Countdown" style="width: 45%;"/>
 </div>
 <br>
-
+- - *Reminder modals and the linter:* I had repeated issues with the reminder section when it came to getting the script.js through the linter. In the first iteraton of the code, the modal creation looked like this however, that kept returning that bootstrap was an 'undefined variable'<br>
+![Reminder section](./docs/bugs-fixes/bugs-reminder-modal-1.png)<br>
+I tried lots of different things involving declaring bootstrap and jQuery on the linter. In the end, I simplified the code down and made it more akin to the Pomodoro modals, using bootstrap. <br>
+<div style="display: flex; justify-content: space-between;">
+  <img src="./docs/bugs-fixes/bugs-reminder-modal-2.png" alt="Bugs Reminder modal 2" style="width: 45%;"/>
+  <img src="./docs/bugs-fixes/bugs-reminder-modal-3.png" alt="Busg reminder modal 3" style="width: 45%;"/>
+</div>
+<br>
 - - *Updating the time and date:* I had some learning to do with 'when' things update automatically. The header of the site has a date and time section which I wnated to automatically populate and update so the header is always up to date and correct.<br>
 ![Header section](./docs/testing/user-stories/user-stories-main-page-top.png)<br>
  <br>
@@ -308,6 +315,9 @@ The basic code looked like this:
   <img src="./docs/bugs-fixes/bugs-button-display-3.png" alt="User Stories To-Do List Countdown" style="width: 45%;"/>
 </div>
 <br>
+
+**Ongoing issue**
+- - *Alarms on mobile browsers:* Through testing I have identified that the alarms, (Pomodoro and Reminder alarms), do not play on mobile browsers. Through researc, I can see that this is to do with rules for autoplay on these browsers being more strick than on desktop. I have -for now- decided that as there are visual cues for these alarms and reminders through the use of accompanying modals, I am going to keep this as is as the minimum viable product. Users are able to utilise the visual cues on mobile devices and further research can be done to see if this can be overcome at a later date. The expertise for this are beyond my current level of expertise.<br>
 
 ### Improvements/ scalability 
 - Drive User Engagement: develop the site further and aim to encourage users to spend more time on the platform by offering more of a range engaging features such as interactive timers, customizable to-do lists, and helpful reminders. A range of backgrounds could also be provided making the UI more personal to users.
