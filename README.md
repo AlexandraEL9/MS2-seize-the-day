@@ -209,7 +209,7 @@ When I was creating my website, the design plan was changed but only small place
 
 3. As a First Time Visitor, I would expect intuitive user interfaces, helpful tooltips, and possibly a guide to aid me in the use and usefulness of the key or unfamiliar functionalities.<br>
 **3a** Solution: The user interface is designed to be intuitive, with interactive elements like buttons and input fields clearly marked.
-A guide is provided for the function which may or ma5 not be familaiar to the user, (the pomodoro timer), explaining what the function is and how it can be beneficial to the user. It is a modal which is accessed via a button close to the heading.
+A guide is provided for the function which may or may not be familaiar to the user, (the pomodoro timer), explaining what the function is and how it can be beneficial to the user. It is a modal which is accessed via a button close to the heading.
 ![User Stories Main Page Whole](./docs/testing/user-stories/user-stories-main-page-pomodoro-modal.png)
 
 - #### Returning Visitor Goals
@@ -234,7 +234,7 @@ A guide is provided for the function which may or ma5 not be familaiar to the us
 
 ![User Stories To-Do List](./docs/testing/user-stories/user-stories-reminder.png)
 <div style="display: flex; justify-content: space-between;">
-  <img src="./docs/testing/user-stories/user-stories-reminder-list.png" alt="User Stories To-Do List Countdown" style="width: 45%;"/>
+  <img src="./docs/testing/user-stories/user-stories-reminder-set.png" alt="User Stories To-Do List Countdown" style="width: 45%;"/>
   <img src="./docs/testing/user-stories/user-stories-reminder-modal.png" alt="User Stories To-Do List Countdown" style="width: 45%;"/>
 </div>
 <br>
@@ -249,12 +249,12 @@ A guide is provided for the function which may or ma5 not be familaiar to the us
 - #### Frequent User Goals
 1. Community Engagement: Frequent users might seek opportunities for community engagement, such as participating in forums, sharing productivity tips, or attending webinars or workshops hosted by the Seize the Day community.<br>
 - - *Solution:* The website fosters community engagement through an option to be put on a mailing list to be kept up to date with upgrades, news etc. Through a 'Join Us' button in the navbar, a modal appears with a form to enter your email to sunscribe to the mailing list<br>
-![User Stories To-Do List](./docs/testing/user-stories/user-stories-join.png)
+![User Stories To-Do List](./docs/testing/user-stories/user-stories-subscribe.png)
 
 ### Further Features
-- **Error Page**: In the footer there is a link to 'www.seizetheday.com'. As this is simply a project and not a real site there is nowhere for it to go. as such, this links to an error page which opens in a new window.
+- **Error Page**: In the footer there is a link to 'www.seizetheday.com'. As this is simply a project and not a real site there is nowhere for it to go. as such, this links to an error page which automatically directs the user back to the main page after a 5 second countdown. 
 ![User Stories To-Do List](./docs/testing/user-stories/user-stories-error-page.png)<br>
-This page contains a message for the user and a 10sec countdown timer which then automatically sends the user back to the main page without intervention from the user through navigation controls/ buttons etc.
+This page contains a message for the user and a 5sec countdown timer which then automatically sends the user back to the main page without intervention from the user through navigation controls/ buttons etc.
 
 
 ### Further Testing
