@@ -252,9 +252,19 @@ A guide is provided for the function which may or may not be familaiar to the us
 ![User Stories To-Do List](./docs/testing/user-stories/user-stories-subscribe.png)
 
 ### Further Features
-- **Error Page**: In the footer there is a link to 'www.seizetheday.com'. As this is simply a project and not a real site there is nowhere for it to go. as such, this links to an error page which automatically directs the user back to the main page after a 5 second countdown. 
-![User Stories To-Do List](./docs/testing/user-stories/user-stories-error-page.png)<br>
-This page contains a message for the user and a 5sec countdown timer which then automatically sends the user back to the main page without intervention from the user through navigation controls/ buttons etc.
+- **404 Page**: In the footer there is a link to 'www.seizetheday.com'. As this is simply a project and not a real site there is nowhere for it to go. as such, this links to an error page which automatically directs the user back to the main page after a 5 second countdown. 
+![404 page](./docs/testing/user-stories/user-stories-error-page.png)<br>
+This page contains a message for the user and a 5sec countdown timer which then automatically sends the user back to the main page without intervention from the user through navigation controls/ buttons etc.<br>
+
+- **Task completion feedback**: Within the To-Do list section there is a button which allows the user to 'Clear List'. When the user clears their list, a small message of congratulations pops up for 5 seconds. This allows the user to get some positive feedback without the message cluttering up the browser indefinately. 
+![404 page](./docs/testing/user-stories/clear-tasks-congrats.png)<br>
+
+- **Use of sound effects and alarms**: Throughout the main working interface, a mixture of sounds and alarms are used to signify different things:<br>
+- 'calm-alarm.wav' and 'reminder.wav'- used with the Pomodoro Timer and Reminder sections respectively. These are short alarm sounds which I have deliberately chosen to be towards the quieter/ calmer end of the alarm spectrum in order to not be to obtrusive whilst still functioning as alarms.<br>
+- 'clear-list.wav'- a sound effect added to the To-Do list section. This was chosen as a sound that could replicate the turning of a page or the ripping of a post-it list from a pad.<br>
+- 'click.wav'- added to buttons within the main interface. <br>
+- 'done-cross-out.wav'- added to the 'Done' button within the To-Do List section. Part of the css means that when the 'Done' button is pressed, the linked task crosses out, as a user may do with a written list. I added a sound to match this action.
+
 
 
 ### Further Testing
