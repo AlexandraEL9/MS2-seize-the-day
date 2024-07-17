@@ -285,7 +285,7 @@ Automated testing would have been handy, particularly as the development of this
 
 **Coding issues**
 
-- - *Reminder time input and accessibility:* I had repeated issues with accessibility in relation to the time input element in the reminder section.<br>
+- *Reminder time input and accessibility:* I had repeated issues with accessibility in relation to the time input element in the reminder section.<br>
 ![Reminder section](./docs/testing/user-stories/user-stories-reminder.png)<br>
 Any label I tried to add wuld result in some catestrophic change ing the styling and alignment of the section. After some research on w3 schools and bootstrap, I found th 'sr-only' bootstrap class. This allowed me to add the labels but for 'screen-readers only' meaning the page has the needed accessibility without hampering the layout. <br>
 <div style="display: flex; justify-content: space-between;">
@@ -293,9 +293,11 @@ Any label I tried to add wuld result in some catestrophic change ing the styling
   <img src="./docs/bugs-fixes/bugs-labels-2.png" alt="User Stories To-Do List Countdown" style="width: 45%;"/>
 </div>
 <br>
-- - *Reminder modals and the linter:* I had repeated issues with the reminder section when it came to getting the script.js through the linter. In the first iteraton of the code, the modal creation looked like this however, that kept returning that bootstrap was an 'undefined variable'<br>
+
+- *Reminder modals and the linter:* I had repeated issues with the reminder section when it came to getting the script.js through the linter. In the first iteraton of the code, the modal creation looked like this however, that kept returning that bootstrap was an 'undefined variable'<br>
 ![Reminder section](./docs/bugs-fixes/bugs-reminder-modal-1.png)<br>
-I tried lots of different things involving declaring bootstrap and jQuery on the linter. In the end, I simplified the code down and made it more akin to the Pomodoro modals, using bootstrap. <br>
+I tried lots of different things involving declaring bootstrap and jQuery on the linter. In the end, I simplified the code down and made it more akin to the Pomodoro modals, using bootstrap.<br>
+
 <div style="display: flex; justify-content: space-between;">
   <img src="./docs/bugs-fixes/bugs-reminder-modal-2.png" alt="Bugs Reminder modal 2" style="width: 45%;"/>
   <img src="./docs/bugs-fixes/bugs-reminder-modal-3.png" alt="Busg reminder modal 3" style="width: 45%;"/>
