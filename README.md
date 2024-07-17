@@ -198,10 +198,8 @@ When I was creating my website, the design plan was changed but only small place
 
 - #### First Time Visitor Goals
 1. As a First Time Visitor, I want to easily understand the main purpose of the site/ platform.<br>
-**1a.** Solution: The website's landing page features a clear and concise tagline or mission statement that explains the main purpose of the platform: to help users manage their time and tasks efficiently. Additionally, the homepage includes a brief overview of key features such as the Pomodoro timer, to-do list, reminders, and dark mode toggle. This immediate clarity helps first-time visitors understand what the site offers.
-<br>
+**1a.** Solution: The website's landing page features a clear and concise tagline or mission statement that explains the main purpose of the platform: to help users manage their time and tasks efficiently. Additionally, the homepage includes a brief overview of key features such as the Pomodoro timer, to-do list, reminders, and dark mode toggle. This immediate clarity helps first-time visitors understand what the site offers.<br>
 ![User Stories Main Page Top](./docs/testing/user-stories/user-stories-main-page-top.png)
-
 
 2. As a First Time Visitor, I want to be able to easily navigate throughout the platform and be able to interpret what I see clearly.<br>
 **2a** Solution: The website uses a simple, intuitive layout with a top navigation bar and clearly defined section and a footer at the base. The use of icons and clear headings further aids navigation, making it easy for users to find and understand each feature. The design for inputs etc has been deliberatly chosen to be familiar with tools and functions used often ensuring ease of understanding and use.
