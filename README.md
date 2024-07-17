@@ -303,10 +303,12 @@ I tried lots of different things involving declaring bootstrap and jQuery on the
   <img src="./docs/bugs-fixes/bugs-reminder-modal-3.png" alt="Busg reminder modal 3" style="width: 45%;"/>
 </div>
 <br>
-- - *Updating the time and date:* I had some learning to do with 'when' things update automatically. The header of the site has a date and time section which I wnated to automatically populate and update so the header is always up to date and correct.<br>
+
+- *Updating the time and date:* I had some learning to do with 'when' things update automatically. The header of the site has a date and time section which I wnated to automatically populate and update so the header is always up to date and correct.<br>
+
 ![Header section](./docs/testing/user-stories/user-stories-main-page-top.png)<br>
- <br>
- The first iteration of the code looked like this:
+
+The first iteration of the code looked like this:
 
  ![Header section](./docs/bugs-fixes/bugs-current-time-1.png)<br>
 This was updating but not on the minute in line with actual 
