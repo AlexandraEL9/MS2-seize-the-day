@@ -227,8 +227,9 @@ A guide is provided for the function which may or may not be familaiar to the us
   <img src="./docs/testing/user-stories/user-stories-pomodoro-take-a-break.png" alt="User Stories To-Do List Countdown" style="width: 45%;"/>
 </div>
 <br>
+
 - 1.3 They may wish to set reminders for tasks which need to be done at a certain time eg. 4pm- attend Teams meeting.
-- - *Solution:* Users have the ability to set time sensitive reminders using the 'Set Reminder' section. The user sets a time and message and the information is added to a list below the input. Once the time is met, a modal with the reminder will display reminding the user what they need to do.<br>
+- -*Solution:* Users have the ability to set time sensitive reminders using the 'Set Reminder' section. The user sets a time and message and the information is added to a list below the input. Once the time is met, a modal with the reminder will display reminding the user what they need to do.<br>
 
 ![User Stories To-Do List](./docs/testing/user-stories/user-stories-reminder.png)
 <div style="display: flex; justify-content: space-between;">
@@ -236,6 +237,7 @@ A guide is provided for the function which may or may not be familaiar to the us
   <img src="./docs/testing/user-stories/user-stories-reminder-modal.png" alt="User Stories To-Do List Countdown" style="width: 45%;"/>
 </div>
 <br>
+
 -  1.4 They may wish to change/ toggle the display of the site to suit either the room/time of day/ light they are in for medical or personal reasons<br>
 - - *Solution:* Users have the ability to set the mode/colour scheme of the page with the use of a Dark Mode/ Light Mode toggler button in the footer. The display text on this button changes depending on the mode the page is in.<br>
 <div style="display: flex; justify-content: space-between;">
@@ -316,7 +318,7 @@ time (it was updating every minuite from the page load), when checked with incid
 ![Header section](./docs/bugs-fixes/bugs-current-time-2.png)
 <br>
 
-- - *Button displays and changing/ 'toggling' the display- :* This refers to the 'Dark Mode/ Light Mode' button and the Pomodoro Timer's 'Start/ Pause' button. In the initial build, these displayed as they are above with both options on or- in the case of the Pomodoro timer- as two separate button. This made the buttons to large, not clear/ specific, or -in the case of the pomodoro timer- the use of two buttons made the interface busy and I want to keep the page as clean and clear as possible. <br>
+-  *Button displays and changing/ 'toggling' the display:* This refers to the 'Dark Mode/ Light Mode' button and the Pomodoro Timer's 'Start/ Pause' button. In the initial build, these displayed as they are above with both options on or- in the case of the Pomodoro timer- as two separate button. This made the buttons to large, not clear/ specific, or -in the case of the pomodoro timer- the use of two buttons made the interface busy and I want to keep the page as clean and clear as possible. <br>
 Through research and a tutorial on 'scrimba', I found a way to change the display using 'text.content' which <br>
 The basic code looked like this:
 ![Basic code from tutorial](./docs/bugs-fixes/bugs-button-display-1.png)<br>
@@ -329,7 +331,7 @@ The basic code looked like this:
 <br>
 
 **Ongoing issue**
-- - *Alarms on mobile browsers:* Through testing I have identified that the alarms, (Pomodoro and Reminder alarms), do not play on mobile browsers. Through researc, I can see that this is to do with rules for autoplay on these browsers being more strick than on desktop. I have -for now- decided that as there are visual cues for these alarms and reminders through the use of accompanying modals, I am going to keep this as is as the minimum viable product. Users are able to utilise the visual cues on mobile devices and further research can be done to see if this can be overcome at a later date. The expertise for this are beyond my current level of expertise.<br>
+- *Alarms on mobile browsers:* Through testing I have identified that the alarms, (Pomodoro and Reminder alarms), do not play on mobile browsers. Through researc, I can see that this is to do with rules for autoplay on these browsers being more strick than on desktop. I have -for now- decided that as there are visual cues for these alarms and reminders through the use of accompanying modals, I am going to keep this as is as the minimum viable product. Users are able to utilise the visual cues on mobile devices and further research can be done to see if this can be overcome at a later date. The expertise for this are beyond my current level of expertise.<br>
 
 ### Improvements/ scalability 
 - Drive User Engagement: develop the site further and aim to encourage users to spend more time on the platform by offering more of a range engaging features such as interactive timers, customizable to-do lists, and helpful reminders. A range of backgrounds could also be provided making the UI more personal to users.
@@ -384,7 +386,6 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 | SheCodes post *How can I display the date and time using javaScript* | [SheCodes](https://www.shecodes.io/athena/38917-how-to-display-the-current-date-and-time-in-javascript#:~:text=To%20display%20the%20current%20date%20and%20time%20in%20JavaScript%2C%20you,()%20object%20and%20its%20methods.&text=In%20the%20code%20above%2C%20we,the%20current%20date%20and%20time.) | Blog post on date and time display    | Adapted for header            |
 | DEV Community *Create To-do List using Vanilla JavaScript*    | [Dev Community Tutorial](https://dev.to/karandeveloper/creating-todo-list-using-vanilla-javascript-2l7l) | To-do list project         | A great bolg post by 'Karan Developer' |
 | Tutorial blog post from Medium.com by Linda Ikechukwu *Building a To-do List App with Vanilla JavaScript*   | [Medium](https://medium.com/@Linda_Ikechukwu/building-a-to-do-list-app-with-vanilla-javascript-e27dda195fea) | Creating to do lists                    | Particularly good for understanding set up and functionality as a 1st step. |
-| blog post from Medium.com by Linda Ikechukwu *Building a To-do List App with Vanilla JavaScript*   | [Medium](https://medium.com/@Linda_Ikechukwu/building-a-to-do-list-app-with-vanilla-javascript-e27dda195fea) | Creating to do lists                    | Particularly good for understanding set up and functionality as a 1st step. |
 | Tutorial blog from altcademy *How to create a button in JavaScript*   | [altcademt](https://www.altcademy.com/blog/how-to-create-a-button-in-javascript/) | Creating a button within javaScript                    | Understanding how to add buttons to the todo list that are within javascript parts eg- the 'Done' button only appears when list items are added by javaScript (it is not part of the HTML) |
 | Tutsplus *Create a Pomodoro Timer with HTML, CSS and Vanilla JavaScript* by esther Vaati  | [Tutsplus](https://webdesign.tutsplus.com/create-a-pomodoro-timer-with-html-css-and-vanilla-javascript--cms-108069t) | Pomodoro timer project       | A walk through of a pomodoro timer project     | adapted basic structure and set up for my own.
 | Freshman.tech *How to build a Ponodoro Timer App with JavaScript* | [Freshman.tech](https://freshman.tech/pomodoro-timer/) | Another tutorial on Pomodoro timers | Simpler design and different ways of working to above.  |
