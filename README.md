@@ -259,7 +259,7 @@ This page contains a message for the user and a 5sec countdown timer which then 
 - **Task completion feedback**: Within the To-Do list section there is a button which allows the user to 'Clear List'. When the user clears their list, a small message of congratulations pops up for 5 seconds. This allows the user to get some positive feedback without the message cluttering up the browser indefinately. 
 ![404 page](./docs/testing/user-stories/clear-tasks-congrats.png)<br>
 
-- **Use of sound effects and alarms**: Throughout the main working interface, a mixture of sounds and alarms are used to signify different things:<br>
+**Use of sound effects and alarms**: Throughout the main working interface, a mixture of sounds and alarms are used to signify different things:<br>
 - 'calm-alarm.wav' and 'reminder.wav'- used with the Pomodoro Timer and Reminder sections respectively. These are short alarm sounds which I have deliberately chosen to be towards the quieter/ calmer end of the alarm spectrum in order to not be to obtrusive whilst still functioning as alarms.<br>
 - 'clear-list.wav'- a sound effect added to the To-Do list section. This was chosen as a sound that could replicate the turning of a page or the ripping of a post-it list from a pad.<br>
 - 'click.wav'- added to buttons within the main interface. <br>
